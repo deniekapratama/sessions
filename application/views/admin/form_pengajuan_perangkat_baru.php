@@ -17,18 +17,6 @@
                               </div>
                               <div class="card-body">
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Pemohon</label>
-                                      <div class="col-sm-12 col-md-7">
-                                          <input type="text" class="form-control">
-                                      </div>
-                                  </div>
-                                  <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pemohon</label>
-                                      <div class="col-sm-12 col-md-7">
-                                          <input type="text" class="form-control">
-                                      </div>
-                                  </div>
-                                  <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Pengguna</label>
                                       <div class="col-sm-12 col-md-7">
                                           <input type="text" class="form-control">

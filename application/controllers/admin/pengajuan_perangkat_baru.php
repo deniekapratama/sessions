@@ -20,7 +20,7 @@ class pengajuan_perangkat_baru extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Pengajuan Perangakat Baru | POSsessions';
+        $data['title'] = 'Pengajuan Perangkat Baru | POSsessions';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
@@ -34,7 +34,7 @@ class pengajuan_perangkat_baru extends CI_Controller
 
     public function form_pengajuan_perangkat_baru()
     {
-        $data['title'] = 'Form Pengajuan Perangakat Baru';
+        $data['title'] = 'Form Pengajuan Perangkat Baru';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
