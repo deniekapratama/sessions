@@ -10,21 +10,11 @@
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="dropdown active">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="index-0.html"> Pengajuan</a></li>
-                    <li><a class="nav-link" href="index.html"> Perbaikan</a></li>
-                    <li><a class="nav-link" href="index.html">All </a></li>
-                </ul>
+                <a href="<?= base_url('admin/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Form</li>
             <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="<?= base_url('admin/pengajuan_perangkat_baru/form_pengajuan_perangkat_baru'); ?>">Perangkat Baru</a></li>
-                    <li><a class="nav-link" href="forms-editor.html">Perbaikan Perangkat</a></li>
-                    <li><a class="nav-link" href="forms-validation.html">Upgrade Perangkat</a></li>
-                </ul>
+                <a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>"><i class="far fa-file-alt"></i> <span>Form Permohonan</span></a>
             </li>
 
             <li class="dropdown">

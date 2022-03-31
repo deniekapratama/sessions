@@ -18,19 +18,19 @@
                               <div class="card-body">
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Pengguna</label>
-                                      <div class="col-sm-12 col-md-7">
+                                      <div class="col-sm-12 col-md-6">
                                           <input type="text" class="form-control">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pengguna</label>
-                                      <div class="col-sm-12 col-md-7">
+                                      <div class="col-sm-12 col-md-6">
                                           <input type="text" class="form-control">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Divisi</label>
-                                      <div class="col-sm-12 col-md-7">
+                                      <div class="col-sm-12 col-md-6">
                                           <select class="form-control selectric">
                                               <option>Pilih..</option>
                                               <option>News</option>
@@ -40,7 +40,7 @@
                                   </div>
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bagian</label>
-                                      <div class="col-sm-12 col-md-7">
+                                      <div class="col-sm-12 col-md-6">
                                           <select class="form-control selectric">
                                               <option>Pilih..</option>
                                               <option>News</option>
@@ -51,7 +51,7 @@
 
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
-                                      <div class="col-sm-12 col-md-7">
+                                      <div class="col-sm-12 col-md-6">
                                           <select class="form-control selectric">
                                               <option>Pilih..</option>
                                               <option>News</option>
@@ -61,26 +61,25 @@
                                   </div>
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE</label>
-                                      <div class="col-sm-12 col-md-7">
+                                      <div class="col-sm-12 col-md-6">
                                           <input type="text" class="form-control">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE</label>
-                                      <div class="col-sm-12 col-md-7">
+                                      <div class="col-sm-12 col-md-6">
                                           <input type="text" class="form-control datepicker">
                                       </div>
                                   </div>
 
                                   <div class="form-group row mb-4">
                                       <label class="exampleFormControlFile1 text-md-right col-12 col-md-3 col-lg-3">Lampiran File PDF Surat (NDE)</label>
-                                      <div class="col-sm-12 col-md-7">
+                                      <div class="col-sm-12 col-md-6">
                                           <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                       </div>
                                   </div>
-
-                                  <div class="form-group row mb-4">
-                                      <button type="button" class="btn btn-primary">Primary</button>
+                                  <div class="card-footer text-right col-sm-12 col-md-9">
+                                      <button class="btn btn-primary">Submit</button>
                                   </div>
                               </div>
                           </div>
