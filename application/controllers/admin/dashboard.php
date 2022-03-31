@@ -4,23 +4,31 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class Dashboard extends CI_Controller
 {
 
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     *	- or -
-     * 		http://example.com/index.php/welcome/index
-     *	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/<method_name>
-     * @see https://codeigniter.com/userguide3/general/urls.html
-     */
+    function __construct()
+    {
+        parent::__construct();
+
+        // load helper
+
+        // load model
+        // $this->load->model('mhome');
+
+        //load library
+        // $this->load->library('pagination');
+
+    }
+
     public function index()
     {
-        $this->load->view('admin/dashboard');
+        $data['title'] = 'Dashboard | POSsessions';
+        // $data['menu_katalog'] = $this->mhome->category();
+        // $data['product_data'] = count($this->mhome->product());
+        // $data['sales_data'] = count($this->mhome->all_sales());x
+        // $data['customer_data'] = count($this->mhome->all_customer());
+
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/menus', $data);
+        $this->load->view('admin/dashboard', $data);
+        $this->load->view('templates/footer');
     }
 }
