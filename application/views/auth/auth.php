@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="<?= base_url('assets/auth/'); ?>style.css" />
+    <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
     <title>Sign in & Sign up </title>
 </head>
 
@@ -13,7 +14,7 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="#" class="sign-in-form">
+                <form action="<?php echo base_url('Auth/login'); ?>" class="sign-in-form">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -23,7 +24,7 @@
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" />
                     </div>
-                    <input type="submit" class="btn" value="Sign In" />
+                    <button type="submit" class="btn" id="login"> SIGN IN </button>
                     <p class="social-text">Or Sign up with social git </p>
                     <div class="social-media">
                         <a href="<?= base_url('admin/dashboard') ?>" class="social-icon">
@@ -31,7 +32,7 @@
                         </a>
                     </div>
                 </form>
-                <form action="#" class="sign-up-form">
+                <form action="#" class="sign-up-form" onsubmit="return false">
                     <h2 class="title">Sign up</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
@@ -45,7 +46,7 @@
                         <i class="fas fa-lock"></i>
                         <input type="password" placeholder="Password" />
                     </div>
-                    <input type="submit" class="btn" value="Sign up" />
+                    <input type="submit" class="btn" value="Sign up"/>
                     <p class="social-text">Or Sign up with social platforms</p>
                     <div class="social-media">
                         <a href="#" class="social-icon">
@@ -97,3 +98,21 @@
 </body>
 
 </html>
+
+<script>
+    $(document).ready(function (){
+        // $('#login').click(function(){
+        //     $.ajax({
+        //         url: '<?php echo base_url(); ?>/model_login/login',
+        //         type: 'post',
+        //         success:function(data){
+        //             alert("tes");
+        //             // $('#myModal').modal("show");
+        //             // $('#tampil_modal').html(data);
+        //             // document.getElementById("judul").innerHTML='Edit Data';  
+        //         }   
+        //     })
+        //     // alert("tes");
+        // })
+    })
+</script>
