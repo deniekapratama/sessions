@@ -31,6 +31,14 @@
 <!-- Template JS File -->
 <script src="<?= base_url('assets/'); ?>assets/js/scripts.js"></script>
 <script src="<?= base_url('assets/'); ?>assets/js/custom.js"></script>
+
+
+<!-- JS Libraies -->
+<script src="<?= base_url('assets/'); ?>assets/modules/summernote/summernote-bs4.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/codemirror/lib/codemirror.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/codemirror/mode/javascript/javascript.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
 </body>
 
 </html>

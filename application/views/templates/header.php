@@ -16,6 +16,13 @@
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
 
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/codemirror/theme/duotone-dark.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/jquery-selectric/selectric.css">
+
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/css/style.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/css/components.css">
@@ -186,7 +193,7 @@
                                 <i class="fas fa-cog"></i> Settings
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item has-icon text-danger">
+                            <a href="<?= base_url(''); ?>" class="dropdown-item has-icon text-danger">
                                 <i class="fas fa-sign-out-alt"></i> Logout
                             </a>
                         </div>

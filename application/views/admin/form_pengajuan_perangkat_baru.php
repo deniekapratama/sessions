@@ -60,6 +60,17 @@
                                           </select>
                                       </div>
                                   </div>
+
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <select class="form-control selectric">
+                                              <option>Tech</option>
+                                              <option>News</option>
+                                              <option>Political</option>
+                                          </select>
+                                      </div>
+                                  </div>
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE</label>
                                       <div class="col-sm-12 col-md-7">
@@ -80,7 +91,7 @@
                                       </div>
                                   </div>
 
-                                  <div class="form-group row m-right">
+                                  <div class="form-group row mb-4">
                                       <button type="button" class="btn btn-primary">Primary</button>
                                   </div>
                               </div>
