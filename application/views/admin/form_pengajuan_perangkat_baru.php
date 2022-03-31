@@ -32,7 +32,7 @@
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Divisi</label>
                                       <div class="col-sm-12 col-md-7">
                                           <select class="form-control selectric">
-                                              <option>Tech</option>
+                                              <option>Pilih..</option>
                                               <option>News</option>
                                               <option>Political</option>
                                           </select>
@@ -42,7 +42,7 @@
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bagian</label>
                                       <div class="col-sm-12 col-md-7">
                                           <select class="form-control selectric">
-                                              <option>Tech</option>
+                                              <option>Pilih..</option>
                                               <option>News</option>
                                               <option>Political</option>
                                           </select>
@@ -53,7 +53,7 @@
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
                                       <div class="col-sm-12 col-md-7">
                                           <select class="form-control selectric">
-                                              <option>Tech</option>
+                                              <option>Pilih..</option>
                                               <option>News</option>
                                               <option>Political</option>
                                           </select>
@@ -68,7 +68,7 @@
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE</label>
                                       <div class="col-sm-12 col-md-7">
-                                          <input type="text" class="form-control">
+                                          <input type="text" class="form-control datepicker">
                                       </div>
                                   </div>
 
