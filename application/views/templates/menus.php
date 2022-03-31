@@ -21,7 +21,7 @@
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="forms-advanced-form.html">Perangkat Baru</a></li>
+                    <li><a class="nav-link" href="<?= base_url('admin/pengajuan_perangkat_baru/form_pengajuan_perangkat_baru'); ?>">Perangkat Baru</a></li>
                     <li><a class="nav-link" href="forms-editor.html">Perbaikan Perangkat</a></li>
                     <li><a class="nav-link" href="forms-validation.html">Upgrade Perangkat</a></li>
                 </ul>
