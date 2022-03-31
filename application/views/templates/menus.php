@@ -2,7 +2,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="<?= base_url('admin/dashboard'); ?>">POS Sessions</a>
+            <a href="<?= base_url('admin/dashboard'); ?>"><b>POS </b>Sessions</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">POS</a>
@@ -12,11 +12,21 @@
             <li class="dropdown active">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="index-0.html">General Dashboard</a></li>
-                    <li class=active><a class="nav-link" href="index.html">Ecommerce Dashboard</a></li>
+                    <li><a class="nav-link" href="index-0.html"> Pengajuan</a></li>
+                    <li><a class="nav-link" href="index.html"> Perbaikan</a></li>
+                    <li><a class="nav-link" href="index.html">All </a></li>
                 </ul>
             </li>
-            <li class="menu-header">Starter</li>
+            <li class="menu-header">Form</li>
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="forms-advanced-form.html">Perangkat Baru</a></li>
+                    <li><a class="nav-link" href="forms-editor.html">Perbaikan Perangkat</a></li>
+                    <li><a class="nav-link" href="forms-validation.html">Upgrade Perangkat</a></li>
+                </ul>
+            </li>
+
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i> <span>Layout</span></a>
                 <ul class="dropdown-menu">
