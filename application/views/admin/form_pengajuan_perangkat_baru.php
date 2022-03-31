@@ -17,13 +17,31 @@
                               </div>
                               <div class="card-body">
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Title</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Pemohon</label>
                                       <div class="col-sm-12 col-md-7">
                                           <input type="text" class="form-control">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pemohon</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <input type="text" class="form-control">
+                                      </div>
+                                  </div>
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Pengguna</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <input type="text" class="form-control">
+                                      </div>
+                                  </div>
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pengguna</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <input type="text" class="form-control">
+                                      </div>
+                                  </div>
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Divisi</label>
                                       <div class="col-sm-12 col-md-7">
                                           <select class="form-control selectric">
                                               <option>Tech</option>
@@ -33,21 +51,43 @@
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bagian</label>
                                       <div class="col-sm-12 col-md-7">
-                                          <textarea class="summernote-simple"></textarea>
+                                          <select class="form-control selectric">
+                                              <option>Tech</option>
+                                              <option>News</option>
+                                              <option>Political</option>
+                                          </select>
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Permintaan</label>
                                       <div class="col-sm-12 col-md-7">
-                                          <button class="btn btn-primary">Publish</button>
+                                          <select class="form-control selectric">
+                                              <option>Tech</option>
+                                              <option>News</option>
+                                              <option>Political</option>
+                                          </select>
                                       </div>
                                   </div>
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <input type="text" class="form-control">
+                                      </div>
+                                  </div>
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <input type="text" class="form-control">
+                                      </div>
+                                  </div>
+                                  
                               </div>
                           </div>
                       </div>
                   </div>
               </div>
-          </section>
+      </div>
+      </section>
       </div>
