@@ -20,7 +20,7 @@ class pengajuan extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Pengajuan Perangkat Baru | POSsessions';
+        $data['title'] = 'Data Pengajuan';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
@@ -28,7 +28,7 @@ class pengajuan extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menus', $data);
-        $this->load->view('admin/pengajuan_perangkat_baru', $data);
+        $this->load->view('admin/pengajuan', $data);
         $this->load->view('templates/footer');
     }
 

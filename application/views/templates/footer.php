@@ -56,6 +56,23 @@
 <script src="<?= base_url('assets/'); ?>assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
 
 
+
+<!-- General JS Scripts -->
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/popper.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/tooltip.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/moment.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/js/stisla.js"></script>
+
+<!-- JS Libraies -->
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Page Specific JS File -->
+<script src="<?= base_url('assets/'); ?>assets/js/page/components-table.js"></script>
+
+
 </body>
 
 </html>
