@@ -20,11 +20,13 @@ class Auth extends CI_Controller
      * @see https://codeigniter.com/userguide3/general/urls.html
      */
 
-    public function __construct(){
+    public function __construct()
+    {
+
         parent::__construct();
         $this->load->model('Model_login');
     }
-    
+
     public function index()
     {
         $this->load->view('auth/auth');
@@ -35,7 +37,5 @@ class Auth extends CI_Controller
         // echo "Tes";
         $tr = $this->login();
         echo $tr;
-        
-
     }
 }
