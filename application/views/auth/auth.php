@@ -5,8 +5,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+<<<<<<< HEAD
     <link rel="stylesheet" href="<?= base_url('assets/auth/'); ?>style.css" />
     <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
+=======
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>style.css" />
+>>>>>>> f4fce1a37fad71e6b80535b9ed9a044e985ea492
     <title>Sign in & Sign up </title>
 </head>
 
@@ -76,7 +80,7 @@
                         Sign up
                     </button>
                 </div>
-                <img src="<?= base_url('assets/auth/'); ?>img/log1.svg" class="image" alt="" />
+                <img src="<?= base_url('assets/auth/'); ?>img/log.svg" class="image" alt="" />
             </div>
             <div class="panel right-panel">
                 <div class="content">
@@ -89,12 +93,12 @@
                         Sign in
                     </button>
                 </div>
-                <img src="<?= base_url('assets/auth/'); ?>img/register1.svg" class="image" alt="" />
+                <img src="<?= base_url('assets/auth/'); ?>img/register.svg" class="image" alt="" />
             </div>
         </div>
     </div>
 
-    <script src="<?= base_url('assets/auth/'); ?>app.js"></script>
+    <script src="<?= base_url('assets/'); ?>app.js"></script>
 </body>
 
 </html>

@@ -13,41 +13,80 @@
                       <div class="col-12">
                           <div class="card">
                               <div class="card-header">
-                                  <h4>Simple Summernote</h4>
+                                  <h4><?php echo $title ?></h4>
                               </div>
                               <div class="card-body">
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Title</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Pengguna</label>
                                       <div class="col-sm-12 col-md-7">
                                           <input type="text" class="form-control">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pengguna</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <input type="text" class="form-control">
+                                      </div>
+                                  </div>
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Divisi</label>
                                       <div class="col-sm-12 col-md-7">
                                           <select class="form-control selectric">
-                                              <option>Tech</option>
+                                              <option>Pilih..</option>
                                               <option>News</option>
                                               <option>Political</option>
                                           </select>
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bagian</label>
                                       <div class="col-sm-12 col-md-7">
-                                          <textarea class="summernote-simple"></textarea>
+                                          <select class="form-control selectric">
+                                              <option>Pilih..</option>
+                                              <option>News</option>
+                                              <option>Political</option>
+                                          </select>
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <select class="form-control selectric">
+                                              <option>Pilih..</option>
+                                              <option>News</option>
+                                              <option>Political</option>
+                                          </select>
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE</label>
                                       <div class="col-sm-12 col-md-7">
-                                          <button class="btn btn-primary">Publish</button>
+                                          <input type="text" class="form-control">
                                       </div>
+                                  </div>
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <input type="text" class="form-control datepicker">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group row mb-4">
+                                      <label class="exampleFormControlFile1 text-md-right col-12 col-md-3 col-lg-3">Lampiran File PDF Surat (NDE)</label>
+                                      <div class="col-sm-12 col-md-7">
+                                          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group row mb-4">
+                                      <button type="button" class="btn btn-primary">Primary</button>
                                   </div>
                               </div>
                           </div>
                       </div>
                   </div>
               </div>
-          </section>
+      </div>
+      </section>
       </div>

@@ -16,6 +16,22 @@
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/owlcarousel2/dist/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/owlcarousel2/dist/assets/owl.theme.default.min.css">
 
+    <!-- CSS Libraries -->
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/summernote/summernote-bs4.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/codemirror/lib/codemirror.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/codemirror/theme/duotone-dark.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/jquery-selectric/selectric.css">
+
+
+    <!-- CSS Libraries -->
+    <!-- data picker form -->
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/jquery-selectric/selectric.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
+
     <!-- Template CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/css/style.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/css/components.css">
@@ -186,7 +202,7 @@
                                 <i class="fas fa-cog"></i> Settings
                             </a>
                             <div class="dropdown-divider"></div>
-                            <a href="#" class="dropdown-item has-icon text-danger">
+                            <a href="<?= base_url(''); ?>" class="dropdown-item has-icon text-danger">
                                 <i class="fas fa-sign-out-alt"></i> Logout
                             </a>
                         </div>

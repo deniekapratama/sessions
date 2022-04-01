@@ -31,6 +31,31 @@
 <!-- Template JS File -->
 <script src="<?= base_url('assets/'); ?>assets/js/scripts.js"></script>
 <script src="<?= base_url('assets/'); ?>assets/js/custom.js"></script>
+
+
+<!-- JS Libraies -->
+<script src="<?= base_url('assets/'); ?>assets/modules/summernote/summernote-bs4.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/codemirror/lib/codemirror.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/codemirror/mode/javascript/javascript.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+<!-- Page Specific JS File -->
+<script src="<?= base_url('assets/'); ?>assets/js/page/forms-advanced-forms.js"></script>
+
+
+
+<!-- JS Libraies -->
+<script src="<?= base_url('assets/'); ?>assets/modules/cleave-js/dist/cleave.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/cleave-js/dist/addons/cleave-phone.us.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/select2/dist/js/select2.full.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+
 </body>
 
 </html>
