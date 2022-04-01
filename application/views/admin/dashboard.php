@@ -1,8 +1,9 @@
-<!-- Main Content -->
 <?php
-    $this->load->view('templates/header');
-    $this->load->view('templates/menus');
+$this->load->view('templates/header');
+$this->load->view('templates/menus');
 ?>
+<!-- Main Content -->
+
 <br>
 <div class="main-content">
     <section class="section">
@@ -237,5 +238,5 @@
     </section>
 </div>
 <?php
-    $this->load->view('templates/footer');
+$this->load->view('templates/footer');
 ?>
