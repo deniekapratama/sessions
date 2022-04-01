@@ -30,12 +30,21 @@ class Auth extends CI_Controller
         $this->load->view('auth/auth');
     }
 
+    public function dashboard(){
+        $this->load->view('admin/dashboard');
+    }
+
     public function login()
     {
-        // echo "Tes";
-        $tr = $this->login();
-        echo $tr;
-        
-
+        // $tr = $this->login();
+        // $tr = $this->load->model('login');
+        $cek = $this->Model_login->login();
+        echo $cek;
+        // if($cek == "hasbulganteng")
+        // {
+        //     echo "1";
+        // }else{
+        //     echo "0";
+        // } 
     }
 }

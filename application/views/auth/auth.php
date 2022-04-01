@@ -5,12 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
-<<<<<<< HEAD
     <link rel="stylesheet" href="<?= base_url('assets/auth/'); ?>style.css" />
     <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
-=======
-    <link rel="stylesheet" href="<?= base_url('assets/'); ?>style.css" />
->>>>>>> f4fce1a37fad71e6b80535b9ed9a044e985ea492
     <title>Sign in & Sign up </title>
 </head>
 
@@ -18,15 +14,15 @@
     <div class="container">
         <div class="forms-container">
             <div class="signin-signup">
-                <form action="<?php echo base_url('Auth/login'); ?>" class="sign-in-form">
+                <form action="#" class="sign-in-form" onsubmit="return false">
                     <h2 class="title">Sign in</h2>
                     <div class="input-field">
                         <i class="fas fa-user"></i>
-                        <input type="text" placeholder="Username" />
+                        <input type="text" id="username" placeholder="Username" />
                     </div>
                     <div class="input-field">
                         <i class="fas fa-lock"></i>
-                        <input type="password" placeholder="Password" />
+                        <input type="password" id="password" placeholder="Password" />
                     </div>
                     <button type="submit" class="btn" id="login"> SIGN IN </button>
                     <p class="social-text">Or Sign up with social git </p>
@@ -80,7 +76,7 @@
                         Sign up
                     </button>
                 </div>
-                <img src="<?= base_url('assets/auth/'); ?>img/log.svg" class="image" alt="" />
+                <img src="<?= base_url('assets/auth/'); ?>img/log1.svg" class="image" alt="" />
             </div>
             <div class="panel right-panel">
                 <div class="content">
@@ -93,30 +89,40 @@
                         Sign in
                     </button>
                 </div>
-                <img src="<?= base_url('assets/auth/'); ?>img/register.svg" class="image" alt="" />
+                <img src="<?= base_url('assets/auth/'); ?>img/register1.svg" class="image" alt="" />
             </div>
         </div>
     </div>
 
-    <script src="<?= base_url('assets/'); ?>app.js"></script>
+    <script src="<?= base_url('assets/auth/'); ?>app.js"></script>
 </body>
 
 </html>
 
 <script>
     $(document).ready(function (){
-        // $('#login').click(function(){
-        //     $.ajax({
-        //         url: '<?php echo base_url(); ?>/model_login/login',
-        //         type: 'post',
-        //         success:function(data){
-        //             alert("tes");
-        //             // $('#myModal').modal("show");
-        //             // $('#tampil_modal').html(data);
-        //             // document.getElementById("judul").innerHTML='Edit Data';  
-        //         }   
-        //     })
-        //     // alert("tes");
-        // })
+        $('#login').click(function(){
+            var username = $('#username').val();
+            var password = $('#password').val();
+            $.ajax({
+                url: '<?php echo base_url('Auth/login'); ?>',
+                method: 'post',
+                data : "username="+username+"&password="+password,
+                success:function(data){
+                    // alert(data);
+                    if(username == data){
+                        alert("Login Berhasil");
+                        window.location.href = "<?php echo base_url('Auth/dashboard'); ?>";
+                    }else{
+                        alert("Login Gagal");
+                    }
+                    // alert(data);
+                    // $('#myModal').modal("show");
+                    // $('#tampil_modal').html(data);
+                    // document.getElementById("judul").innerHTML='Edit Data';  
+                }   
+            })
+            // alert("tes");
+        })
     })
 </script>
