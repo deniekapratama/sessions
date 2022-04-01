@@ -1,6 +1,6 @@
 <footer class="main-footer">
     <div class="footer-left">
-        Copyright &copy; 2018 <div class="bullet"></div> Design By <a href="https://nauval.in/">Muhamad Nauval Azhar</a>
+        Copyright &copy; 2022 <div class="bullet"></div> Design By <a href="https://nauval.in/">Ganesha Corp.</a>
     </div>
     <div class="footer-right">
 
@@ -54,6 +54,23 @@
 <script src="<?= base_url('assets/'); ?>assets/modules/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
 <script src="<?= base_url('assets/'); ?>assets/modules/select2/dist/js/select2.full.min.js"></script>
 <script src="<?= base_url('assets/'); ?>assets/modules/jquery-selectric/jquery.selectric.min.js"></script>
+
+
+
+<!-- General JS Scripts -->
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/popper.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/tooltip.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/bootstrap/js/bootstrap.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/nicescroll/jquery.nicescroll.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/moment.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/js/stisla.js"></script>
+
+<!-- JS Libraies -->
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Page Specific JS File -->
+<script src="<?= base_url('assets/'); ?>assets/js/page/components-table.js"></script>
 
 
 </body>
