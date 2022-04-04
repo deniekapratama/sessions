@@ -17,40 +17,34 @@
                               </div>
                               <div class="card-body">
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Pengguna</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Pengguna :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <input type="text" class="form-control">
-                                      </div>
-                                  </div>
-                                  <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pengguna</label>
-                                      <div class="col-sm-12 col-md-6">
-                                          <input type="text" class="form-control">
-                                      </div>
-                                  </div>
-                                  <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Divisi</label>
-                                      <div class="col-sm-12 col-md-6">
-                                          <select class="form-control selectric">
-                                              <option>Pilih..</option>
-                                              <option>News</option>
-                                              <option>Political</option>
-                                          </select>
-                                      </div>
-                                  </div>
-                                  <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bagian</label>
-                                      <div class="col-sm-12 col-md-6">
-                                          <select class="form-control selectric">
-                                              <option>Pilih..</option>
-                                              <option>News</option>
-                                              <option>Political</option>
-                                          </select>
                                       </div>
                                   </div>
 
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Pengajuan</label>
+                                      <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pegawai :</label>
+                                      <div class="col-sm-12 col-md-6">
+                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Cecep Gaul">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group row mb-4">
+                                      <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Divisi :</label>
+                                      <div class="col-sm-12 col-md-6">
+                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Jasa Keuangan">
+                                      </div>
+                                  </div>
+                                  <div class="form-group row mb-4">
+                                      <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bagian :</label>
+                                      <div class="col-sm-12 col-md-6">
+                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Remitance">
+                                      </div>
+                                  </div>
+
+                                  <div class="form-group row mb-4">
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Pengajuan :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <select class="form-control selectric">
                                               <option>Pilih..</option>
@@ -60,20 +54,20 @@
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <input type="text" class="form-control">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
-                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE</label>
+                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <input type="text" class="form-control datepicker">
                                       </div>
                                   </div>
 
                                   <div class="form-group row mb-4">
-                                      <label class="exampleFormControlFile1 text-md-right col-12 col-md-3 col-lg-3">Lampiran File PDF Surat (NDE)</label>
+                                      <label class="exampleFormControlFile1 text-md-right col-12 col-md-3 col-lg-3">Lampiran File PDF Surat (NDE) :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                       </div>
