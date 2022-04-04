@@ -30,7 +30,6 @@
                                       <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pegawai :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Cecep Gaul">
-
                                       </div>
                                   </div>
 
