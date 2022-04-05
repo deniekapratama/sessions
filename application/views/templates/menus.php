@@ -19,7 +19,7 @@
                     <li><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangakat Baru</a></li>
                     <li><a class="nav-link" href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
                     <li><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
-                    <li><a href="utilities-subscribe.html">Pengembalian</a></li>
+                    <li><a href="<?= base_url('admin/pengembalian/form_pengembalian'); ?>">Pengembalian</a></li>
                 </ul>
             </li>
 
