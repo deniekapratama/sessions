@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class pengajuan extends CI_Controller
+class pengembalian extends CI_Controller
 {
 
     function __construct()
@@ -20,7 +20,7 @@ class pengajuan extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Data Pengajuan Perangkat Baru';
+        $data['title'] = 'Data Pengembalian Perangkat Baru';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
@@ -28,13 +28,13 @@ class pengajuan extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menus', $data);
-        $this->load->view('admin/pengajuan', $data);
+        $this->load->view('admin/pengembalian/pengembalian', $data);
         $this->load->view('templates/footer');
     }
 
-    public function form_pengajuan()
+    public function form_pengembalian()
     {
-        $data['title'] = 'Form Pengajuan Perangkat Baru';
+        $data['title'] = 'Form Pengembalian Perangkat Baru';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
@@ -42,7 +42,7 @@ class pengajuan extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menus', $data);
-        $this->load->view('admin/form_pengajuan', $data);
+        $this->load->view('admin/pengembalian/form_pengembalian', $data);
         $this->load->view('templates/footer');
     }
 }
