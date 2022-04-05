@@ -16,14 +16,23 @@
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangakat Baru</a></li>
+                    <li><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
                     <li><a class="nav-link" href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
                     <li><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
                     <li><a href="<?= base_url('admin/pengembalian/form_pengembalian'); ?>">Pengembalian</a></li>
                 </ul>
             </li>
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Data Perangkat</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="<?= base_url('admin/pengajuan'); ?>">Perangkat Baru</a></li>
+                    <li><a class="nav-link" href="forms-editor.html">Data Service</a></li>
+                    <li><a class="nav-link" href="forms-validation.html">Data Upgrade</a></li>
+                    <li><a class="nav-link" href="forms-validation.html">Data Pengembalian</a></li>
+                </ul>
+            </li>
 
-            <li><a class="nav-link" href="<?= base_url('admin/pengajuan'); ?>"><i class="fas fa-th-large"></i> <span>Data Pengajuan</span></a></li>
+
             <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
                 <ul class="dropdown-menu">
@@ -106,16 +115,7 @@
                     <li><a class="nav-link" href="modules-weather-icon.html">Weather Icon</a></li>
                 </ul>
             </li>
-            <li class="menu-header">Pages</li>
-            <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>Auth</span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="auth-forgot-password.html">Forgot Password</a></li>
-                    <li><a href="auth-login.html">Login</a></li>
-                    <li><a href="auth-register.html">Register</a></li>
-                    <li><a href="auth-reset-password.html">Reset Password</a></li>
-                </ul>
-            </li>
+
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-exclamation"></i> <span>Errors</span></a>
                 <ul class="dropdown-menu">
@@ -137,14 +137,25 @@
                     <li><a class="nav-link" href="features-tickets.html">Tickets</a></li>
                 </ul>
             </li> -->
-            <li class="dropdown">
+            <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-ellipsis-h"></i> <span>Utilities</span></a>
                 <ul class="dropdown-menu">
                     <li><a href="utilities-contact.html">Contact</a></li>
                     <li><a class="nav-link" href="utilities-invoice.html">Invoice</a></li>
                     <li><a href="utilities-subscribe.html">Subscribe</a></li>
                 </ul>
+            </li> -->
+
+            <li class="menu-header">Personal</li>
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>User</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="auth-forgot-password.html">Profil User</a></li>
+                    <li><a href="auth-login.html">Keluar</a></li>
+                </ul>
             </li>
+
+
             <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
         </ul>
 
