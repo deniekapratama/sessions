@@ -183,7 +183,7 @@
                                     </tr>
                                 </table>
                                 <div class="card-footer text-right col-sm-12 col-md-12">
-                                      <button class="btn btn-primary" id="tes">Submit</button>
+                                      <button class="btn btn-primary" id="submit">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -222,29 +222,19 @@
 
 <script>
           $(document).ready(function(){
-              $('#tes').click(function(){
-                //   alert("tes");
-                $('#myModal').modal('show');
-                    // $('#profil_pegawai').show();
-                    // $.ajax({
-                    //     url: '<?php //echo base_url('Auth/login'); ?>',
-                    //     method: 'post',
-                    //     data : "username="+username+"&password="+password,
-                    //     success:function(data){
-                    //         // alert(data);
-                    //         if(username == data){
-                    //             alert("Login Berhasil");
-                    //             window.location.href = "<?php echo base_url('Auth/dashboard'); ?>";
-                    //         }else{
-                    //             alert("Login Gagal");
-                    //         }
-                    //         // alert(data);
-                    //         // $('#myModal').modal("show");
-                    //         // $('#tampil_modal').html(data);
-                    //         // document.getElementById("judul").innerHTML='Edit Data';  
-                    //     }   
-                    // })
-                //   alert("tes");
-              })
+              $('#submit').click(function(){
+                  alert("tes");
+            //     $('#myModal').modal('show');
+            //         // $('#profil_pegawai').show();
+            //         $.ajax({
+            //             url: '<?php// echo base_url('pengajuan/cari_pgw'); ?>',
+            //             method: 'post',
+            //             data : "username="+username+"&password="+password,
+            //             success:function(data){
+            //                alert(data); 
+            //             }   
+            //         })
+            //     //   alert("tes");
+            //   })
           })
       </script>

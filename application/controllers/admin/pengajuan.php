@@ -7,7 +7,7 @@ class pengajuan extends CI_Controller
     function __construct()
     {
         parent::__construct();
-
+        $this->load->model('Model_pengajuan');
         // load helper
 
         // load model
@@ -44,5 +44,12 @@ class pengajuan extends CI_Controller
         $this->load->view('templates/menus', $data);
         $this->load->view('admin/form_pengajuan', $data);
         $this->load->view('templates/footer');
+    }
+
+    public function cari_pgw()
+    {
+        $nipposatasan = $_POST['nippos_atasan'];
+        $cek = $this->Model_pengajuan->cari_pgw($nipposatasan);
+        echo $cek;
     }
 }
