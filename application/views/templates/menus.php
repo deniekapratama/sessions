@@ -137,14 +137,14 @@
                     <li><a class="nav-link" href="features-tickets.html">Tickets</a></li>
                 </ul>
             </li> -->
-            <li class="dropdown">
+            <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-ellipsis-h"></i> <span>Utilities</span></a>
                 <ul class="dropdown-menu">
                     <li><a href="utilities-contact.html">Contact</a></li>
                     <li><a class="nav-link" href="utilities-invoice.html">Invoice</a></li>
                     <li><a href="utilities-subscribe.html">Subscribe</a></li>
                 </ul>
-            </li>
+            </li> -->
 
             <li class="menu-header">Personal</li>
             <li class="dropdown">

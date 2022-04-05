@@ -1,44 +1,46 @@
-<!-- <link rel="stylesheet" type="text/css" href="<?php// echo base_url('assets/assets/modules/bootstrap/css/bootstrap.min.css');?>"/> -->
+<!-- <link rel="stylesheet" type="text/css" href="<? php // echo base_url('assets/assets/modules/bootstrap/css/bootstrap.min.css');
+                                                    ?>"/> -->
 <script src="<?php echo base_url('assets/assets/modules/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
 
 <div class="modal" tabindex="-1" role="dialog" id="myModal">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Lampiran NDE</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <div class="card-body">
-            <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE :</label>
-                <div class="col-sm-12 col-md-6">
-                    <input type="text" class="form-control">
-                </div>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Lampiran NDE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <div class="form-group row mb-4">
-                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE :</label>
-                <div class="col-sm-12 col-md-6">
-                    <input type="text" class="form-control datepicker">
+            <div class="modal-body">
+                <div class="card-body">
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE :</label>
+                        <div class="col-sm-12 col-md-6">
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE :</label>
+                        <div class="col-sm-12 col-md-6">
+                            <input type="text" class="form-control datepicker">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="exampleFormControlFile1 text-md-right col-12 col-md-3 col-lg-3">Lampiran File PDF Surat (NDE) :</label>
+                        <div class="col-sm-12 col-md-6">
+                            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                        </div>
+                    </div>
                 </div>
+                <!-- <p>Modal body text goes here.</p> -->
             </div>
-            <div class="form-group row mb-4">
-                <label class="exampleFormControlFile1 text-md-right col-12 col-md-3 col-lg-3">Lampiran File PDF Surat (NDE) :</label>
-                <div class="col-sm-12 col-md-6">
-                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+
             </div>
         </div>
-        <!-- <p>Modal body text goes here.</p> -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Simpan</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
-      </div>
     </div>
-  </div>
 </div>
 
 <!-- Main Content -->
@@ -183,7 +185,7 @@
                                     </tr>
                                 </table>
                                 <div class="card-footer text-right col-sm-12 col-md-12">
-                                      <button class="btn btn-primary" id="tes">Submit</button>
+                                    <button class="btn btn-primary" id="tes">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -221,30 +223,31 @@
 </html>
 
 <script>
-          $(document).ready(function(){
-              $('#tes').click(function(){
-                //   alert("tes");
-                $('#myModal').modal('show');
-                    // $('#profil_pegawai').show();
-                    // $.ajax({
-                    //     url: '<?php //echo base_url('Auth/login'); ?>',
-                    //     method: 'post',
-                    //     data : "username="+username+"&password="+password,
-                    //     success:function(data){
-                    //         // alert(data);
-                    //         if(username == data){
-                    //             alert("Login Berhasil");
-                    //             window.location.href = "<?php echo base_url('Auth/dashboard'); ?>";
-                    //         }else{
-                    //             alert("Login Gagal");
-                    //         }
-                    //         // alert(data);
-                    //         // $('#myModal').modal("show");
-                    //         // $('#tampil_modal').html(data);
-                    //         // document.getElementById("judul").innerHTML='Edit Data';  
-                    //     }   
-                    // })
-                //   alert("tes");
-              })
-          })
-      </script>
+    $(document).ready(function() {
+        $('#tes').click(function() {
+            //   alert("tes");
+            $('#myModal').modal('show');
+            // $('#profil_pegawai').show();
+            // $.ajax({
+            //     url: '<?php //echo base_url('Auth/login'); 
+                            ?>',
+            //     method: 'post',
+            //     data : "username="+username+"&password="+password,
+            //     success:function(data){
+            //         // alert(data);
+            //         if(username == data){
+            //             alert("Login Berhasil");
+            //             window.location.href = "<?php echo base_url('Auth/dashboard'); ?>";
+            //         }else{
+            //             alert("Login Gagal");
+            //         }
+            //         // alert(data);
+            //         // $('#myModal').modal("show");
+            //         // $('#tampil_modal').html(data);
+            //         // document.getElementById("judul").innerHTML='Edit Data';  
+            //     }   
+            // })
+            //   alert("tes");
+        })
+    })
+</script>
