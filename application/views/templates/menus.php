@@ -14,8 +14,15 @@
             </li>
             <li class="menu-header">Form</li>
             <li class="dropdown">
-                <a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>"><i class="far fa-file-alt"></i> <span>Form Permohonan</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangakat Baru</a></li>
+                    <li><a class="nav-link" href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
+                    <li><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
+                    <li><a href="utilities-subscribe.html">Pengembalian</a></li>
+                </ul>
             </li>
+
             <li><a class="nav-link" href="<?= base_url('admin/pengajuan'); ?>"><i class="fas fa-th-large"></i> <span>Data Pengajuan</span></a></li>
             <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
