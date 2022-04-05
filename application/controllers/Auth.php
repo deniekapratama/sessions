@@ -32,8 +32,12 @@ class Auth extends CI_Controller
         $this->load->view('auth/auth');
     }
 
-    public function dashboard(){
-        $this->load->view('admin/dashboard');
+    public function dashboard()
+    {
+        $this->load->view('templates/header', $data);
+        $this->load->view('templates/menus', $data);
+        $this->load->view('admin/dashboard', $data);
+        $this->load->view('templates/footer');
     }
 
     public function login()
