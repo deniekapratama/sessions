@@ -18,25 +18,6 @@
                               <div class="card-body">
                                 <!-- <div id="profil_pegawai" style="display:none"> -->
                                   <div class="form-group row mb-4">
-                                      <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nama Pengguna :</label>
-                                      <div class="col-sm-12 col-md-6">
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Cecep Gaul">
-                                      </div>
-                                  </div>
-
-                                  <div class="form-group row mb-4">
-                                      <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Divisi :</label>
-                                      <div class="col-sm-12 col-md-6">
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Jasa Keuangan">
-                                      </div>
-                                  </div>
-                                  <div class="form-group row mb-4">
-                                      <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bagian :</label>
-                                      <div class="col-sm-12 col-md-6">
-                                          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="Remitance">
-                                      </div>
-                                  </div>
-                                  <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Atasan :</label>
 
 
