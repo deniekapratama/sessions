@@ -1,5 +1,4 @@
-<!-- <link rel="stylesheet" type="text/css" href="<? php // echo base_url('assets/assets/modules/bootstrap/css/bootstrap.min.css');
-                                                    ?>"/> -->
+
 <script src="<?php echo base_url('assets/assets/modules/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
 
 <div class="modal" tabindex="-1" role="dialog" id="myModal">
