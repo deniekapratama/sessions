@@ -1,5 +1,4 @@
-<!-- <link rel="stylesheet" type="text/css" href="<? php // echo base_url('assets/assets/modules/bootstrap/css/bootstrap.min.css');
-                                                    ?>"/> -->
+
 <script src="<?php echo base_url('assets/assets/modules/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
 
 <div class="modal" tabindex="-1" role="dialog" id="myModal">
@@ -112,7 +111,7 @@
                                    
                                 </table>
                                 <div class="card-footer text-right col-sm-12 col-md-12">
-                                    <button class="btn btn-primary" id="tes">Submit</button>
+                                    <button class="btn btn-primary" id="submit">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -150,31 +149,31 @@
 </html>
 
 <script>
-    $(document).ready(function() {
-        $('#tes').click(function() {
-            //   alert("tes");
-            $('#myModal').modal('show');
-            // $('#profil_pegawai').show();
-            // $.ajax({
-            //     url: '<?php //echo base_url('Auth/login'); 
-                            ?>',
-            //     method: 'post',
-            //     data : "username="+username+"&password="+password,
-            //     success:function(data){
-            //         // alert(data);
-            //         if(username == data){
-            //             alert("Login Berhasil");
-            //             window.location.href = "<?php echo base_url('Auth/dashboard'); ?>";
-            //         }else{
-            //             alert("Login Gagal");
-            //         }
-            //         // alert(data);
-            //         // $('#myModal').modal("show");
-            //         // $('#tampil_modal').html(data);
-            //         // document.getElementById("judul").innerHTML='Edit Data';  
-            //     }   
-            // })
-            //   alert("tes");
-        })
-    })
+$(document).ready(function() {
+$('#tes').click(function() {
+// alert("tes");
+$('#myModal').modal('show');
+// $('#profil_pegawai').show();
+// $.ajax({
+// url: '<?php //echo base_url('Auth/login'); 
+            ?>',
+// method: 'post',
+// data : "username="+username+"&password="+password,
+// success:function(data){
+// // alert(data);
+// if(username == data){
+// alert("Login Berhasil");
+// window.location.href = "<?php echo base_url('Auth/dashboard'); ?>";
+// }else{
+// alert("Login Gagal");
+// }
+// // alert(data);
+// // $('#myModal').modal("show");
+// // $('#tampil_modal').html(data);
+// // document.getElementById("judul").innerHTML='Edit Data';
+// }
+// })
+// alert("tes");
+})
+})
 </script>
