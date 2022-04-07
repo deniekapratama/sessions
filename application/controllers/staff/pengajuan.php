@@ -7,6 +7,7 @@ class pengajuan extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->helper('url');
         $this->load->model('Model_pengajuan');
         // load helper
 
@@ -28,12 +29,8 @@ class pengajuan extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menus', $data);
-        $data['dt_pengajuan'] = $this->Model_pengajuan->selectAll_pengajuan();
-        // $this->load->view('admin/pengajuan',$datas);
         $this->load->view('admin/pengajuan', $data);
         $this->load->view('templates/footer');
-
-       
     }
 
     public function form_pengajuan()
@@ -69,20 +66,23 @@ class pengajuan extends CI_Controller
         $nippos_pengguna = $_POST['nippos_pengguna'];
         $nama_pengguna = $_POST['nama_pengguna'];
         $jabatan_pengguna = $_POST['jabatan_pengguna'];
-        $nm_jabatan_pengguna = $_POST['nm_jabatan_pengguna'];
         $bagian_pengguna = $_POST['bagian_pengguna'];
-        $nm_bagian_pengguna = $_POST['nm_bagian_pengguna'];
         $nippos_atasan = $_POST['nippos_atasan'];
         $nama_atasan = $_POST['nama_atasan'];
         $jabatan_atasan = $_POST['jabatan_atasan'];
-        $nm_jabatan_atasan = $_POST['nm_jabatan_atasan'];
         $bagian_atasan = $_POST['bagian_atasan'];
-        $nm_bagian_atasan = $_POST['nm_bagian_atasan'];
         $jenis_perangkat = $_POST['jenis_perangkat'];
         $deskripsi = $_POST['deskripsi'];
 
-        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna,$nama_pengguna,$jabatan_pengguna,$nm_jabatan_pengguna,$bagian_pengguna,$nm_bagian_pengguna,$nippos_atasan,$nama_atasan,$jabatan_atasan,$nm_jabatan_atasan,$bagian_atasan,$nm_bagian_atasan,$jenis_perangkat,$deskripsi,$tanggal);
+        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna,$nama_pengguna,$jabatan_pengguna,$bagian_pengguna,$nippos_atasan,$nama_atasan,$jabatan_atasan,$bagian_atasan,$jenis_perangkat,$deskripsi,$tanggal);
         echo $cek;
-    }
+    } 
+
+    public function selectAll_pengajuan(){
+        // $data['title']='ini contoh untuk menampilkan data';
+        print_r($this->Model_pengajuan->selectAll_pengajuan());
+        // $this->load->view('pengajuan',$data);
+        
+    } 
 
 }

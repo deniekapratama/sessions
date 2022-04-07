@@ -1,4 +1,4 @@
-Mbu      
+ 
       <!-- Main Content -->
       <div class="main-content">
           <section class="section">
@@ -31,27 +31,28 @@ Mbu
                                       <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos / Nama Atasan :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <input type="text" readonly class="form-control-plaintext" id="nipposnama" value="-">
-                                          <input type="hidden" name="nippos" id="nippos">
+                                          <input type="hidden" name="nama_atasan" id="nama_atasan">
+                                          <input type="hidden" name="nippos_atasan" id="nippos_atasan">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
                                       <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jabatan Atasan :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <input type="text" readonly class="form-control-plaintext" id="jabatan" value="-">
-                                          <input type="hidden" name="kd_jabatan" id="kd_jabatan">
+                                          <input type="hidden" name="kd_jabatan_atasan" id="kd_jabatan_atasan">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
                                       <label for="staticEmail" class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Bagian Atasan :</label>
                                       <div class="col-sm-12 col-md-6">
                                           <input type="text" readonly class="form-control-plaintext" id="bagian" value="-">
-                                          <input type="hidden" name="kd_bagian" id="kd_bagian">
+                                          <input type="hidden" name="kd_bagian_atasan" id="kd_bagian_atasan">
                                       </div>
                                   </div>
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Pengajuan :</label>
                                       <div class="col-sm-12 col-md-4">
-                                          <select class="form-control selectric" id="jns_pengajuan">
+                                          <select class="form-control selectric" id="jns_perangkat">
                                               <option>Laptop</option>
                                               <option>Desktop</option>
                                               <option>Printer</option>
@@ -75,12 +76,12 @@ Mbu
                                   <div class="form-group row mb-4">
                                       <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Deskripsi</label>
                                       <div class="col-sm-12 col-md-4">
-                                          <textarea class="form-control"></textarea>
+                                          <textarea class="form-control" id="deskripsi"></textarea>
                                       </div>
                                   </div>
                                  
                                   <div class="card-footer text-right col-sm-12 col-md-7">
-                                      <button class="btn btn-primary">Submit</button>
+                                      <button class="btn btn-primary" id="simpan">Submit</button>
                                   </div>
                                 <!-- </div> -->
                               </div>
@@ -114,9 +115,10 @@ Mbu
                             var jabatan = dt[0].DescJabatan
                             $('#nippos').val(nippos);
                             $('#nipposnama').val(nippos+" - "+nama);
-                            $('#kd_jabatan').val(kdjabatan);
+                            $('#nama_atasan').val(nama);
+                            $('#kd_jabatan_atasan').val(kdjabatan);
                             $('#jabatan').val(jabatan);
-                            $('#kd_bagian').val(kodebagian);
+                            $('#kd_bagian_atasan').val(kodebagian.trim());
                             $('#bagian').val(namabagian);
                             // alert(JSON.stringify(data));
 		 				    // var mast_tgl_lahir = dt.pribadi[0].PEOPLE_BDATE.split("-");
@@ -136,6 +138,31 @@ Mbu
                     $('#inp_jnsperangkat2').hide();
                 }
               })
-              
-          })
+
+              $('#simpan').click(function(){
+                var nippos_pengguna = "999783945";
+                var nama_pengguna = "Hasbul Hadi";
+                var jabatan_pengguna = "832929";
+                var nm_jabatan_pengguna = "senior analis";
+                var bagian_pengguna = "348934" ;
+                var nm_bagian_pengguna = "pengembangan jaskug" ;
+                var nippos_atasan = $('#nippos_atasan').val();
+                var nama_atasan = $('#nama_atasan').val();
+                var jabatan_atasan = $('#kd_jabatan_atasan').val();
+                var nm_jabatan_atasan = $('#jabatan').val();
+                var bagian_atasan = $('#kd_bagian_atasan').val();
+                var nm_bagian_atasan = $('#bagian').val();
+                var jenis_perangkat = $('#jns_perangkat').val();
+                var deskripsi = $('#deskripsi').val();
+                // alert(jabatan_atasan);
+                    $.ajax({
+                        url: '<?php echo base_url('admin/pengajuan/insert_pengajuan'); ?>',
+                        method: 'post',
+                        data : "nippos_pengguna="+nippos_pengguna+"&nama_pengguna="+nama_pengguna+"&jabatan_pengguna="+jabatan_pengguna+"&nm_jabatan_pengguna="+nm_jabatan_pengguna+"&bagian_pengguna="+bagian_pengguna+"&nm_bagian_pengguna="+nm_bagian_pengguna+"&nippos_atasan="+nippos_atasan+"&nama_atasan="+nama_atasan+"&jabatan_atasan="+jabatan_atasan+"&nm_jabatan_atasan="+nm_jabatan_atasan+"&bagian_atasan="+bagian_atasan+"&nm_bagian_atasan="+nm_bagian_atasan+"&jenis_perangkat="+jenis_perangkat+"&deskripsi="+deskripsi,
+                        success:function(data){
+                           alert(data);
+                        }   
+                    })
+              })
+            })
       </script>
