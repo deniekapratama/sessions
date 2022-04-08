@@ -9,17 +9,16 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="dropdown active">
+            <li class="<?= active_menu('dashboard'); ?>">
                 <a href="<?= base_url('admin/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Form</li>
-            <li class="dropdown">
+            <li class="dropdown <?= active_menu('pengajuan'); ?> , <?= active_menu('service'); ?> , <?= active_menu('upgrade'); ?>">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
-                    <li><a class="nav-link" href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
-                    <li><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
-                    <li><a href="<?= base_url('admin/pengembalian/form_pengembalian'); ?>">Pengembalian</a></li>
+                    <li class="<?= active_menu('pengajuan'); ?>"><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
+                    <li class="<?= active_menu('service'); ?>"><a class="nav-link" href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
+                    <li class="<?= active_menu('upgrade') ?>"><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -148,7 +147,7 @@
 
             <li class="menu-header">Personal</li>
             <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-user"></i> <span>User</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-desktop"></i> <span>Perangkat Saya</span></a>
                 <ul class="dropdown-menu">
                     <li><a href="auth-forgot-password.html">Profil User</a></li>
                     <li><a href="auth-login.html">Keluar</a></li>
