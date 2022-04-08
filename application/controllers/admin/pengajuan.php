@@ -68,12 +68,16 @@ class pengajuan extends CI_Controller
 
         $nippos_pengguna = $_POST['nippos_pengguna'];
         $nama_pengguna = $_POST['nama_pengguna'];
+        $nopend_pengguna = $_POST['nopend_pengguna'];
+        $namaktr_pengguna = $_POST['namaktr_pengguna'];
         $jabatan_pengguna = $_POST['jabatan_pengguna'];
         $nm_jabatan_pengguna = $_POST['nm_jabatan_pengguna'];
         $bagian_pengguna = $_POST['bagian_pengguna'];
         $nm_bagian_pengguna = $_POST['nm_bagian_pengguna'];
         $nippos_atasan = $_POST['nippos_atasan'];
         $nama_atasan = $_POST['nama_atasan'];
+        $nopend_atasan = $_POST['nopend_atasan'];
+        $namaktr_atasan = $_POST['namaktr_atasan'];
         $jabatan_atasan = $_POST['jabatan_atasan'];
         $nm_jabatan_atasan = $_POST['nm_jabatan_atasan'];
         $bagian_atasan = $_POST['bagian_atasan'];
@@ -81,7 +85,7 @@ class pengajuan extends CI_Controller
         $jenis_perangkat = $_POST['jenis_perangkat'];
         $deskripsi = $_POST['deskripsi'];
 
-        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna,$nama_pengguna,$jabatan_pengguna,$nm_jabatan_pengguna,$bagian_pengguna,$nm_bagian_pengguna,$nippos_atasan,$nama_atasan,$jabatan_atasan,$nm_jabatan_atasan,$bagian_atasan,$nm_bagian_atasan,$jenis_perangkat,$deskripsi,$tanggal);
+        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna,$nama_pengguna,$nopend_pengguna,$namaktr_pengguna,$jabatan_pengguna,$nm_jabatan_pengguna,$bagian_pengguna,$nm_bagian_pengguna,$nippos_atasan,$nama_atasan,$nopend_atasan,$namaktr_atasan,$jabatan_atasan,$nm_jabatan_atasan,$bagian_atasan,$nm_bagian_atasan,$jenis_perangkat,$deskripsi,$tanggal);
         echo $cek;
     }
 

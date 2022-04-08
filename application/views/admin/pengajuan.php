@@ -83,10 +83,13 @@
                                             </div>
                                         </th>
                                         <th>Nippos / Nama Pengguna</th>
+                                        <th>Kantor </th>
                                         <th>Bagian </th>
-                                        <th>Divisi</th>
                                         <th>Jabatan</th>
+                                        <th>Jenis Perangkat </th>
+                                        <th>Deskripsi</th>
                                         <th>Status</th>
+
                                     </tr>
                                    <?php
                                         foreach($dt_pengajuan as $b)
@@ -95,13 +98,14 @@
                                             <tr>
                                                 <td class="p-0 text-center">
                                                     <div class="custom-checkbox custom-control">
-                                                        <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="<?php echo $b->nippos_pengguna;?>">
+                                                        <input type="checkbox" data-checkboxes="mygroup" name="ids" class="custom-control-input" id="<?php echo $b->nippos_pengguna;?>" value="<?php echo $b->nippos_pengguna;?>">
                                                         <label for="<?php echo $b->nippos_pengguna;?>" class="custom-control-label">&nbsp;</label>
                                                     </div>
                                                 </td>
                                                 <td><?php echo $b->nippos_pengguna." - ".$b->nama_pengguna;?></td>
-                                                <td><?php echo $b->nm_jabatan_pengguna;?></td>
+                                                <td><?php echo $b->nopend_pengguna." - ".$b->namaktr_pengguna;?></td>
                                                 <td><?php echo $b->nm_bagian_pengguna;?></td>
+                                                <td><?php echo $b->nm_jabatan_pengguna;?></td>
                                                 <td><?php echo $b->jenis_perangkat;?></td>
                                                 <td><?php echo $b->deskripsi;?></td>
                                             </tr>
@@ -150,9 +154,15 @@
 
 <script>
 $(document).ready(function() {
-$('#tes').click(function() {
+$('#submit').click(function() {
 // alert("tes");
 $('#myModal').modal('show');
+var selectedLanguage = new Array();
+			$('input[name="ids"]:checked').each(function() {
+			  selectedLanguage.push(this.value);
+			});
+// var ts = $('input[name="ids"]:checked').val();
+alert(selectedLanguage);
 // $('#profil_pegawai').show();
 // $.ajax({
 // url: '<?php //echo base_url('Auth/login'); 
