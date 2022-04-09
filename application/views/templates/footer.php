@@ -63,6 +63,18 @@
 <script src="<?= base_url('assets/'); ?>assets/js/page/components-table.js"></script>
 
 
+
+
+<!-- JS Libraies -->
+<script src="<?= base_url('assets/'); ?>assets/modules/datatables/datatables.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/datatables/Select-1.2.4/js/dataTables.select.min.js"></script>
+<script src="<?= base_url('assets/'); ?>assets/modules/jquery-ui/jquery-ui.min.js"></script>
+
+<!-- Page Specific JS File -->
+<script src="<?= base_url('assets/'); ?>assets/js/page/modules-datatables.js"></script>
+
+
 </body>
 
 </html>
