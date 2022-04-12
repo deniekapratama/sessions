@@ -1,3 +1,5 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 <!-- sidebar -->
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
@@ -9,16 +11,18 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li class="<?= active_menu('dashboard'); ?>">
+            <li>
                 <a href="<?= base_url('admin/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Form</li>
-            <li class="dropdown <?= active_menu('pengajuan'); ?> , <?= active_menu('service'); ?> , <?= active_menu('upgrade'); ?>">
+            <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
                 <ul class="dropdown-menu">
-                    <li class="<?= active_menu('pengajuan'); ?>"><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
-                    <li class="<?= active_menu('service'); ?>"><a class="nav-link" href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
-                    <li class="<?= active_menu('upgrade') ?>"><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
+                        <li><a href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
+                        <li><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
+                    </ul>
                 </ul>
             </li>
             <li class="dropdown">
@@ -165,3 +169,17 @@
         </div>
     </aside>
 </div>
+
+<script>
+    $("ul > li").hover(
+        function() {
+            $(this).addClass('active');
+        },
+        function() {
+            $(this).removeClass('active');
+        }
+    );
+    $("ul > li").click(function() {
+        $(this).toggleClass('active');
+    });
+</script>

@@ -32,8 +32,6 @@ class pengajuan extends CI_Controller
         // $this->load->view('admin/pengajuan',$datas);
         $this->load->view('admin/pengajuan', $data);
         $this->load->view('templates/footer');
-
-       
     }
 
     public function form_pengajuan()
@@ -60,8 +58,8 @@ class pengajuan extends CI_Controller
     public function insert_pengajuan()
     {
         // echo $this->getDateTime();
-         //load date helper
-         $this->load->helper('date');
+        //load date helper
+        $this->load->helper('date');
 
         $format = "%Y-%m-%d %h:%i %s";
         $tanggal = @mdate($format);
@@ -85,8 +83,7 @@ class pengajuan extends CI_Controller
         $jenis_perangkat = $_POST['jenis_perangkat'];
         $deskripsi = $_POST['deskripsi'];
 
-        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna,$nama_pengguna,$nopend_pengguna,$namaktr_pengguna,$jabatan_pengguna,$nm_jabatan_pengguna,$bagian_pengguna,$nm_bagian_pengguna,$nippos_atasan,$nama_atasan,$nopend_atasan,$namaktr_atasan,$jabatan_atasan,$nm_jabatan_atasan,$bagian_atasan,$nm_bagian_atasan,$jenis_perangkat,$deskripsi,$tanggal);
+        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $nopend_pengguna, $namaktr_pengguna, $jabatan_pengguna, $nm_jabatan_pengguna, $bagian_pengguna, $nm_bagian_pengguna, $nippos_atasan, $nama_atasan, $nopend_atasan, $namaktr_atasan, $jabatan_atasan, $nm_jabatan_atasan, $bagian_atasan, $nm_bagian_atasan, $jenis_perangkat, $deskripsi, $tanggal);
         echo $cek;
     }
-
 }

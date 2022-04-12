@@ -1,9 +1,8 @@
 <?php
-Class Model_login extends CI_Model
+class Model_login extends CI_Model
 {
-    public function login() 
+    public function login()
     {
-        return "hasbulganteng";
+        return "admin";
     }
 }
-?>
