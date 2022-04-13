@@ -113,7 +113,7 @@
 
                                 </table>
                                 <div class="card-footer text-right col-sm-12 col-md-12">
-                                    <button class="btn btn-primary" id="submit">Submit</button>
+                                    <button class="btn btn-primary" id="submit1">Submit</button>
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,6 @@
                                             <td><?php echo $b->jenis_perangkat; ?></td>
                                             <td><?php echo $b->deskripsi; ?></td>
                                             <td>
-
                                                 <span class="badge badge-pill badge-primary">Primary</span>
                                             </td>
 
@@ -241,8 +240,7 @@
                                     <?php
                                     }
                                     ?>
-                                    </tr>
-                                    </tbody>
+
                                 </table>
                                 <div class="card-footer text-right col-sm-12 col-md-12">
                                     <button class="btn btn-primary" id="submit">Submit</button>
@@ -256,3 +254,7 @@
     </section>
 </div>
 <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
+
+</body>
+
+</html>
