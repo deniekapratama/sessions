@@ -1,4 +1,4 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
 
 <!-- sidebar -->
 <div class="main-sidebar sidebar-style-2">
@@ -11,7 +11,9 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            <li>
+            <li class="<?php if ($this->uri->segment('2') == 'dashboard') {
+                            echo 'active';
+                        } ?>">
                 <a href="<?= base_url('admin/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Form</li>
@@ -19,17 +21,28 @@
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
                 <ul class="dropdown-menu">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
-                        <li><a href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
-                        <li><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
+                        <li class="<?php if ($this->uri->segment('3') == 'form_pengajuan') {
+                                        echo 'active';
+                                    } ?>"> <a href=" <?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
+                        <li class="<?php if ($this->uri->segment('3') == 'form_service') {
+                                        echo 'active';
+                                    } ?>"><a href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
+                        <li class="<?php if ($this->uri->segment('3') == 'form_upgrade') {
+                                        echo 'active';
+                                    } ?>"><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
                     </ul>
                 </ul>
             </li>
+
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Data Perangkat</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="<?= base_url('admin/pengajuan'); ?>">Perangkat Baru</a></li>
-                    <li><a class="nav-link" href="forms-editor.html">Data Service</a></li>
+                    <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
+                                    echo 'active';
+                                } ?>"><a class="nav-link" href="<?= base_url('admin/pengajuan'); ?>">Perangkat Baru</a></li>
+                    <li class="<?php if ($this->uri->segment('2') == 'service') {
+                                    echo 'active';
+                                } ?>"><a class="nav-link" href="<?= base_url('admin/service'); ?>">Data Service</a></li>
                     <li><a class="nav-link" href="forms-validation.html">Data Upgrade</a></li>
                     <li><a class="nav-link" href="forms-validation.html">Data Pengembalian</a></li>
                 </ul>
@@ -169,7 +182,7 @@
         </div>
     </aside>
 </div>
-
+<!-- 
 <script>
     $("ul > li").hover(
         function() {
@@ -182,4 +195,4 @@
     $("ul > li").click(function() {
         $(this).toggleClass('active');
     });
-</script>
+</script> -->

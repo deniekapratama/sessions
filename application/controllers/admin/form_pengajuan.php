@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class service extends CI_Controller
+class Form_Pengajuan extends CI_Controller
 {
 
     function __construct()
@@ -20,7 +20,7 @@ class service extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Data Service Perangkat';
+        $data['title'] = 'Form Pengajuan Perangkat Baru';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
@@ -28,21 +28,7 @@ class service extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menus', $data);
-        $this->load->view('admin/service/service', $data);
-        $this->load->view('templates/footer');
-    }
-
-    public function form_service()
-    {
-        $data['title'] = 'Form Pengajuan Service';
-        // $data['menu_katalog'] = $this->mhome->category();
-        // $data['product_data'] = count($this->mhome->product());
-        // $data['sales_data'] = count($this->mhome->all_sales());x
-        // $data['customer_data'] = count($this->mhome->all_customer());
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
-        $this->load->view('admin/service/form_service', $data);
+        $this->load->view('admin/form_pengajuan', $data);
         $this->load->view('templates/footer');
     }
 }
