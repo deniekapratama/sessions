@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class pengajuan extends CI_Controller
+class Pengajuan extends CI_Controller
 {
 
     function __construct()
@@ -28,8 +28,8 @@ class pengajuan extends CI_Controller
         // $data['customer_data'] = count($this->mhome->all_customer());
 
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
-        $this->load->view('admin/pengajuan', $data);
+        $this->load->view('templates/nonstruktural/menus', $data);
+        $this->load->view('nonstruktural/pengajuan', $data);
         $this->load->view('templates/footer');
     }
 
@@ -42,8 +42,8 @@ class pengajuan extends CI_Controller
         // $data['customer_data'] = count($this->mhome->all_customer());
 
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
-        $this->load->view('admin/form_pengajuan', $data);
+        $this->load->view('templates/nonstruktural/menus', $data);
+        $this->load->view('nonstruktural/form_pengajuan', $data);
         $this->load->view('templates/footer');
     }
 
@@ -57,8 +57,8 @@ class pengajuan extends CI_Controller
     public function insert_pengajuan()
     {
         // echo $this->getDateTime();
-         //load date helper
-         $this->load->helper('date');
+        //load date helper
+        $this->load->helper('date');
 
         $format = "%Y-%m-%d %h:%i %s";
         $tanggal = @mdate($format);
@@ -74,15 +74,15 @@ class pengajuan extends CI_Controller
         $jenis_perangkat = $_POST['jenis_perangkat'];
         $deskripsi = $_POST['deskripsi'];
 
-        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna,$nama_pengguna,$jabatan_pengguna,$bagian_pengguna,$nippos_atasan,$nama_atasan,$jabatan_atasan,$bagian_atasan,$jenis_perangkat,$deskripsi,$tanggal);
+        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $jabatan_pengguna, $bagian_pengguna, $nippos_atasan, $nama_atasan, $jabatan_atasan, $bagian_atasan, $jenis_perangkat, $deskripsi, $tanggal);
         echo $cek;
-    } 
+    }
 
-    public function selectAll_pengajuan(){
+    public function selectAll_pengajuan()
+    {
         // $data['title']='ini contoh untuk menampilkan data';
         print_r($this->Model_pengajuan->selectAll_pengajuan());
         // $this->load->view('pengajuan',$data);
-        
-    } 
 
+    }
 }

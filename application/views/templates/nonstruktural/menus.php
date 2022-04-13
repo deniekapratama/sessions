@@ -4,7 +4,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="<?= base_url('admin/dashboard'); ?>"><b>POS </b>Sessions</a>
+            <a href="<?= base_url('nonstruktural/dashboard'); ?>"><b>POS </b>Sessions</a>
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">POS</a>
@@ -14,7 +14,7 @@
             <li class="<?php if ($this->uri->segment('2') == 'dashboard') {
                             echo 'active';
                         } ?>">
-                <a href="<?= base_url('admin/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="<?= base_url('nonstruktural/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Form</li>
             <li class="dropdown">
@@ -23,31 +23,16 @@
                     <ul class="nav navbar-nav">
                         <li class="<?php if ($this->uri->segment('3') == 'form_pengajuan') {
                                         echo 'active';
-                                    } ?>"> <a href=" <?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
+                                    } ?>"> <a href=" <?= base_url('nonstruktural/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
                         <li class="<?php if ($this->uri->segment('3') == 'form_service') {
                                         echo 'active';
-                                    } ?>"><a href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
+                                    } ?>"><a href="<?= base_url('nonstruktural/service/form_service'); ?>">Service</a></li>
                         <li class="<?php if ($this->uri->segment('3') == 'form_upgrade') {
                                         echo 'active';
-                                    } ?>"><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
+                                    } ?>"><a href="<?= base_url('nonstruktural/upgrade/form_upgrade'); ?>">Upgrade</a></li>
                     </ul>
                 </ul>
             </li>
-
-            <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Data Perangkat</span></a>
-                <ul class="dropdown-menu">
-                    <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
-                                    echo 'active';
-                                } ?>"><a class="nav-link" href="<?= base_url('admin/pengajuan'); ?>">Perangkat Baru</a></li>
-                    <li class="<?php if ($this->uri->segment('2') == 'service') {
-                                    echo 'active';
-                                } ?>"><a class="nav-link" href="<?= base_url('admin/service'); ?>">Data Service</a></li>
-                    <li><a class="nav-link" href="forms-validation.html">Data Upgrade</a></li>
-                </ul>
-            </li>
-
-
             <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
                 <ul class="dropdown-menu">

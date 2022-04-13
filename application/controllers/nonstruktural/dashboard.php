@@ -27,8 +27,8 @@ class Dashboard extends CI_Controller
         // $data['customer_data'] = count($this->mhome->all_customer());
 
         $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
-        $this->load->view('staff/dashboard', $data);
+        $this->load->view('templates/nonstruktural/menus', $data);
+        $this->load->view('nonstruktural/dashboard', $data);
         $this->load->view('templates/footer');
     }
 }
