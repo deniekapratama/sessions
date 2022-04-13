@@ -2,93 +2,8 @@
 <div class="main-content">
     <section class="section">
         <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card card-statistic-2">
-                    <div class="card-stats">
-                        <div class="card-stats-title">Jumlah Pengajuan -
-                            <div class="dropdown d-inline">
-                                <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">April</a>
-                                <ul class="dropdown-menu dropdown-menu-sm">
-                                    <li class="dropdown-title">Select Month</li>
-                                    <li><a href="#" class="dropdown-item">January</a></li>
-                                    <li><a href="#" class="dropdown-item">February</a></li>
-                                    <li><a href="#" class="dropdown-item">March</a></li>
-                                    <li><a href="#" class="dropdown-item">April</a></li>
-                                    <li><a href="#" class="dropdown-item">May</a></li>
-                                    <li><a href="#" class="dropdown-item">June</a></li>
-                                    <li><a href="#" class="dropdown-item">July</a></li>
-                                    <li><a href="#" class="dropdown-item active">August</a></li>
-                                    <li><a href="#" class="dropdown-item">September</a></li>
-                                    <li><a href="#" class="dropdown-item">October</a></li>
-                                    <li><a href="#" class="dropdown-item">November</a></li>
-                                    <li><a href="#" class="dropdown-item">December</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-stats-items">
-                            <div class="card-stats-item">
-                                <div class="card-stats-item-count">24</div>
-                                <div class="card-stats-item-label">Perangkat Baru</div>
-                            </div>
-                            <div class="card-stats-item">
-                                <div class="card-stats-item-count">12</div>
-                                <div class="card-stats-item-label">Service</div>
-                            </div>
-                            <div class="card-stats-item">
-                                <div class="card-stats-item-count">23</div>
-                                <div class="card-stats-item-label">Upgrade</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-icon shadow-primary bg-primary">
-                        <i class="fas fa-archive"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Total Pengajuan Perangkat</h4>
-                        </div>
-                        <div class="card-body">
-                            59
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card card-statistic-2">
-                    <div class="card-chart">
-                        <canvas id="balance-chart" height="80"></canvas>
-                    </div>
-                    <div class="card-icon shadow-primary bg-primary">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Jumlah Pengguna Perangkat</h4>
-                        </div>
-                        <div class="card-body">
-                            187,13
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card card-statistic-2">
-                    <div class="card-chart">
-                        <canvas id="sales-chart" height="80"></canvas>
-                    </div>
-                    <div class="card-icon shadow-primary bg-primary">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Jumlah Seluruh Perangkat</h4>
-                        </div>
-                        <div class="card-body">
-                            14,732
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+
         </div>
 
         <div class="row">
@@ -149,6 +64,96 @@
                         <div class="card-body">
                             47
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <h2 class="section-title">Card Variants</h2>
+        <p class="section-lead">
+            Basically, the Bootstrap card can be given a color variant.
+        </p>
+
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-primary">
+                    <div class="card-header">
+                        <h4>Card Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Card <code>.card-primary</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-secondary">
+                    <div class="card-header">
+                        <h4>Card Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Card <code>.card-secondary</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-danger">
+                    <div class="card-header">
+                        <h4>Card Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Card <code>.card-danger</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-warning">
+                    <div class="card-header">
+                        <h4>Card Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Card <code>.card-warning</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-info">
+                    <div class="card-header">
+                        <h4>Card Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Card <code>.card-info</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-success">
+                    <div class="card-header">
+                        <h4>Card Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Card <code>.card-success</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-light">
+                    <div class="card-header">
+                        <h4>Card Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Card <code>.card-light</code></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="card card-dark">
+                    <div class="card-header">
+                        <h4>Card Header</h4>
+                    </div>
+                    <div class="card-body">
+                        <p>Card <code>.card-dark</code></p>
                     </div>
                 </div>
             </div>
