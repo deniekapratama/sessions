@@ -4,7 +4,8 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="<?= base_url('admin/dashboard'); ?>"><b>POS </b>Sessions</a>
+            <a href="<?= base_url('admin/dashboard'); ?>"><b>
+                    <img width="200px" src="<?= base_url('assets/auth/img/logoses.png') ?>" alt="">
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
             <a href="index.html">POS</a>
