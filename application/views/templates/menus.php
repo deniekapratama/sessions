@@ -5,10 +5,10 @@
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
             <a href="<?= base_url('admin/dashboard'); ?>"><b>
-                    <img width="200px" src="<?= base_url('assets/auth/img/logoses.png') ?>" alt="">
+                    <img width="120px" src="<?= base_url('assets/auth/img/logoses.svg') ?>" alt="">
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">POS</a>
+            <a href="index.html"><b>POS</b></a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
