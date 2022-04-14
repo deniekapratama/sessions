@@ -10,35 +10,44 @@
     <title>Sign in & Sign up </title>
 </head>
 
+
+
 <body>
+
     <div class="container">
-        <div class="forms-container">
-            <div class="signin-signup">
-                <form action="#" class="sign-in-form" onsubmit="return false">
-                    <h2 class="title">Sign in</h2>
-                    <div class="input-field">
-                        <i class="fas fa-user"></i>
-                        <input type="text" id="username" placeholder="Nippos" />
-                    </div>
-                    <div class="input-field">
-                        <i class="fas fa-lock"></i>
-                        <input type="password" id="password" placeholder="Password" />
-                    </div>
-                    <button type="submit" class="btn" id="login"> SIGN IN </button>
-                </form>
-            </div>
+        <div>
+            <img width="90px" src="<?= base_url('assets/auth/'); ?>img/pos.svg" align="right" alt="BUMN" />
+            <img width="330px" src="<?= base_url('assets/auth/'); ?>img/bumn.png" align="right" alt="BUMN" />
         </div>
-        <div class="panels-container">
-            <div class="panel left-panel">
-                <div class="content">
-                    <h3>Selamat Datang!</h3>
-                    <p>
-                        Silahkan lakukan login terlebih dahulu!
-                    </p>
+    </div>
+    <div class="forms-container">
+
+        <div class="signin-signup">
+            <form action="#" class="sign-in-form" onsubmit="return false">
+                <h2 class="title">Sign in</h2>
+                <div class="input-field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="username" placeholder="Nippos" />
                 </div>
-                <img src="<?= base_url('assets/auth/'); ?>img/registerpos.svg" class="image" alt="" />
+                <div class="input-field">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" />
+                </div>
+                <button type="submit" class="btn" id="login"> SIGN IN </button>
+            </form>
+        </div>
+    </div>
+    <div class="panels-container">
+        <div class="panel left-panel">
+            <div class="content">
+                <h3>Selamat Datang!</h3>
+                <p>
+                    Silahkan lakukan login terlebih dahulu!
+                </p>
             </div>
-            <!-- <div class="panel right-panel">
+            <img src="<?= base_url('assets/auth/'); ?>img/registerpos.svg" class="image" alt="" />
+        </div>
+        <!-- <div class="panel right-panel">
                 <div class="content">
                     <h3>One of us ?</h3>
                     <p>
@@ -51,7 +60,7 @@
                 </div>
                 <img src="<?= base_url('assets/auth/'); ?>img/registerpos.svg" class="image" alt="" />
             </div> -->
-        </div>
+    </div>
     </div>
 
     <script src="<?= base_url('assets/auth/'); ?>app.js"></script>
