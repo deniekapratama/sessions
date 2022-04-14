@@ -10,10 +10,7 @@
     <title>Sign in & Sign up </title>
 </head>
 
-
-
 <body>
-
     <div class="container">
         <div>
             <img width="90px" src="<?= base_url('assets/auth/'); ?>img/pos.svg" align="right" alt="BUMN" />
