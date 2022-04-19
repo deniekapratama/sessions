@@ -4,35 +4,52 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="<?= base_url('nonstruktural/dashboard'); ?>"><b>POS </b>Sessions</a>
+            <a href="<?= base_url('manager-gs/dashboard'); ?>"><b>
+                    <img width="120px" src="<?= base_url('assets/auth/img/logoses.svg') ?>" alt="">
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
-            <a href="index.html">POS</a>
+            <a href="index.html"><b>POS</b></a>
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
             <li class="<?php if ($this->uri->segment('2') == 'dashboard') {
                             echo 'active';
                         } ?>">
-                <a href="<?= base_url('nonstruktural/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="<?= base_url('manager-gs/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
-            <li class="menu-header">Form</li>
+            <!-- <li class="menu-header">Form</li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
                 <ul class="dropdown-menu">
                     <ul class="nav navbar-nav">
                         <li class="<?php if ($this->uri->segment('3') == 'form_pengajuan') {
                                         echo 'active';
-                                    } ?>"> <a href=" <?= base_url('nonstruktural/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
+                                    } ?>"> <a href=" <?= base_url('manager-gs/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
                         <li class="<?php if ($this->uri->segment('3') == 'form_service') {
                                         echo 'active';
-                                    } ?>"><a href="<?= base_url('nonstruktural/service/form_service'); ?>">Service</a></li>
+                                    } ?>"><a href="<?= base_url('manager-gs/service/form_service'); ?>">Service</a></li>
                         <li class="<?php if ($this->uri->segment('3') == 'form_upgrade') {
                                         echo 'active';
-                                    } ?>"><a href="<?= base_url('nonstruktural/upgrade/form_upgrade'); ?>">Upgrade</a></li>
+                                    } ?>"><a href="<?= base_url('manager-gs/upgrade/form_upgrade'); ?>">Upgrade</a></li>
                     </ul>
                 </ul>
+            </li> -->
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Pengajuan Perangkat</span></a>
+                <ul class="dropdown-menu">
+                    <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
+                                    echo 'active';
+                                } ?>"><a class="nav-link" href="<?= base_url('manager-gs/pengajuan'); ?>">Perangkat Baru</a></li>
+                    <li class="<?php if ($this->uri->segment('2') == 'service') {
+                                    echo 'active';
+                                } ?>"><a class="nav-link" href="<?= base_url('manager-gs/service'); ?>">Data Service</a></li>
+                    <li><a class="nav-link" href="forms-validation.html">Data Upgrade</a></li>
+                </ul>
             </li>
+
+            <li><a class="nav-link" href="<?= base_url('manager-gs/pengajuan'); ?>"><i class="fas fa-desktop"></i> <span>Data Perangkat</span></a></li>
+
+
             <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
                 <ul class="dropdown-menu">
@@ -146,17 +163,15 @@
                 </ul>
             </li> -->
 
-            <li class="menu-header">Personal</li>
+            <!-- <li class="menu-header">Personal</li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-desktop"></i> <span>Perangkat Saya</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="auth-forgot-password.html">Profil User</a></li>
-                    <li><a href="auth-login.html">Keluar</a></li>
+                    <li><a href="auth-forgot-password.html">Pengajuan Perangkat</a></li>
+                    <li><a href="auth-forgot-password.html">Daftar Perangkat Saya</a></li>
                 </ul>
             </li>
-
-
-            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
+            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li> -->
         </ul>
 
         <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
@@ -164,6 +179,8 @@
                 <i class="fas fa-rocket"></i> Documentation
             </a>
         </div>
+
+        
     </aside>
 </div>
 <!-- 
