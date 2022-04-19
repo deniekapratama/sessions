@@ -26,10 +26,10 @@ class service extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
+        $this->load->view('templates/admin/header', $data);
+        $this->load->view('templates/admin/menus', $data);
         $this->load->view('admin/service/service', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/admin/footer');
     }
 
     public function form_service()
@@ -40,9 +40,9 @@ class service extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
+        $this->load->view('templates/admin/header', $data);
+        $this->load->view('templates/admin/menus', $data);
         $this->load->view('admin/service/form_service', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/admin/footer');
     }
 }

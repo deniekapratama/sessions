@@ -15,7 +15,6 @@ class Dashboard extends CI_Controller
 
         //load library
         // $this->load->library('pagination');
-
     }
 
     public function index()
@@ -26,9 +25,9 @@ class Dashboard extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
+        $this->load->view('templates/admin/header', $data);
+        $this->load->view('templates/admin/menus', $data);
         $this->load->view('admin/dashboard/dashboard', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/admin/footer');
     }
 }
