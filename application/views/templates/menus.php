@@ -165,12 +165,10 @@
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-desktop"></i> <span>Perangkat Saya</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="auth-forgot-password.html">Profil User</a></li>
-                    <li><a href="auth-login.html">Keluar</a></li>
+                    <li><a href="auth-forgot-password.html">Pengajuan Perangkat</a></li>
+                    <li><a href="auth-forgot-password.html">Daftar Perangkat Saya</a></li>
                 </ul>
             </li>
-
-
             <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
         </ul>
 

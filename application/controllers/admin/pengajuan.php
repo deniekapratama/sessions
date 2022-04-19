@@ -30,7 +30,7 @@ class pengajuan extends CI_Controller
         $this->load->view('templates/menus', $data);
         $data['dt_pengajuan'] = $this->Model_pengajuan->selectAll_pengajuan();
         // $this->load->view('admin/pengajuan',$datas);
-        $this->load->view('admin/pengajuan', $data);
+        $this->load->view('admin/pengajuan/pengajuan', $data);
         $this->load->view('templates/footer');
     }
 
@@ -44,7 +44,7 @@ class pengajuan extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menus', $data);
-        $this->load->view('admin/form_pengajuan', $data);
+        $this->load->view('admin/pengajuan/form_pengajuan', $data);
         $this->load->view('templates/footer');
     }
 
