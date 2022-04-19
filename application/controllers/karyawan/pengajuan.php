@@ -26,11 +26,11 @@ class Pengajuan extends CI_Controller
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
-
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/nonstruktural/menus', $data);
-        $this->load->view('nonstruktural/pengajuan', $data);
-        $this->load->view('templates/footer');
+        $data['dt_pengajuan'] = $this->Model_pengajuan->selectAll_pengajuan();
+        $this->load->view('templates/karyawan/header', $data);
+        $this->load->view('templates/karyawan/menus', $data);
+        $this->load->view('karyawan/pengajuan/pengajuan', $data);
+        $this->load->view('templates/karyawan/footer');
     }
 
     public function form_pengajuan()
@@ -41,10 +41,10 @@ class Pengajuan extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/nonstruktural/menus', $data);
-        $this->load->view('nonstruktural/form_pengajuan', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/karyawan/header', $data);
+        $this->load->view('templates/karyawan/menus', $data);
+        $this->load->view('karyawan/pengajuan/form_pengajuan', $data);
+        $this->load->view('templates/karyawan/footer');
     }
 
     public function cari_pgw()
