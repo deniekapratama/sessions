@@ -13,15 +13,18 @@
 <body>
     <div class="container">
         <div>
-            <img width="90px" src="<?= base_url('assets/auth/'); ?>img/pos.svg" align="right" alt="BUMN" />
-            <img width="330px" src="<?= base_url('assets/auth/'); ?>img/bumn.png" align="right" alt="BUMN" />
+            <img src="<?= base_url('assets/auth/'); ?>img/pos.svg" align="right" width="120" height="120" style="margin:2px 20px" alt="BUMN" />
+            <img src="<?= base_url('assets/auth/'); ?>img/bumn.png" align="right" width="250" height="80px" style="margin:20px 10px" alt="BUMN" />
+
         </div>
+
     </div>
+
     <div class="forms-container">
 
         <div class="signin-signup">
             <form action="#" class="sign-in-form" onsubmit="return false">
-                <h2 class="title">Sign in</h2>
+                <h1 class="title">Sign in</h1>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
                     <input type="text" id="username" placeholder="Nippos" />
@@ -34,12 +37,16 @@
             </form>
         </div>
     </div>
+
     <div class="panels-container">
+
         <div class="panel left-panel">
+
             <div class="content">
-                <h3>Selamat Datang!</h3>
+
+                <h1>Selamat Datang!</h1>
                 <p>
-                    Silahkan lakukan login terlebih dahulu!
+                    Aplikasi berbasis web untuk <b>pengajuan</b>, <b>pengembalian</b> dan <b>monitoring</b> data perangkat IT yang ada di lingkungan kantor pusat PT. Pos Indonesia (Persero)
                 </p>
             </div>
             <img src="<?= base_url('assets/auth/'); ?>img/registerpos.svg" class="image" alt="" />

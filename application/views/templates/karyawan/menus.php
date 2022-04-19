@@ -163,6 +163,8 @@
 
             <li class="menu-header">Personal</li>
             <li><a class="nav-link" href="<?= base_url('karyawan/pengajuan'); ?>"><i class="fas fa-pencil-ruler"></i> <span>Pengajuan Perangkat</span></a></li>
+            <li><a class="nav-link" href="<?= base_url('karyawan/pengajuan'); ?>"><i class="fas fa-desktop"></i> <span>Perangkat Saya</span></a></li>
+
 
             <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-desktop"></i> <span>Perangkat Saya</span></a>
