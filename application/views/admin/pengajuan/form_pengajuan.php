@@ -17,10 +17,8 @@
                          </div>
                          <div class="card-body">
                              <!-- <div id="profil_pegawai" style="display:none"> -->
-                             <div class="form-group row mb-4">
+                             <!-- <div class="form-group row mb-4">
                                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Atasan :</label>
-
-
                                  <div class="col-sm-12 col-md-4">
                                      <input type="text" class="form-control" id="nippos_atasan">
                                  </div>
@@ -54,7 +52,7 @@
                                      <input type="text" readonly class="form-control-plaintext" id="bagian" value="-">
                                      <input type="hidden" name="kd_bagian_atasan" id="kd_bagian_atasan">
                                  </div>
-                             </div>
+                             </div> -->
                              <div class="form-group row mb-4">
                                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Pengajuan :</label>
                                  <div class="col-sm-12 col-md-5">
@@ -67,7 +65,6 @@
                                          <option>Hardisk SSD</option>
                                          <option>Hardisk Eksternal</option>
                                          <option>Perangkat Jaringan</option>
-                                         <option value="00">Lain-lain</option>
                                      </select>
                                  </div>
                              </div>
@@ -75,7 +72,7 @@
                                  <div class="form-group row mb-4">
                                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Perangkat Lain :</label>
                                      <div class="col-sm-12 col-md-5">
-                                         <input type="text" class="form-control" id="jns_perangkat2">
+                                         <input type="text" class="form-control" id="jns_perangkat2" placeholder="Silahkan isi keluhan yang di alami saat ini">
                                      </div>
                                  </div>
                              </div>

@@ -35,7 +35,7 @@
                 </ul>
             </li>
             <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Data Perangkat</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Pengajuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
                                     echo 'active';
@@ -47,6 +47,18 @@
                 </ul>
             </li>
 
+            <li class="dropdown">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-desktop"></i> <span>Perangkat</span></a>
+                <ul class="dropdown-menu">
+                    <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
+                                    echo 'active';
+                                } ?>"><a class="nav-link" href="<?= base_url('admin/pengajuan'); ?>">Perangkat Baru</a></li>
+                    <li class="<?php if ($this->uri->segment('2') == 'service') {
+                                    echo 'active';
+                                } ?>"><a class="nav-link" href="<?= base_url('admin/service'); ?>">Data Service</a></li>
+                    <li><a class="nav-link" href="forms-validation.html">Data Upgrade</a></li>
+                </ul>
+            </li>
 
             <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
