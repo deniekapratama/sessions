@@ -36,7 +36,7 @@
             </li>
             <li class="menu-header">Data</li>
             <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-th-large"></i> <span>Pengajuan</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-arrow-up"></i> <span>Pengajuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
                                     echo 'active';
@@ -47,19 +47,7 @@
                     <li><a class="nav-link" href="forms-validation.html">Data Upgrade</a></li>
                 </ul>
             </li>
-
-            <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-desktop"></i> <span>Perangkat</span></a>
-                <ul class="dropdown-menu">
-                    <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
-                                    echo 'active';
-                                } ?>"><a class="nav-link" href="<?= base_url('admin/pengajuan'); ?>">Perangkat Baru</a></li>
-                    <li class="<?php if ($this->uri->segment('2') == 'service') {
-                                    echo 'active';
-                                } ?>"><a class="nav-link" href="<?= base_url('admin/service'); ?>">Data Service</a></li>
-                    <li><a class="nav-link" href="forms-validation.html">Data Upgrade</a></li>
-                </ul>
-            </li>
+            <li><a class="nav-link" href="credits.html"><i class="fas fa-arrow-down"></i> <span>Pengembalian</span></a></li>
 
             <!-- <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-th"></i> <span>Bootstrap</span></a>
@@ -173,10 +161,12 @@
                     <li><a href="utilities-subscribe.html">Subscribe</a></li>
                 </ul>
             </li> -->
+            <li class="menu-header">Perangkat</li>
+            <li><a href="<?= base_url('admin/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Data Perangkat</span></a></li>
 
             <li class="menu-header">Personal</li>
             <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop"></i> <span>Perangkat Saya</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i> <span>Perangkat Saya</span></a>
                 <ul class="dropdown-menu">
                     <li><a href="auth-forgot-password.html">Pengajuan Perangkat</a></li>
                     <li><a href="auth-forgot-password.html">Daftar Perangkat Saya</a></li>
@@ -190,7 +180,7 @@
                     <li><a href="auth-forgot-password.html">Pengembalian </a></li>
                 </ul>
             </li>
-            <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li>
+            <!-- <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li> -->
         </ul>
 
         <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
