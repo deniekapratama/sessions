@@ -28,7 +28,7 @@ class upgrade extends CI_Controller
 
         $this->load->view('templates/admin/header', $data);
         $this->load->view('templates/admin/menus', $data);
-        $this->load->view('admin/upgrade', $data);
+        $this->load->view('admin/upgrade/upgrade', $data);
         $this->load->view('templates/admin/footer');
     }
 
