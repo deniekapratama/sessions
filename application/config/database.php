@@ -75,7 +75,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'http://dbposession.ccp54sqkpvmq.ap-southeast-1.rds.amazonaws.com',
+	'hostname' => 'dbposession.ccp54sqkpvmq.ap-southeast-1.rds.amazonaws.com',
 	'username' => 'adminposession',
 	'password' => 'ganeshajuara',
 	'database' => 'db_posession',
