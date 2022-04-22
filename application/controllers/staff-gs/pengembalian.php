@@ -28,7 +28,7 @@ class pengembalian extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menus', $data);
-        $this->load->view('admin/pengembalian/pengembalian', $data);
+        $this->load->view('staff-gs/pengembalian/pengembalian', $data);
         $this->load->view('templates/footer');
     }
 
@@ -42,7 +42,7 @@ class pengembalian extends CI_Controller
 
         $this->load->view('templates/header', $data);
         $this->load->view('templates/menus', $data);
-        $this->load->view('admin/pengembalian/form_pengembalian', $data);
+        $this->load->view('staff-gs/pengembalian/form_pengembalian', $data);
         $this->load->view('templates/footer');
     }
 }

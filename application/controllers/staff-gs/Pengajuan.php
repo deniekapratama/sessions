@@ -26,12 +26,12 @@ class pengajuan extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/admin/header', $data);
-        $this->load->view('templates/admin/menus', $data);
+        $this->load->view('templates/staff-gs/header', $data);
+        $this->load->view('templates/staff-gs/menus', $data);
         $data['dt_pengajuan'] = $this->Model_pengajuan->selectAll_pengajuan();
-        // $this->load->view('admin/pengajuan',$datas);
-        $this->load->view('admin/pengajuan/pengajuan', $data);
-        $this->load->view('templates/admin/footer');
+        // $this->load->view('staff-gs/pengajuan',$datas);
+        $this->load->view('staff-gs/pengajuan/pengajuan', $data);
+        $this->load->view('templates/staff-gs/footer');
     }
 
     public function form_pengajuan()
@@ -42,10 +42,10 @@ class pengajuan extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/admin/header', $data);
-        $this->load->view('templates/admin/menus', $data);
-        $this->load->view('admin/pengajuan/form_pengajuan', $data);
-        $this->load->view('templates/admin/footer');
+        $this->load->view('templates/staff-gs/header', $data);
+        $this->load->view('templates/staff-gs/menus', $data);
+        $this->load->view('staff-gs/pengajuan/form_pengajuan', $data);
+        $this->load->view('templates/staff-gs/footer');
     }
 
     public function cari_pgw()

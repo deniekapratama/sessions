@@ -26,11 +26,11 @@ class perangkat extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/admin/header', $data);
-        $this->load->view('templates/admin/menus', $data);
-        // $this->load->view('admin/perangkat',$datas);
-        $this->load->view('admin/perangkat/perangkat', $data);
-        $this->load->view('templates/admin/footer');
+        $this->load->view('templates/staff-gs/header', $data);
+        $this->load->view('templates/staff-gs/menus', $data);
+        // $this->load->view('staff-gs/perangkat',$datas);
+        $this->load->view('staff-gs/perangkat/perangkat', $data);
+        $this->load->view('templates/staff-gs/footer');
     }
 
     public function form_perangkat()
@@ -41,9 +41,9 @@ class perangkat extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/admin/header', $data);
-        $this->load->view('templates/admin/menus', $data);
-        $this->load->view('admin/perangkat/form_perangkat', $data);
-        $this->load->view('templates/admin/footer');
+        $this->load->view('templates/staff-gs/header', $data);
+        $this->load->view('templates/staff-gs/menus', $data);
+        $this->load->view('staff-gs/perangkat/form_perangkat', $data);
+        $this->load->view('templates/staff-gs/footer');
     }
 }
