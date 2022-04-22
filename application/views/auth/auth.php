@@ -15,11 +15,8 @@
         <div>
             <img src="<?= base_url('assets/auth/'); ?>img/pos.svg" align="right" width="120" height="120" style="margin:2px 20px" alt="BUMN" />
             <img src="<?= base_url('assets/auth/'); ?>img/bumn.png" align="right" width="220" height="80px" style="margin:20px 10px" alt="BUMN" />
-
         </div>
-
     </div>
-
     <div class="forms-container">
 
         <div class="signin-signup">
