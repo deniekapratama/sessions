@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'root',
-	'password' => '',
-	'database' => 'pos_indonesia',
+	'hostname' => 'http://dbposession.ccp54sqkpvmq.ap-southeast-1.rds.amazonaws.com',
+	'username' => 'adminposession',
+	'password' => 'ganeshajuara',
+	'database' => 'db_posession',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
