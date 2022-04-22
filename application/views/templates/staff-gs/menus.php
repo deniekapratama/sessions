@@ -17,7 +17,6 @@
                         } ?>">
                 <a href="<?= base_url('admin/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
-
             <li class="menu-header">Data</li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-arrow-up"></i> <span>Data Pengajuan</span></a>
@@ -37,7 +36,11 @@
             </li>
             <li><a class="nav-link" href="credits.html"><i class="fas fa-arrow-down"></i> <span>Data Pengembalian</span></a></li>
 
-            <li><a href="<?= base_url('admin/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Calon Karyawan Pensiun</span></a></li>
+            <li class="menu-header">Perangkat</li>
+            <li><a href="<?= base_url('admin/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Data Perangkat</span></a></li>
+            <li class="menu-header">Transaksi</li>
+            <li><a href="<?= base_url('admin/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Serah Terima</span></a></li>
+            <li><a href="<?= base_url('admin/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Pengembalian</span></a></li>
             <li class="menu-header">Report</li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
