@@ -18,7 +18,7 @@
                 <a href="<?= base_url('karyawan/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Form</li>
-            <li class="dropdown">
+            <li class="dropdown <?php echo activate_menu('pengajuan'); ?> , <?php echo activate_menu('service'); ?> , <?php echo activate_menu('upgrade'); ?>">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-file-alt"></i> <span>Forms</span></a>
                 <ul class="dropdown-menu">
                     <ul class="nav navbar-nav">
@@ -35,8 +35,11 @@
                 </ul>
             </li>
             <li class="menu-header">Personal</li>
-            <li><a href="<?= base_url('karyawan/perangkat_saya'); ?>" class="nav-link"><i class="fas fa-laptop-code"></i> <span>Perangkat Saya</span></a></li>
-
+            <li class="<?php if ($this->uri->segment('2') == 'perangkat_saya') {
+                            echo 'active';
+                        } ?>">
+                <a href="<?= base_url('karyawan/perangkat_saya'); ?>"><i class="fas fa-laptop-code"></i><span>Perangkat Saya</span></a>
+            </li>
             <!-- <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li> -->
         </ul>
         <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
