@@ -4,7 +4,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="<?= base_url('admin/dashboard'); ?>"><b>
+            <a href="<?= base_url('karyawan/dashboard'); ?>"><b>
                     <img width="120px" src="<?= base_url('assets/auth/img/logoses.svg') ?>" alt="">
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
@@ -15,7 +15,7 @@
             <li class="<?php if ($this->uri->segment('2') == 'dashboard') {
                             echo 'active';
                         } ?>">
-                <a href="<?= base_url('admin/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="<?= base_url('karyawan/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Form</li>
             <li class="dropdown">
@@ -24,18 +24,18 @@
                     <ul class="nav navbar-nav">
                         <li class="<?php if ($this->uri->segment('3') == 'form_pengajuan') {
                                         echo 'active';
-                                    } ?>"> <a href=" <?= base_url('admin/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
+                                    } ?>"> <a href=" <?= base_url('karyawan/pengajuan/form_pengajuan'); ?>">Perangkat Baru</a></li>
                         <li class="<?php if ($this->uri->segment('3') == 'form_service') {
                                         echo 'active';
-                                    } ?>"><a href="<?= base_url('admin/service/form_service'); ?>">Service</a></li>
+                                    } ?>"><a href="<?= base_url('karyawan/service/form_service'); ?>">Service</a></li>
                         <li class="<?php if ($this->uri->segment('3') == 'form_upgrade') {
                                         echo 'active';
-                                    } ?>"><a href="<?= base_url('admin/upgrade/form_upgrade'); ?>">Upgrade</a></li>
+                                    } ?>"><a href="<?= base_url('karyawan/upgrade/form_upgrade'); ?>">Upgrade</a></li>
                     </ul>
                 </ul>
             </li>
             <li class="menu-header">Personal</li>
-            <li><a href="#" class="nav-link"><i class="fas fa-laptop-code"></i> <span>Perangkat Saya</span></a></li>
+            <li><a href="<?= base_url('karyawan/perangkat_saya'); ?>" class="nav-link"><i class="fas fa-laptop-code"></i> <span>Perangkat Saya</span></a></li>
 
             <!-- <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li> -->
         </ul>
