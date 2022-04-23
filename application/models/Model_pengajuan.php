@@ -26,7 +26,7 @@ Class Model_pengajuan extends CI_Model
         return $response;
     }
 
-    public function insert_pengajuan($nippos_pengguna,$nama_pengguna,$nopend_pengguna,$namaktr_pengguna,$jabatan_pengguna,$nm_jabatan_pengguna,$bagian_pengguna,$nm_bagian_pengguna,$nippos_atasan,$nama_atasan,$nopend_atasan,$namaktr_atasan,$jabatan_atasan,$nm_jabatan_atasan,$bagian_atasan,$nm_bagian_atasan,$jenis_perangkat,$deskripsi,$tanggal){
+    public function insert_pengajuan($nippos_pengguna, $nama_pengguna, $nopend_pengguna, $namaktr_pengguna, $jabatan_pengguna, $nm_jabatan_pengguna, $bagian_pengguna, $nm_bagian_pengguna, $jenis_perangkat, $deskripsi, $no_surat_nde, $tgl_surat_nde){
      
 
 
@@ -49,7 +49,7 @@ Class Model_pengajuan extends CI_Model
       //   'UID_UPDATE' => $tanggal
       // );
 
-      $sql1="INSERT INTO m_pengajuan (nippos_pengguna, nama_pengguna,nopend_pengguna, namaktr_pengguna, jabatan_pengguna,nm_jabatan_pengguna, bagian_pengguna,nm_bagian_pengguna,nippos_atasan, nama_atasan,nopend_atasan,namaktr_atasan, jabatan_atasan,nm_jabatan_atasan,bagian_atasan,nm_bagian_atasan,jenis_perangkat,deskripsi,status,no_surat_nde,tgl_surat_nde,lampiran,WKT_INSERT,UID_INSERT,WKT_UPDATE,UID_UPDATE) VALUES ('".$nippos_pengguna."','".$nama_pengguna."','".$nopend_pengguna."','".$namaktr_pengguna."','".$jabatan_pengguna."','".$nm_jabatan_pengguna."','".$bagian_pengguna."','".$nm_bagian_pengguna."','".$nippos_atasan."','".$nama_atasan."','".$nopend_atasan."','".$namaktr_atasan."','".$jabatan_atasan."','".$nm_jabatan_atasan."','".$bagian_atasan."','".$nm_bagian_atasan."','".$jenis_perangkat."','".$deskripsi."','0','','','',CURDATE(),CURDATE(),CURDATE(),CURDATE())";
+      $sql1="INSERT INTO tb_pengajuan (nippos,nama,kodebagian,namabagian,kodejabatan,namajabatan,nopend,namaktr,jenisperangkat,deskripsi,serial_number,id_perangkat,respon_admin,tglpengajuan,tglpengembalian,status,no_surat_nde,tgl_surat_nde,lampiran,WKT_INSERT,UID_INSERT,WKT_UPDATE,UID_UPDATE) VALUES ('".$nippos_pengguna."','".$nama_pengguna."','".$bagian_pengguna."','".$nm_bagian_pengguna."','".$jabatan_pengguna."','".$nm_jabatan_pengguna."','".$nopend_pengguna."','".$namaktr_pengguna."','".$jenis_perangkat."','".$deskripsi."','','','','".$tgl_surat_nde."','','0','".$no_surat_nde."','".$tgl_surat_nde."','',NOW(),NOW(),NOW(),NOW())";
       $this->db->query($sql1);
       // return $this->db->insert_id();
       echo "tes";
