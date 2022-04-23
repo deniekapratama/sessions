@@ -74,23 +74,29 @@
         $('#login').click(function() {
             var username = $('#username').val();
             var password = $('#password').val();
-            alert("tes");
+            // alert("tes");
             $.ajax({
                 url: '<?php echo base_url('Auth/login'); ?>',
                 method: 'post',
                 data: "username=" + username + "&password=" + password,
-                success: function(data) {
-                    alert(data);
-                    // if (username == data) {
-                    //     alert("Login Berhasil");
-                    //     window.location.href = "<?php echo base_url('admin/dashboard'); ?>";
-                    // } else {
-                    //     alert("Login Gagal");
-                    // }
+                success: function(datap) {
+                    var dt = jQuery.parseJSON(datap);
+                    // alert(dt.data[0].posisi);
+                    var posisi = dt.data[0].posisi;
+                    if (dt.success == true) {
+                        // if(dt.succ)
+                        if(posisi == "99"){
+                            window.location.href = "<?php echo base_url('admin/dashboard'); ?>";
+                        }else{
+                            window.location.href = "<?php echo base_url('karyawan/dashboard'); ?>";
+                        }
+                    } else {
+                        alert("Login Gagal");
+                    }
                     // alert(data);
-                    // $('#myModal').modal("show");
-                    // $('#tampil_modal').html(data);
-                    // document.getElementById("judul").innerHTML='Edit Data';  
+                    $('#myModal').modal("show");
+                    $('#tampil_modal').html(data);
+                    document.getElementById("judul").innerHTML='Edit Data';  
                 }
             })
             // alert("tes");

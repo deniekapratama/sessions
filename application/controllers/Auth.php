@@ -42,9 +42,11 @@ class Auth extends CI_Controller
 
     public function login()
     {
+        $nippos = $_POST['username'];
+        $password = $_POST['password'];
         // $tr = $this->login();
         // $tr = $this->load->model('login');
-        $cek = $this->Model_login->login();
+        $cek = $this->Model_login->login($nippos,$password);
         echo $cek;
         // if($cek == "hasbulganteng")
         // {
