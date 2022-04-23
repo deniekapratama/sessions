@@ -51,7 +51,7 @@
                         } ?>><a href="<?= base_url('admin/upgrade'); ?>">Data Upgrade</a></li>
                 </ul>
             </li>
-            <li><a class="nav-link" href="credits.html"><i class="fas fa-arrow-down"></i> <span>Daftar Pengembalian</span></a></li>
+            <li><a class="nav-link" href="<?= base_url('admin/pengembalian'); ?>"><i class="fas fa-arrow-down"></i> <span>Daftar Pengembalian</span></a></li>
 
             <li class="menu-header">Perangkat</li>
             <li><a href="<?= base_url('admin/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Perangkat</span></a></li>

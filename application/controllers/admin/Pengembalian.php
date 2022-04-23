@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class pengembalian extends CI_Controller
+class Pengembalian extends CI_Controller
 {
 
     function __construct()
@@ -9,13 +9,10 @@ class pengembalian extends CI_Controller
         parent::__construct();
 
         // load helper
-
         // load model
         // $this->load->model('mhome');
-
         //load library
         // $this->load->library('pagination');
-
     }
 
     public function index()
@@ -26,10 +23,10 @@ class pengembalian extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
+        $this->load->view('templates/admin/header', $data);
+        $this->load->view('templates/admin/menus', $data);
         $this->load->view('admin/pengembalian/pengembalian', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/admin/footer');
     }
 
     public function form_pengembalian()
@@ -40,9 +37,9 @@ class pengembalian extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/header', $data);
-        $this->load->view('templates/menus', $data);
+        $this->load->view('templates/admin/header', $data);
+        $this->load->view('templates/admin/menus', $data);
         $this->load->view('admin/pengembalian/form_pengembalian', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/admin/footer');
     }
 }
