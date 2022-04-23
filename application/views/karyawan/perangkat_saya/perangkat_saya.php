@@ -89,52 +89,63 @@
 
             <div class="modal-body">
                 <!-- form -->
+                <?php
+                    foreach ($dataperangkatdetail as $c){
+                        $namaktr = $c->namaktr;
+                        $namabagian = $c->namabagian;
+                        $jabatan = $c->namajabatan;
+                        $merk = $c->merk;
+                        $spesifikasi = $c->spesifikasi;
+                        $serial_number = $c->serial_number;
+                        $jenis_perangkat = $c->jenisperangkat;
+                    }
+                ?>
 
                 <form>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Nama Kantor</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" <?php echo $namaktr;?>">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Bagian</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $namabagian;?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jabatan</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?php echo $jabatan;?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Merk</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" <?php echo $merk;?>">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Spefisikasi</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" <?php echo $spesifikasi;?>">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Serial Number</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" <?php echo $serial_number;?>">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" <?php echo $jenis_perangkat;?>">
                         </div>
                     </div>
                     <div class="form-group row">

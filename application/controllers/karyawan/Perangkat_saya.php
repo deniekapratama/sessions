@@ -30,6 +30,8 @@ class Perangkat_saya extends CI_Controller
         $this->load->view('templates/karyawan/header', $data);
         $this->load->view('templates/karyawan/menus', $data);
         $data['dataperangkat'] = $this->Model_perangkatsaya->selectAll_perangkatsaya();
+        $data['dataperangkatdetail'] = $this->Model_perangkatsaya->selectAll_perangkatsayadetail();
+
 
         // $this->load->view('karyawan/perangkat',$datas);
         $this->load->view('karyawan/perangkat_saya/perangkat_saya', $data);
