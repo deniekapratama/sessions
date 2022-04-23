@@ -60,8 +60,8 @@
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-laptop-code"></i> <span>Perangkat Saya</span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="auth-forgot-password.html">Pengajuan Perangkat</a></li>
-                    <li><a href="auth-forgot-password.html">Daftar Perangkat Saya</a></li>
+                    <li><a href="<?= base_url('admin/perangkat_saya'); ?>">Pengajuan Perangkat</a></li>
+                    <li><a href="<?= base_url('admin/perangkat_saya'); ?>">Daftar Perangkat Saya</a></li>
                 </ul>
             </li>
             <li class="menu-header">Transaksi</li>
