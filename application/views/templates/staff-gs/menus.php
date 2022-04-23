@@ -35,14 +35,39 @@
                 </ul>
             </li>
 
+
             <li class="<?php if ($this->uri->segment('2') == 'pengembalian') {
                             echo 'active';
-                        } ?>" href="<?= base_url('staff-gs/pengembalian'); ?>"><i class="fas fa-arrow-down"></i> <span>Daftar Pengembalian</span></a></li>
+                        } ?>">
+                <a href="<?= base_url('staff-gs/pengembalian'); ?>"><i class="fas fa-arrow-down"></i><span>Daftar Pengembalian</span></a>
+            </li>
+
+
+
+
+
             <li class="menu-header">Perangkat</li>
-            <li><a href="<?= base_url('staff-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Perangkat</span></a></li>
+            <li class="<?php if ($this->uri->segment('2') == 'perangkat') {
+                            echo 'active';
+                        } ?>"><a href="<?= base_url('staff-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Perangkat</span></a></li>
+
+
+
+
             <li class="menu-header">Transaksi</li>
-            <li><a href="<?= base_url('staff-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Serah Terima</span></a></li>
-            <li><a href="<?= base_url('staff-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Pengembalian</span></a></li>
+
+            <li class="<?php if ($this->uri->segment('2') == 'serah_terima') {
+                            echo 'active';
+                        } ?>">
+                <a href="<?= base_url('staff-gs/serah_terima'); ?>"><i class="fas fa-server"></i><span>Daftar Serah Terima</span></a>
+            </li>
+
+
+            <li class="<?php if ($this->uri->segment('2') == 'pengembalian') {
+                            echo 'active';
+                        } ?>">
+                <a href="<?= base_url('staff-gs/pengembalian'); ?>"><i class="fas fa-arrow-right"></i><span>Daftar Pengembalian</span></a>
+            </li>
             <!-- <li class="menu-header">Report</li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
