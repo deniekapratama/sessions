@@ -20,7 +20,7 @@
     <div class="forms-container">
 
         <div class="signin-signup">
-            <form action="#" class="sign-in-form" onsubmit="return false">
+            <form action="<?php echo base_url('Auth/login');?>" class="sign-in-form">
                 <h1 class="title">Sign in</h1>
                 <div class="input-field">
                     <i class="fas fa-user"></i>
@@ -70,29 +70,5 @@
 </html>
 
 <script>
-    $(document).ready(function() {
-        $('#login').click(function() {
-            var username = $('#username').val();
-            var password = $('#password').val();
-            $.ajax({
-                url: '<?php echo base_url('Auth/login'); ?>',
-                method: 'post',
-                data: "username=" + username + "&password=" + password,
-                success: function(data) {
-                    // alert(data);
-                    if (username == data) {
-                        alert("Login Berhasil");
-                        window.location.href = "<?php echo base_url('admin/dashboard'); ?>";
-                    } else {
-                        alert("Login Gagal");
-                    }
-                    // alert(data);
-                    // $('#myModal').modal("show");
-                    // $('#tampil_modal').html(data);
-                    // document.getElementById("judul").innerHTML='Edit Data';  
-                }
-            })
-            // alert("tes");
-        })
-    })
+   
 </script>
