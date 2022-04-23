@@ -94,16 +94,16 @@
                                         <tr>
                                             <td class="p-0 text-center">
                                                 <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" name="ids" class="custom-control-input" id="<?php echo $b->nippos_pengguna; ?>" value="<?php echo $b->nippos_pengguna; ?>">
-                                                    <label for="<?php echo $b->nippos_pengguna; ?>" class="custom-control-label">&nbsp;</label>
+                                                    <input type="checkbox" data-checkboxes="mygroup" name="ids" class="custom-control-input" id="<?php echo $b->nippos; ?>" value="<?php echo $b->nippos; ?>">
+                                                    <label for="<?php echo $b->nippos; ?>" class="custom-control-label">&nbsp;</label>
                                                 </div>
                                             </td>
 
-                                            <td><?php echo $b->nippos_pengguna . " - " . $b->nama_pengguna; ?></td>
-                                            <td><?php echo $b->nopend_pengguna . " - " . $b->namaktr_pengguna; ?></td>
-                                            <td><?php echo $b->nm_bagian_pengguna; ?></td>
-                                            <td><?php echo $b->nm_jabatan_pengguna; ?></td>
-                                            <td><?php echo $b->jenis_perangkat; ?></td>
+                                            <td><?php echo $b->nippos . " - " . $b->nama; ?></td>
+                                            <td><?php echo $b->nopend . " - " . $b->namaktr; ?></td>
+                                            <td><?php echo $b->namabagian; ?></td>
+                                            <td><?php echo $b->namajabatan; ?></td>
+                                            <td><?php echo $b->jenisperangkat; ?></td>
                                             <td><?php echo $b->deskripsi; ?></td>
                                             <td>
                                                 <span class="badge badge-pill badge-primary">Primary</span>

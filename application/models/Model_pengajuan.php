@@ -63,7 +63,7 @@ Class Model_pengajuan extends CI_Model
     {
         //  $this->db->order_by("Judul","desc"); 
         
-         return $this->db->get('m_pengajuan')->result();
+         return $this->db->get('tb_pengajuan')->result();
     }
 }
 ?>
