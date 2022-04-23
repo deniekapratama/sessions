@@ -41,7 +41,7 @@
 
             <div class="content">
 
-                <h1>Selamat Datang!</h1>
+                <h1>Selamat Datangg!</h1>
                 <p>
                     Aplikasi berbasis web untuk <b>pengajuan</b>, <b>pengembalian</b> dan <b>monitoring</b> data perangkat IT yang ada di lingkungan kantor pusat PT. Pos Indonesia (Persero)
                 </p>
@@ -81,10 +81,10 @@
                 success: function(data) {
                     // alert(data);
                     if (username == data) {
-                        alert("Login Berhasil");
+                        // alert("Login Berhasil");
                         window.location.href = "<?php echo base_url('admin/dashboard'); ?>";
                     } else {
-                        alert("Login Gagal");
+                        // alert("Login Gagal");
                     }
                     // alert(data);
                     // $('#myModal').modal("show");
