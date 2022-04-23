@@ -15,7 +15,6 @@ class Pengajuan extends CI_Controller
 
         //load library
         // $this->load->library('pagination');
-
     }
 
     public function index()
