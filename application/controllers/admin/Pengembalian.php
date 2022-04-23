@@ -23,10 +23,10 @@ class Pengembalian extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/admin/header', $data);
-        $this->load->view('templates/admin/menus', $data);
-        $this->load->view('admin/pengembalian/pengembalian', $data);
-        $this->load->view('templates/admin/footer');
+        $this->load->view('templates/staff-gs/header', $data);
+        $this->load->view('templates/staff-gs/menus', $data);
+        $this->load->view('staff-gs/pengembalian/pengembalian', $data);
+        $this->load->view('templates/staff-gs/footer');
     }
 
     public function form_pengembalian()
@@ -37,9 +37,9 @@ class Pengembalian extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/admin/header', $data);
-        $this->load->view('templates/admin/menus', $data);
-        $this->load->view('admin/pengembalian/form_pengembalian', $data);
-        $this->load->view('templates/admin/footer');
+        $this->load->view('templates/staff-gs/header', $data);
+        $this->load->view('templates/staff-gs/menus', $data);
+        $this->load->view('staff-gs/pengembalian/form_pengembalian', $data);
+        $this->load->view('templates/staff-gs/footer');
     }
 }

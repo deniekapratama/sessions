@@ -25,9 +25,9 @@ class Profil extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/staff-gs/header', $data);
-        $this->load->view('templates/staff-gs/menus', $data);
-        $this->load->view('staff-gs/profil/profil', $data);
-        $this->load->view('templates/staff-gs/footer');
+        $this->load->view('templates/karyawan/header', $data);
+        $this->load->view('templates/karyawan/menus', $data);
+        $this->load->view('karyawan/profil/profil', $data);
+        $this->load->view('templates/karyawan/footer');
     }
 }

@@ -4,7 +4,7 @@
         <div class="section-header">
             <h1><?= $title ?></h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                <div class="breadcrumb-item active"><a href="<?= base_url('karyawan/dashboard'); ?>">Dashboard</a></div>
                 <div class="breadcrumb-item"><?= $title ?></div>
             </div>
         </div>
@@ -45,10 +45,10 @@
                                             <td><?php echo $b->serial_number; ?></td>
                                             <td><?php echo $b->spesifikasi; ?></td>
 
-                                            
+                                        
                                             <td>
-                                                <span class="badge badge-pill badge-primary">Primary</span>
-                                            </td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Kembalikan</button>
+                                                </td>
 
                                         </tr>
 
@@ -82,11 +82,16 @@
                 <h5 class="modal-title" id="exampleModalLabel">Detail Data Perangkat Saya</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
+
                 </button>
             </div>
+            <hr>
+
             <div class="modal-body">
                 <!-- form -->
+
                 <form>
+
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Nama Kantor</label>
                         <div class="col-sm-6">
@@ -144,8 +149,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
+                <button type="button" class="btn btn-primary">Kembalikan</button>
             </div>
         </div>
     </div>

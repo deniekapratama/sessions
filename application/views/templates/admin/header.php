@@ -81,7 +81,7 @@
 
     <div class="preloader">
         <div class="loading">
-            <img src="<?= base_url('assets/assets/img/logopossessions.png'); ?>" width="100">
+            <img src="<?= base_url('assets/assets/img/logopossessions.png'); ?>" width="200">
             <p>“Protecting Device for Everyone”</p>
         </div>
     </div>
