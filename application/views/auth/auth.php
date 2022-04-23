@@ -74,18 +74,19 @@
         $('#login').click(function() {
             var username = $('#username').val();
             var password = $('#password').val();
+            alert("tes");
             $.ajax({
                 url: '<?php echo base_url('Auth/login'); ?>',
                 method: 'post',
                 data: "username=" + username + "&password=" + password,
                 success: function(data) {
-                    // alert(data);
-                    if (username == data) {
-                        alert("Login Berhasil");
-                        window.location.href = "<?php echo base_url('admin/dashboard'); ?>";
-                    } else {
-                        alert("Login Gagal");
-                    }
+                    alert(data);
+                    // if (username == data) {
+                    //     alert("Login Berhasil");
+                    //     window.location.href = "<?php echo base_url('admin/dashboard'); ?>";
+                    // } else {
+                    //     alert("Login Gagal");
+                    // }
                     // alert(data);
                     // $('#myModal').modal("show");
                     // $('#tampil_modal').html(data);
