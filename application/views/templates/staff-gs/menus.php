@@ -18,7 +18,7 @@
                 <a href="<?= base_url('staff-gs/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Data</li>
-            <li class="dropdown ">
+            <li class="dropdown <?php echo activate_menu('pengajuan'); ?> , <?php echo activate_menu('service'); ?> , <?php echo activate_menu('upgrade'); ?>">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-arrow-up"></i> <span>Daftar Pengajuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
@@ -34,7 +34,10 @@
                         } ?>><a href="<?= base_url('staff-gs/upgrade'); ?>">Data Upgrade</a></li>
                 </ul>
             </li>
-            <li><a class="nav-link" href="<?= base_url('staff-gs/pengembalian'); ?>"><i class="fas fa-arrow-down"></i> <span>Daftar Pengembalian</span></a></li>
+
+            <li class="<?php if ($this->uri->segment('2') == 'pengembalian') {
+                            echo 'active';
+                        } ?>" href="<?= base_url('staff-gs/pengembalian'); ?>"><i class="fas fa-arrow-down"></i> <span>Daftar Pengembalian</span></a></li>
             <li class="menu-header">Perangkat</li>
             <li><a href="<?= base_url('staff-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Perangkat</span></a></li>
             <li class="menu-header">Transaksi</li>
