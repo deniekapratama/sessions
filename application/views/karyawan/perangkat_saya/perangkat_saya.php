@@ -33,42 +33,29 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>Create a mobile app</td>
-                                            <td>2018-01-20</td>
-                                            <td>
-                                                fjdshfjkdhs
-                                            </td>
-                                            <td>
-                                                fjdshfjkdhs
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Detail</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>Redesign homepage</td>
+                                    <?php
+                                    $no = 1;
+                                    foreach ($dataperangkat as $b) {
+                                    ?>
 
-                                            <td>2018-04-10</td>
-                                            <td>
-                                                fdsjfhksd
-                                            </td>
-                                            <td>
-                                                fjdshfjkdhs
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Detail</button>
+                                        <tr>
+                                            <td><?php echo $no; ?></td>
+                                            <td><?php echo $b->merk; ?></td>
+                                            <td><?php echo $b->jenisperangkat; ?></td>
+                                            <td><?php echo $b->serial_number; ?></td>
+                                            <td><?php echo $b->spesifikasi; ?></td>
 
+                                            
+                                            <td>
+                                                <span class="badge badge-pill badge-primary">Primary</span>
                                             </td>
+
                                         </tr>
 
-
+                                    <?php
+                                    $no++;
+                                    }
+                                    ?>
                                     </tbody>
                                 </table>
                             </div>
