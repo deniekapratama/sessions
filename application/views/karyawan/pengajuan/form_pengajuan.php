@@ -89,13 +89,13 @@
                              <div class="form-group row mb-4">
                                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">No Surat NDE :</label>
                                  <div class="col-sm-12 col-md-5">
-                                     <input type="text" class="form-control">
+                                     <input type="text" class="form-control" id="no_surat_nde">
                                  </div>
                              </div>
                              <div class="form-group row mb-4">
                                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tanggal Surat NDE :</label>
                                  <div class="col-sm-12 col-md-5">
-                                     <input type="text" class="form-control datepicker">
+                                     <input type="text" class="form-control datepicker" id="tgl_surat_nde">
                                  </div>
                              </div>
                              <div class="form-group row mb-4">
@@ -105,14 +105,14 @@
                                  </div>
                              </div>
 
-                             <input type="hidden" name="nippos" value="<?php echo $this->session->userdata('nippos');?>">
-                             <input type="hidden" name="nama" value="<?php echo $this->session->userdata('nama');?>">
-                             <input type="hidden" name="nopend" value="<?php echo $this->session->userdata('nopend');?>">
-                             <input type="hidden" name="namaktr" value="<?php echo $this->session->userdata('namaktr');?>">
-                             <input type="hidden" name="kodejabatan" value="<?php echo $this->session->userdata('kodejabatan');?>">
-                             <input type="hidden" name="namajabatan" value="<?php echo $this->session->userdata('namajabatan');?>">
-                             <input type="hidden" name="kodebagian" value="<?php echo $this->session->userdata('kodebagian');?>">
-                             <input type="hidden" name="namabagian" value="<?php echo $this->session->userdata('namabagian');?>">
+                             <input type="hidden" name="nippos" id="nippos" value="<?php echo $this->session->userdata('nippos');?>">
+                             <input type="hidden" name="nama" id="nama" value="<?php echo $this->session->userdata('nama');?>">
+                             <input type="hidden" name="nopend" id="nopend" value="<?php echo $this->session->userdata('nopend');?>">
+                             <input type="hidden" name="namaktr" id="namaktr" value="<?php echo $this->session->userdata('namaktr');?>">
+                             <input type="hidden" name="kodejabatan" id="kodejabatan" value="<?php echo $this->session->userdata('kodejabatan');?>">
+                             <input type="hidden" name="namajabatan" id="namajabatan" value="<?php echo $this->session->userdata('namajabatan');?>">
+                             <input type="hidden" name="kodebagian" id="kodebagian" value="<?php echo $this->session->userdata('kodebagian');?>">
+                             <input type="hidden" name="namabagian" id="namabagian" value="<?php echo $this->session->userdata('namabagian');?>">
 
 
 
@@ -148,7 +148,7 @@
                      var kodebagian = dt[0].kodebagian;
                      var namabagian = dt[0].namabagian;
                      var kdjabatan = dt[0].jabatan;
-                     var jabatan = dt[0].DescJabatan
+                     var jabatan = dt[0].DescJabatan;
                      $('#nippos').val(nippos);
                      $('#nipposnama').val(nippos + " - " + nama);
                      $('#nama_atasan').val(nama);
@@ -186,6 +186,8 @@
             var nm_jabatan_pengguna = $('#namajabatan').val();
             var bagian_pengguna = $('#kodebagian').val();
             var nm_bagian_pengguna = $('#namabagian').val();
+            var no_surat_nde = $('#no_surat_nde').val();
+            var tgl_surat_nde = $('#tgl_surat_nde').val();
             //  var nippos_pengguna = "993783785";
             //  var nama_pengguna = "Deni";
             //  var nopend_pengguna = "40005";
@@ -206,11 +208,11 @@
              var deskripsi = $('#deskripsi').val();
              // alert(jabatan_atasan);
              $.ajax({
-                 url: '<?php echo base_url('admin/pengajuan/insert_pengajuan'); ?>',
-                 method: 'post',
-                 data: "nippos_pengguna=" + nippos_pengguna + "&nama_pengguna=" + nama_pengguna + "&nopend_pengguna=" + nopend_pengguna + "&namaktr_pengguna=" + namaktr_pengguna + "&jabatan_pengguna=" + jabatan_pengguna + "&nm_jabatan_pengguna=" + nm_jabatan_pengguna + "&bagian_pengguna=" + bagian_pengguna + "&nm_bagian_pengguna=" + nm_bagian_pengguna + "&nippos_atasan=" + nippos_atasan + "&nama_atasan=" + nama_atasan + "&nopend_atasan=" + nopend_atasan + "&namaktr_atasan=" + namaktr_atasan + "&jabatan_atasan=" + jabatan_atasan + "&nm_jabatan_atasan=" + nm_jabatan_atasan + "&bagian_atasan=" + bagian_atasan + "&nm_bagian_atasan=" + nm_bagian_atasan + "&jenis_perangkat=" + jenis_perangkat + "&deskripsi=" + deskripsi,
-                 success: function(data) {
-                     alert(data);
+                 url: '<?php echo base_url('admin/Pengajuan/insert_pengajuan'); ?>',
+                 method: 'POST',
+                 data: "nippos_pengguna=" + nippos_pengguna + "&nama_pengguna=" + nama_pengguna + "&nopend_pengguna=" + nopend_pengguna + "&namaktr_pengguna=" + namaktr_pengguna + "&jabatan_pengguna=" + jabatan_pengguna + "&nm_jabatan_pengguna=" + nm_jabatan_pengguna + "&bagian_pengguna=" + bagian_pengguna + "&nm_bagian_pengguna=" + nm_bagian_pengguna + "&jenis_perangkat=" + jenis_perangkat + "&deskripsi=" + deskripsi + "&no_surat_nde=" + no_surat_nde + "&tgl_surat_nde=" + tgl_surat_nde,
+                 success: function(response) {
+                     alert(response);
                  }
              })
          })
