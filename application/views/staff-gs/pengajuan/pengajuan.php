@@ -1,5 +1,3 @@
-<script src="<?php echo base_url('assets/assets/modules/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
-
 <!-- Main Content -->
 <div class="main-content">
     <section class="section">
@@ -86,10 +84,8 @@
         </div>
     </section>
 </div>
-<script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
 </div>
 </div>
-<script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
 
 </body>
 
