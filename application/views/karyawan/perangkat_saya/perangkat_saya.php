@@ -28,6 +28,8 @@
                                             <th>Jenis Perangkat</th>
                                             <th>Serial Number</th>
                                             <th>Spesifikasi</th>
+                                            <th>#</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -38,12 +40,13 @@
                                             <td>Create a mobile app</td>
                                             <td>2018-01-20</td>
                                             <td>
-                                                <div class="badge badge-success">Completed</div>
+                                                fjdshfjkdhs
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                                    Kembalikan
-                                                </button>
+                                                fjdshfjkdhs
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Detail</button>
                                             </td>
                                         </tr>
                                         <tr>
@@ -54,12 +57,14 @@
 
                                             <td>2018-04-10</td>
                                             <td>
-                                                <div class="badge badge-info">Todo</div>
+                                                fdsjfhksd
                                             </td>
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                                    Kembalikan
-                                                </button>
+                                                fjdshfjkdhs
+                                            </td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Detail</button>
+
                                             </td>
                                         </tr>
 
@@ -75,26 +80,85 @@
     </section>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+
+
+<!-- 
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content"> -->
+
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Form Pengembalian Perangkat</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Detail Data Perangkat Saya</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Tanggal Pengajuan Pengembalian:</label>
-                        <input type="date" class="form-control" id="recipient-name">
+                <!-- form -->
+                <form>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Nama Kantor</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                        </div>
                     </div>
-                </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Bagian</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Jabatan</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Merk</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Spefisikasi</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Serial Number</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : email@example.com">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Lampiran</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                        </div>
+                    </div>
+
+                </form>
+
+
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <button type="button" class="btn btn-primary">Cetak Pengajuan</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
         </div>
     </div>

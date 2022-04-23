@@ -71,18 +71,18 @@
 
     </head>
 
-    <div class="preloader">
+    <!-- <div class="preloader">
         <div class="loading">
             <img src="poi.gif" width="80">
             <p>Harap Tunggu</p>
         </div>
-    </div>
+    </div> -->
 
 
     <div class="preloader">
         <div class="loading">
-            <img src="<?= base_url('assets/assets/img/logopossessions.png'); ?>" width="80">
-            <p>Harap Tunggu</p>
+            <img src="<?= base_url('assets/assets/img/logopossessions.png'); ?>" width="100">
+            <p>“Protecting Device for Everyone”</p>
         </div>
     </div>
     <script>
