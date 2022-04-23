@@ -22,34 +22,36 @@
                                     <thead>
                                         <tr>
 
-                                            <th class="text-center">
+                                            <!-- <th class="text-center">
                                                 <div class="custom-checkbox custom-control">
                                                     <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
                                                     <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                                                 </div>
-                                            </th>
+                                            </th> -->
                                             <th>
                                                 No
                                             </th>
-                                            <th>Task Name</th>
-                                            <th>Due Date</th>
-                                            <th>Status</th>
+                                            <th>Serial Number</th>
+                                            <th>Jenis Perangkat</th>
+                                            <th>Merk</th>
+                                            <th>Spesifikasi</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-
-                                            <td>
+                                            <!-- <td>
                                                 <div class="custom-checkbox custom-control">
                                                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
                                                     <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
                                                 </div>
-                                            </td>
+                                            </td> -->
                                             <td>
                                                 1
                                             </td>
-
+                                            <td>
+                                                dsjfjds
+                                            </td>
                                             <td>Create a mobile app</td>
                                             <td>2018-01-20</td>
                                             <td>
@@ -59,15 +61,18 @@
                                         </tr>
                                         <tr>
 
-                                            <td>
+                                            <!-- <td>
                                                 <div class="custom-checkbox custom-control">
                                                     <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-2">
                                                     <label for="checkbox-2" class="custom-control-label">&nbsp;</label>
                                                 </div>
-                                            </td>
+                                            </td> -->
 
                                             <td>
                                                 2
+                                            </td>
+                                            <td>
+                                                dsjfjds
                                             </td>
                                             <td>Redesign homepage</td>
 

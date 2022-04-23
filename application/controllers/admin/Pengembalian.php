@@ -17,7 +17,7 @@ class Pengembalian extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Data Pengembalian Perangkat Baru';
+        $data['title'] = 'Data Pengembalian Perangkat';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
@@ -31,7 +31,7 @@ class Pengembalian extends CI_Controller
 
     public function form_pengembalian()
     {
-        $data['title'] = 'Form Pengembalian Perangkat Baru';
+        $data['title'] = 'Form Pengembalian Perangkat';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
