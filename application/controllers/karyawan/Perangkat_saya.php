@@ -20,7 +20,7 @@ class Perangkat_saya extends CI_Controller
 
     public function index()
     {
-        $data['title'] = 'Data perangkat';
+        $data['title'] = 'Daftar Perangkat Saya ';
         // $data['menu_katalog'] = $this->mhome->category();
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x

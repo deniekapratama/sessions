@@ -73,7 +73,11 @@
 
 <!-- Page Specific JS File -->
 <script src="<?= base_url('assets/'); ?>assets/js/page/modules-datatables.js"></script>
-
+<script>
+    $(document).ready(function() {
+        $(".preloader").fadeOut();
+    })
+</script>
 
 </body>
 
