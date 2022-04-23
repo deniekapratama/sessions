@@ -1,6 +1,47 @@
+<head>
+
+    <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+    <style type="text/css">
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background-color: #fff;
+        }
+
+        .preloader .loading {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            font: 14px arial;
+        }
+    </style>
+
+</head>
+
+<div class="preloader">
+    <div class="loading">
+        <img src="poi.gif" width="80">
+        <p>Harap Tunggu</p>
+    </div>
+</div>
+
+
+<div class="preloader">
+    <div class="loading">
+        <img src="<?= base_url('assets/assets/img/logopossessions.png'); ?>" width="80">
+        <p>Harap Tunggu</p>
+    </div>
+</div>
+
+
+
 <!-- Main Content -->
-
-
 <br>
 <div class="main-content">
     <section class="section">
@@ -8,7 +49,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="card card-statistic-2">
                     <div class="card-stats">
-                        <div class="card-stats-title">Jumlah Pengajuan - 
+                        <div class="card-stats-title">Jumlah Pengajuan -
                             <div class="dropdown d-inline">
                                 <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">April</a>
                                 <ul class="dropdown-menu dropdown-menu-sm">
@@ -328,3 +369,9 @@
         </div>
     </section>
 </div>
+
+<script>
+    $(document).ready(function() {
+        $(".preloader").fadeOut();
+    })
+</script>
