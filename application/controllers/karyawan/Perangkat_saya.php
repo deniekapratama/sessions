@@ -7,6 +7,7 @@ class Perangkat_saya extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->model('Model_perangkatsaya');
 
         // load helper
 
@@ -28,6 +29,8 @@ class Perangkat_saya extends CI_Controller
 
         $this->load->view('templates/karyawan/header', $data);
         $this->load->view('templates/karyawan/menus', $data);
+        $data['dataperangkat'] = $this->Model_perangkatsaya->selectAll_perangkatsaya();
+
         // $this->load->view('karyawan/perangkat',$datas);
         $this->load->view('karyawan/perangkat_saya/perangkat_saya', $data);
         $this->load->view('templates/karyawan/footer');

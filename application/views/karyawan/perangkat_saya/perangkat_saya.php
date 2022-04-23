@@ -33,42 +33,29 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                    <?php
+                                    $no = 1;
+                                    foreach ($dataperangkat as $b) {
+                                    ?>
+
                                         <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>Create a mobile app</td>
-                                            <td>2018-01-20</td>
-                                            <td>
-                                                fjdshfjkdhs
-                                            </td>
-                                            <td>
-                                                fjdshfjkdhs
-                                            </td>
+                                            <td><?php echo $no; ?></td>
+                                            <td><?php echo $b->merk; ?></td>
+                                            <td><?php echo $b->jenisperangkat; ?></td>
+                                            <td><?php echo $b->serial_number; ?></td>
+                                            <td><?php echo $b->spesifikasi; ?></td>
+
+                                        
                                             <td>
                                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Kembalikan</button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>Redesign homepage</td>
+                                                </td>
 
-                                            <td>2018-04-10</td>
-                                            <td>
-                                                fdsjfhksd
-                                            </td>
-                                            <td>
-                                                fjdshfjkdhs
-                                            </td>
-                                            <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Kembalikan</button>
-
-                                            </td>
                                         </tr>
 
-
+                                    <?php
+                                    $no++;
+                                    }
+                                    ?>
                                     </tbody>
                                 </table>
                             </div>
