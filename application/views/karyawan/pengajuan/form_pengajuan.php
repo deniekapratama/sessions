@@ -17,7 +17,7 @@
                          </div>
                          <div class="card-body">
                              <!-- <div id="profil_pegawai" style="display:none"> -->
-                             <div class="form-group row mb-4">
+                             <!-- <div class="form-group row mb-4">
                                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Nippos Atasan :</label>
 
 
@@ -54,7 +54,7 @@
                                      <input type="text" readonly class="form-control-plaintext" id="bagian" value="-">
                                      <input type="hidden" name="kd_bagian_atasan" id="kd_bagian_atasan">
                                  </div>
-                             </div>
+                             </div> -->
                              <div class="form-group row mb-4">
                                  <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Jenis Pengajuan :</label>
                                  <div class="col-sm-12 col-md-5">
@@ -104,6 +104,17 @@
                                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
                                  </div>
                              </div>
+
+                             <input type="hidden" name="nippos" value="<?php echo $this->session->userdata('nippos');?>">
+                             <input type="hidden" name="nama" value="<?php echo $this->session->userdata('nama');?>">
+                             <input type="hidden" name="nopend" value="<?php echo $this->session->userdata('nopend');?>">
+                             <input type="hidden" name="namaktr" value="<?php echo $this->session->userdata('namaktr');?>">
+                             <input type="hidden" name="kodejabatan" value="<?php echo $this->session->userdata('kodejabatan');?>">
+                             <input type="hidden" name="namajabatan" value="<?php echo $this->session->userdata('namajabatan');?>">
+                             <input type="hidden" name="kodebagian" value="<?php echo $this->session->userdata('kodebagian');?>">
+                             <input type="hidden" name="namabagian" value="<?php echo $this->session->userdata('namabagian');?>">
+
+
 
                              <div class="card-footer text-right col-sm-12 col-md-8">
                                  <button class="btn btn-primary" id="simpan">Submit</button>
@@ -167,22 +178,30 @@
          })
 
          $('#simpan').click(function() {
-             var nippos_pengguna = "993783785";
-             var nama_pengguna = "Deni";
-             var nopend_pengguna = "40005";
-             var namaktr_pengguna = "KANTOR PUSAT BANDUNG";
-             var jabatan_pengguna = "832929";
-             var nm_jabatan_pengguna = "senior analis";
-             var bagian_pengguna = "348934";
-             var nm_bagian_pengguna = "pengembangan jaskug";
-             var nippos_atasan = $('#nippos_atasan').val();
-             var nama_atasan = $('#nama_atasan').val();
-             var nopend_atasan = $('#nopend_atasan').val();
-             var namaktr_atasan = $('#namaktr_atasan').val();
-             var jabatan_atasan = $('#kd_jabatan_atasan').val();
-             var nm_jabatan_atasan = $('#jabatan').val();
-             var bagian_atasan = $('#kd_bagian_atasan').val();
-             var nm_bagian_atasan = $('#bagian').val();
+            var nippos_pengguna = $('#nippos').val();
+            var nama_pengguna = $('#nama').val();
+            var nopend_pengguna = $('#nopend').val();
+            var namaktr_pengguna = $('#namaktr').val();
+            var jabatan_pengguna = $('#kodejabatan').val();
+            var nm_jabatan_pengguna = $('#namajabatan').val();
+            var bagian_pengguna = $('#kodebagian').val();
+            var nm_bagian_pengguna = $('#namabagian').val();
+            //  var nippos_pengguna = "993783785";
+            //  var nama_pengguna = "Deni";
+            //  var nopend_pengguna = "40005";
+            //  var namaktr_pengguna = "KANTOR PUSAT BANDUNG";
+            //  var jabatan_pengguna = "832929";
+            //  var nm_jabatan_pengguna = "senior analis";
+            //  var bagian_pengguna = "348934";
+            //  var nm_bagian_pengguna = "pengembangan jaskug";
+            //  var nippos_atasan = $('#nippos_atasan').val();
+            //  var nama_atasan = $('#nama_atasan').val();
+            //  var nopend_atasan = $('#nopend_atasan').val();
+            //  var namaktr_atasan = $('#namaktr_atasan').val();
+            //  var jabatan_atasan = $('#kd_jabatan_atasan').val();
+            //  var nm_jabatan_atasan = $('#jabatan').val();
+            //  var bagian_atasan = $('#kd_bagian_atasan').val();
+            //  var nm_bagian_atasan = $('#bagian').val();
              var jenis_perangkat = $('#jns_perangkat').val();
              var deskripsi = $('#deskripsi').val();
              // alert(jabatan_atasan);

@@ -20,7 +20,9 @@ class Model_login extends CI_Model
                 'data' => array($data)
             );
             $hsl2 = json_encode($hsl1);
+            $this->session->set_userdata('nama', $name);
             return $hsl2;
+
         }else{
 
             $curl = curl_init();
@@ -43,7 +45,24 @@ class Model_login extends CI_Model
             $response = curl_exec($curl);
             
             curl_close($curl);
-            // $data1 = json_decode($response,TRUE);
+            $data1 = json_decode($response,TRUE);
+            $nippospeg = $data1['data'][0]['nippos'];
+            $namapeg = $data1['data'][0]['nama'];
+            $nopend = $data1['data'][0]['nopend'];
+            $namaktr = $data1['data'][0]['namaktr'];
+            $kodebagian = $data1['data'][0]['kodebagian'];
+            $namabagian = $data1['data'][0]['namabagian'];
+            $kodejabatan = $data1['data'][0]['jabatan'];
+            $namajabatan = $data1['data'][0]['descjabatan'];
+            $this->session->set_userdata('nippos', $nippospeg);
+            $this->session->set_userdata('nama', $namapeg);
+            $this->session->set_userdata('nopend', $nopend);
+            $this->session->set_userdata('namaktr', $namaktr);
+            $this->session->set_userdata('kodebagian', $kodebagian);
+            $this->session->set_userdata('namabagian', $namabagian);
+            $this->session->set_userdata('kodejabatan', $kodejabatan);
+            $this->session->set_userdata('namajabatan', $namajabatan);
+
             return $response;
         }
             // return "admin";

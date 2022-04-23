@@ -8,7 +8,7 @@
             <div class="col-lg-4 col-md-4 col-sm-12">
                 <div class="card card-statistic-2">
                     <div class="card-stats">
-                        <div class="card-stats-title">Jumlah Pengajuan -
+                        <div class="card-stats-title">Jumlah Pengajuan - 
                             <div class="dropdown d-inline">
                                 <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">April</a>
                                 <ul class="dropdown-menu dropdown-menu-sm">
