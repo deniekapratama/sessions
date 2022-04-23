@@ -1,6 +1,3 @@
-
-
-
 <!-- Main Content -->
 <br>
 <div class="main-content">
@@ -57,60 +54,6 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card card-statistic-2">
-                    <div class="card-chart">
-                        <canvas id="balance-chart" height="80"></canvas>
-                    </div>
-                    <div class="card-icon shadow-primary bg-primary">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Jumlah Pengguna Perangkat</h4>
-                        </div>
-                        <div class="card-body">
-                            187,13
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card card-statistic-2">
-                    <div class="card-chart">
-                        <canvas id="sales-chart" height="80"></canvas>
-                    </div>
-                    <div class="card-icon shadow-primary bg-primary">
-                        <i class="fas fa-desktop"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Jumlah Seluruh Perangkat</h4>
-                        </div>
-                        <div class="card-body">
-                            14,732
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                <div class="card card-statistic-1">
-                    <div class="card-icon bg-danger">
-                        <i class="far fa-newspaper"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Pengguna Perangkat</h4>
-                        </div>
-                        <div class="card-body">
-                            42
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-warning">
@@ -141,6 +84,10 @@
                     </div>
                 </div>
             </div>
+
+
+        </div>
+        <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-success">
@@ -156,6 +103,8 @@
                     </div>
                 </div>
             </div>
+
+
         </div>
 
 
