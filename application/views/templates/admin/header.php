@@ -43,6 +43,48 @@
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
     <link rel="stylesheet" href="<?= base_url('assets/'); ?>assets/modules/datatables/Select-1.2.4/css/select.bootstrap4.min.css">
 
+    <!-- tambahan -->
+
+    <head>
+
+        <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>
+
+        <style type="text/css">
+            .preloader {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 9999;
+                background-color: #fff;
+            }
+
+            .preloader .loading {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font: 14px arial;
+            }
+        </style>
+
+    </head>
+
+    <div class="preloader">
+        <div class="loading">
+            <img src="poi.gif" width="80">
+            <p>Harap Tunggu</p>
+        </div>
+    </div>
+
+
+    <div class="preloader">
+        <div class="loading">
+            <img src="<?= base_url('assets/assets/img/logopossessions.png'); ?>" width="80">
+            <p>Harap Tunggu</p>
+        </div>
+    </div>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -194,7 +236,7 @@
                     </li>
                     <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             <img alt="image" src="<?= base_url('assets/'); ?>assets/img/avatar/avatar-4.png" class="rounded-circle mr-1">
-                            <div class="d-sm-none d-lg-inline-block">Hi, <?php echo $this->session->userdata('nama');?></div>
+                            <div class="d-sm-none d-lg-inline-block">Hi, <?php echo $this->session->userdata('nama'); ?></div>
                         </a>
                         <div class="dropdown-menu dropdown-menu-right">
                             <div class="dropdown-title">Logged in 5 min ago</div>
