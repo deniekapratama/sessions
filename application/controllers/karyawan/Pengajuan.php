@@ -8,7 +8,7 @@ class Pengajuan extends CI_Controller
     {
         parent::__construct();
         $this->load->helper('url');
-        $this->load->model('Model_pengajuan');
+        $this->load->model('karyawan/Model_pengajuan');
         // load helper
 
         // load model
@@ -56,25 +56,35 @@ class Pengajuan extends CI_Controller
 
     public function insert_pengajuan()
     {
-        // echo $this->getDateTime();
+               // echo $this->getDateTime();
         //load date helper
         $this->load->helper('date');
 
         $format = "%Y-%m-%d %h:%i %s";
         $tanggal = @mdate($format);
 
-        $nippos_pengguna = $_POST['nippos_pengguna'];
-        $nama_pengguna = $_POST['nama_pengguna'];
-        $jabatan_pengguna = $_POST['jabatan_pengguna'];
-        $bagian_pengguna = $_POST['bagian_pengguna'];
-        $nippos_atasan = $_POST['nippos_atasan'];
-        $nama_atasan = $_POST['nama_atasan'];
-        $jabatan_atasan = $_POST['jabatan_atasan'];
-        $bagian_atasan = $_POST['bagian_atasan'];
-        $jenis_perangkat = $_POST['jenis_perangkat'];
-        $deskripsi = $_POST['deskripsi'];
+        $nippos_pengguna = trim($_POST['nippos_pengguna']);
+        $nama_pengguna = trim($_POST['nama_pengguna']);
+        $nopend_pengguna = trim($_POST['nopend_pengguna']);
+        $namaktr_pengguna = trim($_POST['namaktr_pengguna']);
+        $jabatan_pengguna = trim($_POST['jabatan_pengguna']);
+        $nm_jabatan_pengguna = trim($_POST['nm_jabatan_pengguna']);
+        $bagian_pengguna = trim($_POST['bagian_pengguna']);
+        $nm_bagian_pengguna = trim($_POST['nm_bagian_pengguna']);
+        // $nippos_atasan = $_POST['nippos_atasan'];
+        // $nama_atasan = $_POST['nama_atasan'];
+        // $nopend_atasan = $_POST['nopend_atasan'];
+        // $namaktr_atasan = $_POST['namaktr_atasan'];
+        // $jabatan_atasan = $_POST['jabatan_atasan'];
+        // $nm_jabatan_atasan = $_POST['nm_jabatan_atasan'];
+        // $bagian_atasan = $_POST['bagian_atasan'];
+        // $nm_bagian_atasan = $_POST['nm_bagian_atasan'];
+        $jenis_perangkat = trim($_POST['jenis_perangkat']);
+        $deskripsi = trim($_POST['deskripsi']);
+        $no_surat_nde = trim($_POST['no_surat_nde']);
+        $tgl_surat_nde = trim($_POST['tgl_surat_nde']);
 
-        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $jabatan_pengguna, $bagian_pengguna, $nippos_atasan, $nama_atasan, $jabatan_atasan, $bagian_atasan, $jenis_perangkat, $deskripsi, $tanggal);
+        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $nopend_pengguna, $namaktr_pengguna, $jabatan_pengguna, $nm_jabatan_pengguna, $bagian_pengguna, $nm_bagian_pengguna, $jenis_perangkat, $deskripsi, $no_surat_nde, $tgl_surat_nde);
         echo $cek;
     }
 

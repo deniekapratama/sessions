@@ -208,7 +208,7 @@
              var deskripsi = $('#deskripsi').val();
              // alert(jabatan_atasan);
              $.ajax({
-                 url: '<?php echo base_url('admin/Pengajuan/insert_pengajuan'); ?>',
+                 url: '<?php echo base_url('karyawan/Pengajuan/insert_pengajuan'); ?>',
                  method: 'POST',
                  data: "nippos_pengguna=" + nippos_pengguna + "&nama_pengguna=" + nama_pengguna + "&nopend_pengguna=" + nopend_pengguna + "&namaktr_pengguna=" + namaktr_pengguna + "&jabatan_pengguna=" + jabatan_pengguna + "&nm_jabatan_pengguna=" + nm_jabatan_pengguna + "&bagian_pengguna=" + bagian_pengguna + "&nm_bagian_pengguna=" + nm_bagian_pengguna + "&jenis_perangkat=" + jenis_perangkat + "&deskripsi=" + deskripsi + "&no_surat_nde=" + no_surat_nde + "&tgl_surat_nde=" + tgl_surat_nde,
                  success: function(response) {

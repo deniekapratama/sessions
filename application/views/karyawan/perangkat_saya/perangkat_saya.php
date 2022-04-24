@@ -24,10 +24,11 @@
                                             <th>
                                                 No
                                             </th>
-                                            <th>Merk</th>
+                                            <th>Kantor</th>
+                                            <th>Bagian</th>
+                                            <th>Jabatan</th>
                                             <th>Jenis Perangkat</th>
-                                            <th>Serial Number</th>
-                                            <th>Spesifikasi</th>
+                                            <th>Deskripsi</th>
                                             <th>Status</th>
                                             <th>#</th>
 
@@ -35,16 +36,19 @@
                                     </thead>
                                     <tbody>
                                         <?php
+                                        // print_r($dataperangkat);
                                         $no = 1;
                                         foreach ($dataperangkat as $b) {
                                         ?>
 
                                             <tr>
                                                 <td><?php echo $no; ?></td>
-                                                <td><?php echo $b->merk; ?></td>
+                                                <td><?php echo $b->nopend." - ".$b->namaktr; ?></td>
+                                                <td><?php echo $b->kodebagian." - ".$b->namabagian;; ?></td>
+                                                <td><?php echo $b->kodejabatan." - ".$b->namajabatan; ?></td>
                                                 <td><?php echo $b->jenisperangkat; ?></td>
-                                                <td><?php echo $b->serial_number; ?></td>
-                                                <td><?php echo $b->spesifikasi; ?></td>
+                                                <td><?php echo $b->deskripsi; ?></td>
+
                                                 <?php
                                                 if ($b->status == "0") {
                                                     echo '<td><div class="badge badge-info">Pengajuan</div></td>';
@@ -67,8 +71,8 @@
                                                             Pilih
                                                         </button>
                                                         <div class="dropdown-menu">
-                                                            <a class="dropdown-item" data-toggle="modal" id="detail" href="#">Detail</a>
-                                                            <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal">Kembalikan</a>
+                                                            <a class="dropdown-item" id="detail" href="javascript:void(0)">Detail</a>
+                                                            <a class="dropdown-item" id="kembali" href="javascript:void(0)">Kembalikan</a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -98,7 +102,7 @@
         <div class="modal-content"> -->
 
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -113,15 +117,15 @@
             <div class="modal-body">
                 <!-- form -->
                 <?php
-                foreach ($dataperangkatdetail as $c) {
-                    $namaktr = $c->namaktr;
-                    $namabagian = $c->namabagian;
-                    $jabatan = $c->namajabatan;
-                    $merk = $c->merk;
-                    $spesifikasi = $c->spesifikasi;
-                    $serial_number = $c->serial_number;
-                    $jenis_perangkat = $c->jenisperangkat;
-                }
+                // foreach ($dataperangkatdetail as $c) {
+                //     $namaktr = $c->namaktr;
+                //     $namabagian = $c->namabagian;
+                //     $jabatan = $c->namajabatan;
+                //     $merk = $c->merk;
+                //     $spesifikasi = $c->spesifikasi;
+                //     $serial_number = $c->serial_number;
+                //     $jenis_perangkat = $c->jenisperangkat;
+                // }
                 ?>
 
                 <form>
@@ -129,46 +133,46 @@
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Nama Kantor</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=": <?php echo $namaktr; ?>">
+                            <input type="text" readonly class="form-control-plaintext" id="namaktr">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Bagian</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=": <?php echo $namabagian; ?>">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jabatan</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=": <?php echo $jabatan; ?>">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Merk</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=": <?php echo $merk; ?>">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Spefisikasi</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=": <?php echo $spesifikasi; ?>">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Serial Number</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=": <?php echo $serial_number; ?>">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=": <?php echo $jenis_perangkat; ?>">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" >
                         </div>
                     </div>
                     <div class="form-group row">
@@ -192,7 +196,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -224,7 +228,7 @@
 <script>
     $(document).ready(function() {
         $('#detail').click(function() {
-            $('.modal').modal('show');
+            $('#exampleModal1').modal('show');
         })
 
 
