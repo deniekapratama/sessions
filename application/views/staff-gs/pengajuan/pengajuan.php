@@ -195,7 +195,7 @@
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
                         <div class="col-sm-6">
-                            <select class="col-sm-6 form-control select2" id="exampleFormControlSelect2">
+                            <select class="col-sm-12 form-control" id="exampleFormControlSelect2">
                                 <?php
                                 foreach ($dt_perangkat as $c) {
                                     $id_perangkat = $c->id_perangkat;
@@ -209,7 +209,7 @@
                                 ?>
                             </select>
                         </div>
-                    </div>  
+                    </div>
                     <!-- <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
 

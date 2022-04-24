@@ -11,11 +11,18 @@
 
         <div class="section-body">
             <div class="row">
+
                 <div class="col-12">
+
                     <div class="card">
                         <!-- <div class="card-header">
                             <h4>Basic DataTables</h4>
                         </div> -->
+
+                        <div>
+                            <a href="#" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i>Tambah Perangkat</a>
+                        </div>
+
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-striped" id="table-1">
