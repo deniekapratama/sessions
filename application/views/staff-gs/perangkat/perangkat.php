@@ -85,7 +85,7 @@
             </div>
             <div class="modal-body">
                 <!-- form -->
-                <form>
+                <form ml-1>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Serial Number</label>
                         <div class="col-sm-6">
