@@ -7,7 +7,7 @@ class pengajuan extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('/staff-gs/Model_pengajuan');
+        $this->load->model('staff-gs/Model_pengajuan');
         // load helper
 
         // load model
