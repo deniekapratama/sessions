@@ -59,10 +59,18 @@
 
 
                                                 <td>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" id="detail">Details</button>
-                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                                                        Kembalikan
-                                                    </button>
+                                                    <!-- <button type="button" class="btn btn-primary" data-toggle="modal" id="detail">Details</button>
+                                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Kembalikan</button> -->
+                                                    <!-- Example single danger button -->
+                                                    <div class="btn-group">
+                                                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                            Pilih
+                                                        </button>
+                                                        <div class="dropdown-menu">
+                                                            <a class="dropdown-item" data-toggle="modal" id="detail">Detail</a>
+                                                            <a class="dropdown-item" href="#">Kembalikan</a>
+                                                        </div>
+                                                    </div>
                                                 </td>
 
                                             </tr>
