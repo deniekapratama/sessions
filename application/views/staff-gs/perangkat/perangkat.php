@@ -19,11 +19,13 @@
                             <h4>Basic DataTables</h4>
                         </div> -->
 
-                        <div>
-                            <a href="#" class="btn btn-icon icon-left btn-primary"><i class="far fa-edit"></i>Tambah Perangkat</a>
-                        </div>
+
 
                         <div class="card-body">
+                            <div class="col-xs-3 mb-3">
+                                <button class="btn btn-icon icon-left btn-primary mr-1" data-toggle="modal" data-target=".bd-example-modal-lg"><i class=" far fa-edit"></i>Tambah Perangkat</a>
+                            </div>
+
                             <div class="table-responsive">
                                 <table class="table table-striped" id="table-1">
                                     <thead>
@@ -31,11 +33,11 @@
                                             <th class="text-center">
                                                 No
                                             </th>
-                                            <th>Nama Perangkat</th>
-                                            <th>Tipe</th>
-                                            <th>Members</th>
-                                            <th>Due Date</th>
-                                            <th>Status</th>
+                                            <th>Serial Number</th>
+                                            <th>Jenis Perangkat</th>
+                                            <th>Merek</th>
+                                            <th>Spesifikasi Perangkat</th>
+                                            <th>Jumlah Perangkat</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -59,69 +61,6 @@
                                             </td>
                                             <td><a href="#" class="btn btn-primary">Detail</a></td>
                                         </tr>
-                                        <tr>
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>Redesign homepage</td>
-                                            <td class="align-middle">
-                                                <div class="progress" data-height="4" data-toggle="tooltip" title="0%">
-                                                    <div class="progress-bar" data-width="0"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Nur Alpiana">
-                                                <img alt="image" src="assets/img/avatar/avatar-3.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Hariono Yusup">
-                                                <img alt="image" src="assets/img/avatar/avatar-4.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Bagus Dwi Cahya">
-                                            </td>
-                                            <td>2018-04-10</td>
-                                            <td>
-                                                <div class="badge badge-info">Todo</div>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Detail</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                3
-                                            </td>
-                                            <td>Backup database</td>
-                                            <td class="align-middle">
-                                                <div class="progress" data-height="4" data-toggle="tooltip" title="70%">
-                                                    <div class="progress-bar bg-warning" data-width="70%"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Rizal Fakhri">
-                                                <img alt="image" src="assets/img/avatar/avatar-2.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Hasan Basri">
-                                            </td>
-                                            <td>2018-01-29</td>
-                                            <td>
-                                                <div class="badge badge-warning">In Progress</div>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Detail</a></td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                                4
-                                            </td>
-                                            <td>Input data</td>
-                                            <td class="align-middle">
-                                                <div class="progress" data-height="4" data-toggle="tooltip" title="100%">
-                                                    <div class="progress-bar bg-success" data-width="100%"></div>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <img alt="image" src="assets/img/avatar/avatar-2.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Rizal Fakhri">
-                                                <img alt="image" src="assets/img/avatar/avatar-5.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Isnap Kiswandi">
-                                                <img alt="image" src="assets/img/avatar/avatar-4.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Yudi Nawawi">
-                                                <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle" width="35" data-toggle="tooltip" title="Khaerul Anwar">
-                                            </td>
-                                            <td>2018-01-16</td>
-                                            <td>
-                                                <div class="badge badge-success">Completed</div>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Detail</a></td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -131,4 +70,63 @@
             </div>
         </div>
     </section>
+</div>
+
+
+
+<div class="modal fade bd-example-modal-lg" id="modals" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Tambah Perangkat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- form -->
+                <form ml-1>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Serial Number</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
+                        <div class="col-sm-6">
+                            <select class="col-sm-12 form-control" id="exampleFormControlSelect2">
+                                <option>A</option>
+                                <option>B</option>
+                                <option>C</option>
+                                <option>D</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Merek</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Spesifikasi</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Jumlah Perangkat</label>
+                        <div class="col-sm-6">
+                            <input class="form-control" type="text">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Simpan</button>
+            </div>
+        </div>
+    </div>
 </div>
