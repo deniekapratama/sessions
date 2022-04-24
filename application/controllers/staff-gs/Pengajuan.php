@@ -29,6 +29,8 @@ class pengajuan extends CI_Controller
         $this->load->view('templates/staff-gs/header', $data);
         $this->load->view('templates/staff-gs/menus', $data);
         $data['dt_pengajuan'] = $this->Model_pengajuan->selectAll_pengajuan();
+        $data['dt_perangkat'] = $this->Model_pengajuan->getall_perangkat();
+
         // $data['dt_pengajuandetail'] = $this->Model_pengajuan->selectAll_pengajuandetail();
 
         // $this->load->view('staff-gs/pengajuan',$datas);
@@ -53,7 +55,7 @@ class pengajuan extends CI_Controller
     public function cari_pgw()
     {
         $nipposatasan = $_POST['nippos_atasan'];
-        $cek = $this->Model_pengajuan->cari_pgw($nipposatasan);
+        // $cek = $this->Model_pengajuan->cari_pgw($nipposatasan);
         echo $cek;
     }
 
@@ -92,7 +94,10 @@ class pengajuan extends CI_Controller
     public function detail_pengajuan(){
         $nippos = $_POST['nippos'];
         $idpengajuan = $_POST['id_pengajuan'];
-        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $nopend_pengguna, $namaktr_pengguna, $jabatan_pengguna, $nm_jabatan_pengguna, $bagian_pengguna, $nm_bagian_pengguna, $nippos_atasan, $nama_atasan, $nopend_atasan, $namaktr_atasan, $jabatan_atasan, $nm_jabatan_atasan, $bagian_atasan, $nm_bagian_atasan, $jenis_perangkat, $deskripsi, $tanggal);
-        echo $cek;
+        $hsl = $this->Model_pengajuan->selectAll_pengajuandetail($nippos,$idpengajuan);
+        $data = json_encode($hsl);
+        echo $data;
     }
+
+
 }

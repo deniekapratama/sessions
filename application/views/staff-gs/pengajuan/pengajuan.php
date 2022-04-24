@@ -144,69 +144,64 @@
             </div>
             <div class="modal-body">
                 <!-- form -->
-                <?php
-                    // foreach ($dataperangkatdetail as $c){
-                    //     $namaktr = $c->namaktr;
-                    //     $namabagian = $c->namabagian;
-                    //     $jabatan = $c->namajabatan;
-                    //     $merk = $c->merk;
-                    //     $spesifikasi = $c->spesifikasi;
-                    //     $serial_number = $c->serial_number;
-                    //     $jenis_perangkat = $c->jenisperangkat;
-                    // }
-                ?>
                 <form>
 
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Nippos/Nama</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="nipposnama" value=" : Lampiran Serah Terima">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Kantor</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="kantor" value=" : Lampiran Serah Terima">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Bagian</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="bagian" value=" : Lampiran Serah Terima">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jabatan</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="jabatan" value=" : Lampiran Serah Terima">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="jns_perangkat" value=" : Lampiran Serah Terima">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Deskripsi</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="deskripsi" value=" : Lampiran Serah Terima">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
                         <select class="form-control col-sm-6" id="exampleFormControlSelect1">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                            <option>4</option>
-                            <option>5</option>
+                        <?php
+                            foreach ($dt_perangkat as $c){
+                                $id_perangkat = $c->id_perangkat;
+                                $serial_number = $c->serial_number;
+                                $jenis_perangkat = $c->jenis_perangkat;
+                                $merk = $c->merk;
+                                $spesifikasi = $c->spesifikasi;
+
+                                echo " <option value='$id_perangkat'>$serial_number - $jenis_perangkat - $merk - $spesifikasi </option>";
+                            }
+                        ?>
                         </select>
                     </div>
 
 
-                    <div class="form-group row">
+                    <!-- <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
 
                         <select class="form-control select2" id="exampleFormControlSelect2">
@@ -215,7 +210,7 @@
                             <option>Option 3</option>
                         </select>
 
-                    </div>
+                    </div> -->
 
 
                 </form>
@@ -272,7 +267,27 @@
                  method: 'POST',
                  data: "nippos=" + nippos + "&id_pengajuan=" + id_pengajuan,
                  success: function(response) {
-                     alert(response);
+                    var dt = jQuery.parseJSON(response);
+                    var nippos = dt[0].nippos;
+                    var nama = dt[0].nama;
+                    var nopend = dt[0].nopend;
+                    var namaktr = dt[0].namaktr;
+                    var kodebagian = dt[0].kodebagian;
+                    var namabagian = dt[0].namabagian;
+                    var kodejabatan = dt[0].kodejabatan;
+                    var namajabatan = dt[0].namajabatan;
+                    var jenis_perangkat = dt[0].jenisperangkat;
+                    var deskripsi = dt[0].deskripsi;
+                    
+                    $('#nipposnama').val(nippos+" - "+nama);
+                    $('#kantor').val(nopend+" - "+namaktr);
+                    $('#bagian').val(kodebagian+" - "+namabagian);
+                    $('#jabatan').val(kodejabatan+" - "+namajabatan);
+                    $('#jns_perangkat').val(jenis_perangkat);
+                    $('#deskripsi').val(deskripsi);
+                    
+                    // alert(nopend);
+
                  }
              })
         })

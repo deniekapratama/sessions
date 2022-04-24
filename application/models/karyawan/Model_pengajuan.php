@@ -63,20 +63,15 @@ Class Model_pengajuan extends CI_Model
     {
         //  $this->db->order_by("Judul","desc"); 
         
-        $query = $this->db->query("SELECT a.id_pengajuan,a.nippos,a.nama,a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.deskripsi,a.serial_number,b.merk,b.spesifikasi FROM tb_pengajuan a left join tb_perangkat b on a.serial_number = b.serial_number where a.status = '0'");
+        $query = $this->db->query("SELECT a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.serial_number,b.merk,b.spesifikasi FROM tb_pengajuan a left join tb_perangkat b on a.serial_number = b.serial_number  where a.nippos = '$nippos'");
         return $query->result();
     }
 
-    public function selectAll_pengajuandetail($nippos,$id_pengajuan)
+    public function selectAll_pengajuandetail($nippos)
     {
-         $query = $this->db->query("SELECT a.nippos,a.nama,a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.deskripsi FROM tb_pengajuan a left join tb_perangkat b on a.serial_number = b.serial_number  where a.nippos = '$nippos' and a.id_pengajuan = '$id_pengajuan';");
+         $query = $this->db->query("SELECT a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.serial_number,b.merk,b.spesifikasi FROM tb_pengajuan a left join tb_perangkat b on a.serial_number = b.serial_number  where a.nippos = '$nippos' and a.serial_number = 'SN38483458433' or a.id_perangkat = '1';");
          return $query->result();
 
-    }
-
-    public function getall_perangkat(){
-      $query = $this->db->query("SELECT * FROM tb_perangkat");
-      return $query->result();
     }
 }
 ?>
