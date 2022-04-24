@@ -61,7 +61,7 @@
                                             <td><?php echo $b->jenisperangkat; ?></td>
                                             <td><?php echo $b->deskripsi; ?></td>
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Detail</button>
+                                                <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos."_". $b->id_pengajuan;?>">Detail</button>
 
                                                 <!-- <span class="badge badge-pill badge-primary">Primary</span> -->
                                             </td>
@@ -91,7 +91,7 @@
 
 </html>
 
-<div class="modal" tabindex="-1" role="dialog" id="myModal">
+<!-- <div class="modal" tabindex="-1" role="dialog" id="myModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -121,7 +121,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- <p>Modal body text goes here.</p> -->
+                 <p>Modal body text goes here.</p> 
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
@@ -130,10 +130,10 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
 
 
-<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-lg" id="modals" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -144,6 +144,17 @@
             </div>
             <div class="modal-body">
                 <!-- form -->
+                <?php
+                    // foreach ($dataperangkatdetail as $c){
+                    //     $namaktr = $c->namaktr;
+                    //     $namabagian = $c->namabagian;
+                    //     $jabatan = $c->namajabatan;
+                    //     $merk = $c->merk;
+                    //     $spesifikasi = $c->spesifikasi;
+                    //     $serial_number = $c->serial_number;
+                    //     $jenis_perangkat = $c->jenisperangkat;
+                    // }
+                ?>
                 <form>
 
 
@@ -221,16 +232,11 @@
 
 <script>
     $(document).ready(function() {
-        $('#submit').click(function() {
-            // alert("tes");
-            $('#myModal').modal('show');
-            var selectedLanguage = new Array();
-            $('input[name="ids"]:checked').each(function() {
-                selectedLanguage.push(this.value);
-            });
-            // var ts = $('input[name="ids"]:checked').val();
-            alert(selectedLanguage);
-            // $('#profil_pegawai').show();
+        // $('#detail2').click(function() {
+        //     // alert("tes");
+        //     alert("tes");
+        //     $('.modal2').modal('show');
+            // var ts = $('input[name="ids"]:checked').val();            // $('#profil_pegawai').show();
             // $.ajax({
             // url: '<?php //echo base_url('Auth/login'); 
                         ?>',
@@ -240,7 +246,7 @@
             // // alert(data);
             // if(username == data){
             // alert("Login Berhasil");
-            // window.location.href = "<?php echo base_url('Auth/dashboard'); ?>";
+            // window.location.href = "<?php //echo base_url('Auth/dashboard'); ?>";
             // }else{
             // alert("Login Gagal");
             // }
@@ -251,6 +257,24 @@
             // }
             // })
             // alert("tes");
+        // })
+
+
+        $('#detail').click(function() {
+            // alert("tes");
+            $('#modals').modal('show');
+            var par = $('#detail').val();
+            var myarr = par.split("_");
+            var nippos = myarr[0];
+            var id_pengajuan = myarr[1];
+            $.ajax({
+                 url: '<?php echo base_url('staff-gs/Pengajuan/detail_pengajuan'); ?>',
+                 method: 'POST',
+                 data: "nippos=" + nippos + "&id_pengajuan=" + id_pengajuan,
+                 success: function(response) {
+                     alert(response);
+                 }
+             })
         })
     })
 </script>

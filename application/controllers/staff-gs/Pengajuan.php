@@ -7,7 +7,7 @@ class pengajuan extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Model_pengajuan');
+        $this->load->model('/staff-gs/Model_pengajuan');
         // load helper
 
         // load model
@@ -29,7 +29,7 @@ class pengajuan extends CI_Controller
         $this->load->view('templates/staff-gs/header', $data);
         $this->load->view('templates/staff-gs/menus', $data);
         $data['dt_pengajuan'] = $this->Model_pengajuan->selectAll_pengajuan();
-        $data['dt_pengajuandetail'] = $this->Model_pengajuan->selectAll_pengajuandetail();
+        // $data['dt_pengajuandetail'] = $this->Model_pengajuan->selectAll_pengajuandetail();
 
         // $this->load->view('staff-gs/pengajuan',$datas);
         $this->load->view('staff-gs/pengajuan/pengajuan', $data);
@@ -85,6 +85,13 @@ class pengajuan extends CI_Controller
         $jenis_perangkat = $_POST['jenis_perangkat'];
         $deskripsi = $_POST['deskripsi'];
 
+        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $nopend_pengguna, $namaktr_pengguna, $jabatan_pengguna, $nm_jabatan_pengguna, $bagian_pengguna, $nm_bagian_pengguna, $nippos_atasan, $nama_atasan, $nopend_atasan, $namaktr_atasan, $jabatan_atasan, $nm_jabatan_atasan, $bagian_atasan, $nm_bagian_atasan, $jenis_perangkat, $deskripsi, $tanggal);
+        echo $cek;
+    }
+
+    public function detail_pengajuan(){
+        $nippos = $_POST['nippos'];
+        $idpengajuan = $_POST['id_pengajuan'];
         $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $nopend_pengguna, $namaktr_pengguna, $jabatan_pengguna, $nm_jabatan_pengguna, $bagian_pengguna, $nm_bagian_pengguna, $nippos_atasan, $nama_atasan, $nopend_atasan, $namaktr_atasan, $jabatan_atasan, $nm_jabatan_atasan, $bagian_atasan, $nm_bagian_atasan, $jenis_perangkat, $deskripsi, $tanggal);
         echo $cek;
     }
