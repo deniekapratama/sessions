@@ -24,11 +24,12 @@
                                             <th>
                                                 No
                                             </th>
-                                            <th>Kantor</th>
                                             <th>Bagian</th>
                                             <th>Jabatan</th>
                                             <th>Jenis Perangkat</th>
-                                            <th>Deskripsi</th>
+                                            <th>Serial Number</th>
+                                            <th>Merk</th>
+                                            <th>Spesifikasi</th>
                                             <th>Status</th>
                                             <th>#</th>
 
@@ -43,13 +44,18 @@
 
                                             <tr>
                                                 <td><?php echo $no; ?></td>
-                                                <td><?php echo $b->nopend." - ".$b->namaktr; ?></td>
                                                 <td><?php echo $b->kodebagian." - ".$b->namabagian;; ?></td>
                                                 <td><?php echo $b->kodejabatan." - ".$b->namajabatan; ?></td>
                                                 <td><?php echo $b->jenisperangkat; ?></td>
-                                                <td><?php echo $b->deskripsi; ?></td>
+                                                <td><?php echo $b->serial_number; ?></td>
+                                                <td><?php echo $b->merk; ?></td>
+                                                <td><?php echo $b->spesifikasi; ?></td>
 
                                                 <?php
+                                                $nippos = $b->nippos;
+                                                $sn = $b->serial_number;
+                                                $id_perangkat = $b->id_perangkat;
+
                                                 if ($b->status == "0") {
                                                     echo '<td><div class="badge badge-info">Pengajuan</div></td>';
                                                 } else if ($b->status == "1") {
@@ -71,8 +77,8 @@
                                                             Pilih
                                                         </button>
                                                         <div class="dropdown-menu">
-                                                            <a class="dropdown-item" id="detail" href="javascript:void(0)">Detail</a>
-                                                            <a class="dropdown-item" id="kembali" href="javascript:void(0)">Kembalikan</a>
+                                                            <a class="dropdown-item" id="detail" href="javascript:void(0)" onclick="detail('<?php echo $nippos;?>','<?php echo $sn;?>','<?php echo $id_perangkat;?>')">Detail</a>
+                                                            <a class="dropdown-item" id="kembali" href="javascript:void(0)" onclick="kembali()">Kembalikan</a>
                                                         </div>
                                                     </div>
                                                 </td>
@@ -139,46 +145,69 @@
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Bagian</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail">
+                            <input type="text" readonly class="form-control-plaintext" id="bagian">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jabatan</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail">
+                            <input type="text" readonly class="form-control-plaintext" id="jabatan">
                         </div>
                     </div>
-
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="jenisperangkat" >
+                        </div>
+                    </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Merk</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail">
+                            <input type="text" readonly class="form-control-plaintext" id="merk">
                         </div>
                     </div>
 
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Spefisikasi</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" >
+                            <input type="text" readonly class="form-control-plaintext" id="spesifikasi" >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Serial Number</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail">
+                            <input type="text" readonly class="form-control-plaintext" id="sn">
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Tanggal Surat NDE</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" >
+                            <input type="text" readonly class="form-control-plaintext" id="tgl_surat_nde" >
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Lampiran</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">No Surat NDE</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=": Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="no_surat_nde" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Lampiran NDE</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="lampiran_nde" value=": Lampiran Serah Terima">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Lampiran Serah Terima</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="lampiran_serah_terima" value=": Lampiran Serah Terima">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Lampiran pengembalian</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="lampiran_pengembalian" value=": Lampiran Serah Terima">
                         </div>
                     </div>
 
@@ -187,8 +216,8 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button>
-                <button type="button" class="btn btn-primary">Kembalikan</button>
+                <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Batal</button> -->
+                <button type="button" class="btn btn-primary" data-dismiss="modal">Tutup</button>
             </div>
         </div>
     </div>
@@ -227,10 +256,66 @@
 <script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
 <script>
     $(document).ready(function() {
-        $('#detail').click(function() {
-            $('#exampleModal1').modal('show');
-        })
+        // $('#detail').click(function() {
+        //     $('#exampleModal1').modal('show');
+        //     // var val_detail = $(this).attr('href');
+        //     var val_detail = $(this).attr('href');
+
+        // })
+
+       
 
 
     })
+    function detail(nippos,sn,idperangkat){  
+       
+            // alert(sn);        
+            $('#exampleModal1').modal('show');
+            $.ajax({
+                url: '<?php echo base_url('karyawan/Perangkat_saya/detail_perangkatsaya'); ?>',
+                method: 'POST',
+                data: "nippos=" + nippos + "&sn=" + sn + "&idperangkat=" + idperangkat,
+                success: function(response) {
+                    // alert(response);
+                    var dt = jQuery.parseJSON(response);
+                    // var nippos = dt[0].nippos;
+                    // var nama = dt[0].nama;
+                    var nopend = dt[0].nopend;
+                    var namaktr = dt[0].namaktr;
+                    var kodebagian = dt[0].kodebagian;
+                    var namabagian = dt[0].namabagian;
+                    var kodejabatan = dt[0].kodejabatan;
+                    var namajabatan = dt[0].namajabatan;
+                    var jenis_perangkat = dt[0].jenisperangkat;
+                    var merk = dt[0].merk;
+                    var spesifikasi = dt[0].spesifikasi;
+                    var sn = dt[0].serial_number;
+                    var tgl_surat_nde = dt[0].tgl_surat_nde;
+                    var no_surat_nde = dt[0].no_surat_nde;
+
+                    $('#namaktr').val(nopend + " - " + namaktr);
+                    $('#bagian').val(kodebagian + " - " + namabagian);
+                    $('#jabatan').val(kodejabatan + " - " + namajabatan);
+                    $('#jenisperangkat').val(jenis_perangkat);
+                    $('#merk').val(merk);
+                    $('#spesifikasi').val(spesifikasi);
+                    $('#sn').val(sn);
+                    $('#tgl_surat_nde').val(tgl_surat_nde);
+                    $('#no_surat_nde').val(no_surat_nde);
+
+                    // $('#nipposnama').val(nippos + " - " + nama);
+                    // $('#kantor').val(nopend + " - " + namaktr);
+                    // $('#bagian').val(kodebagian + " - " + namabagian);
+                    // $('#jabatan').val(kodejabatan + " - " + namajabatan);
+                    // $('#jns_perangkat').val(jenis_perangkat);
+                    // $('#deskripsi').val(deskripsi);
+
+                }
+            })
+        }
+
+        function kembali(){
+            $('#exampleModal2').modal('show');
+
+        }
 </script>

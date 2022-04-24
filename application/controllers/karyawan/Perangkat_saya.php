@@ -7,7 +7,7 @@ class Perangkat_saya extends CI_Controller
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Model_perangkatsaya');
+        $this->load->model('karyawan/Model_perangkatsaya');
 
         // load helper
 
@@ -30,11 +30,22 @@ class Perangkat_saya extends CI_Controller
         $this->load->view('templates/karyawan/header', $data);
         $this->load->view('templates/karyawan/menus', $data);
         $data['dataperangkat'] = $this->Model_perangkatsaya->selectAll_perangkatsaya();
-        $data['dataperangkatdetail'] = $this->Model_perangkatsaya->selectAll_perangkatsayadetail();
+        // $data['dataperangkatdetail'] = $this->Model_perangkatsaya->selectAll_perangkatsayadetail();
 
 
         // $this->load->view('karyawan/perangkat',$datas);
         $this->load->view('karyawan/perangkat_saya/perangkat_saya', $data);
         $this->load->view('templates/karyawan/footer');
+    }
+    
+
+    public function detail_perangkatsaya(){
+        $nippos = $_POST['nippos'];
+        $sn = $_POST['sn'];
+        $idperangkat = $_POST['idperangkat'];
+        $hsl = $this->Model_perangkatsaya->selectAll_perangkatsayadetail($nippos,$sn,$idperangkat);
+        $data = json_encode($hsl);
+        echo $data;
+
     }
 }
