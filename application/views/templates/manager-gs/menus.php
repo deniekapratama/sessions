@@ -18,7 +18,7 @@
                 <a href="<?= base_url('manager-gs/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
             <li class="menu-header">Data</li>
-            <li class="dropdown ">
+            <li class="dropdown <?php echo activate_menu('pengajuan'); ?> , <?php echo activate_menu('service'); ?> , <?php echo activate_menu('upgrade'); ?>">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-arrow-up"></i> <span>Daftar Pengajuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
@@ -36,7 +36,9 @@
             </li>
 
             <li class="menu-header">Perangkat</li>
-            <li><a href="<?= base_url('manager-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Kelola Perangkat</span></a></li>
+            <li class="<?php if ($this->uri->segment('2') == 'perangkat') {
+                            echo 'active';
+                        } ?>"> <a href="<?= base_url('manager-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Kelola Perangkat</span></a></li>
             <li class="menu-header">Report</li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
