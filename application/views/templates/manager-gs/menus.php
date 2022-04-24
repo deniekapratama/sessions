@@ -24,11 +24,6 @@
                     <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
                                     echo 'active';
                                 } ?>"><a class="nav-link" href="<?= base_url('manager-gs/pengajuan'); ?>">Perangkat Baru</a></li>
-
-                    <li class="<?php if ($this->uri->segment('2') == 'service') {
-                                    echo 'active';
-                                } ?>"><a class="nav-link" href="<?= base_url('manager-gs/service'); ?>">Data Service</a></li>
-
                     <li <?php if ($this->uri->segment('2') == 'upgrade') {
                             echo 'active';
                         } ?>><a href="<?= base_url('manager-gs/upgrade'); ?>">Data Upgrade</a></li>
