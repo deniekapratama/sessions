@@ -28,6 +28,7 @@
                                             <th>Jenis Perangkat</th>
                                             <th>Serial Number</th>
                                             <th>Spesifikasi</th>
+                                            <th>Status</th>
                                             <th>#</th>
 
                                         </tr>
@@ -44,10 +45,21 @@
                                             <td><?php echo $b->jenisperangkat; ?></td>
                                             <td><?php echo $b->serial_number; ?></td>
                                             <td><?php echo $b->spesifikasi; ?></td>
+                                            <?php
+                                                if($b->status == "0"){
+                                                    echo '<td><div class="badge badge-info">Pengajuan</div></td>';
+                                                }else if($b->status == "1"){
+                                                    echo '<td><div class="badge badge-warning">Completed</div></td>';
+                                                }else if($b->status == "2"){
+                                                    echo '<td><div class="badge badge-success">Completed</div></td>';
+                                                }else if($b->status == "5"){
+                                                    echo '<td><div class="badge badge-danger">Sudah Dikembalikan</div></td>';
+                                                }
+                                            ?>
 
                                         
                                             <td>
-                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Kembalikan</button>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" id="detail">Detail</button>
                                                 </td>
 
                                         </tr>
@@ -166,3 +178,13 @@
         </div>
     </div>
 </div>
+<script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
+ <script>
+     $(document).ready(function() {
+         $('#detail').click(function() {
+            $('.modal').modal('show');
+         })
+
+       
+     })
+ </script>

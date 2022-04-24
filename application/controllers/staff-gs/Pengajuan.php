@@ -29,6 +29,8 @@ class pengajuan extends CI_Controller
         $this->load->view('templates/staff-gs/header', $data);
         $this->load->view('templates/staff-gs/menus', $data);
         $data['dt_pengajuan'] = $this->Model_pengajuan->selectAll_pengajuan();
+        $data['dt_pengajuandetail'] = $this->Model_pengajuan->selectAll_pengajuandetail();
+
         // $this->load->view('staff-gs/pengajuan',$datas);
         $this->load->view('staff-gs/pengajuan/pengajuan', $data);
         $this->load->view('templates/staff-gs/footer');

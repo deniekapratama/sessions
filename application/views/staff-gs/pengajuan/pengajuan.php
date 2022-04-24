@@ -26,12 +26,12 @@
                                 <table class="table table-striped" id="table-2">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">
+                                            <!-- <th class="text-center">
                                                 <div class="custom-checkbox custom-control">
                                                     <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
                                                     <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                                                 </div>
-                                            </th>
+                                            </th> -->
                                             <th>Nippos/Nama</th>
                                             <th>Kantor</th>
                                             <th>Bagian</th>
@@ -47,12 +47,12 @@
                                     ?>
 
                                         <tr>
-                                            <td class="p-0 text-center">
+                                            <!-- <td class="p-0 text-center">
                                                 <div class="custom-checkbox custom-control">
                                                     <input type="checkbox" data-checkboxes="mygroup" name="ids" class="custom-control-input" id="<?php echo $b->nippos; ?>" value="<?php echo $b->nippos; ?>">
                                                     <label for="<?php echo $b->nippos; ?>" class="custom-control-label">&nbsp;</label>
                                                 </div>
-                                            </td>
+                                            </td> -->
 
                                             <td><?php echo $b->nippos . " - " . $b->nama; ?></td>
                                             <td><?php echo $b->nopend . " - " . $b->namaktr; ?></td>
