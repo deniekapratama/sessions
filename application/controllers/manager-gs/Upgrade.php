@@ -26,10 +26,10 @@ class upgrade extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/karyawan/header', $data);
-        $this->load->view('templates/karyawan/menus', $data);
-        $this->load->view('karyawan/upgrade', $data);
-        $this->load->view('templates/karyawan/footer');
+        $this->load->view('templates/manager-gs/header', $data);
+        $this->load->view('templates/manager-gs/menus', $data);
+        $this->load->view('manager-gs/upgrade/upgrade', $data);
+        $this->load->view('templates/manager-gs/footer');
     }
 
     public function form_upgrade()
@@ -40,9 +40,9 @@ class upgrade extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/karyawan/header', $data);
-        $this->load->view('templates/karyawan/menus', $data);
-        $this->load->view('karyawan/upgrade/form_upgrade', $data);
-        $this->load->view('templates/karyawan/footer');
+        $this->load->view('templates/manager-gs/header', $data);
+        $this->load->view('templates/manager-gs/menus', $data);
+        $this->load->view('manager-gs/upgrade/form_upgrade', $data);
+        $this->load->view('templates/manager-gs/footer');
     }
 }

@@ -32,6 +32,7 @@
                                                     <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
                                                 </div>
                                             </th> -->
+                                            <th>No</th>
                                             <th>Nippos/Nama</th>
                                             <th>Kantor</th>
                                             <th>Bagian</th>
@@ -44,6 +45,7 @@
                                     </thead>
                                     <?php
                                     foreach ($dt_pengajuan as $b) {
+                                        $no_urut = 0;
                                     ?>
 
                                         <tr>
@@ -53,7 +55,9 @@
                                                     <label for="<?php echo $b->nippos; ?>" class="custom-control-label">&nbsp;</label>
                                                 </div>
                                             </td> -->
-
+                                            <td>
+                                                Test
+                                            </td>
                                             <td><?php echo $b->nippos . " - " . $b->nama; ?></td>
                                             <td><?php echo $b->nopend . " - " . $b->namaktr; ?></td>
                                             <td><?php echo $b->namabagian; ?></td>
@@ -201,7 +205,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary">Setujui</button>
             </div>
         </div>
     </div>
