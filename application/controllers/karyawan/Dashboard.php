@@ -7,6 +7,7 @@ class Dashboard extends CI_Controller
     function __construct()
     {
         parent::__construct();
+        $this->load->model('karyawan/Model_dashboard');
 
         // load helper
 
@@ -25,6 +26,8 @@ class Dashboard extends CI_Controller
         // $data['product_data'] = count($this->mhome->product());
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
+        $data['status_pengajuan'] = $this->Model_dashboard->selectstatus_pengajuan();
+
 
         $this->load->view('templates/karyawan/header', $data);
         $this->load->view('templates/karyawan/menus', $data);

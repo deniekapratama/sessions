@@ -146,7 +146,8 @@
                 <!-- form -->
                 <form>
 
-
+                
+                    <input type="hidden" name="id_pengajuan" id="id_pengajuan">
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Nippos/Nama</label>
                         <div class="col-sm-6">
@@ -193,9 +194,10 @@
                           </select>
                       </div> -->
                     <div class="form-group row">
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Perangkat</label>
                         <div class="col-sm-6">
-                            <select class="col-sm-12 form-control" id="exampleFormControlSelect2">
+                            <select class="col-sm-12 form-control" id="perangkat">
+                                <option value="00">-- Pilih Perangkat --</option>
                                 <?php
                                 foreach ($dt_perangkat as $c) {
                                     $id_perangkat = $c->id_perangkat;
@@ -204,7 +206,7 @@
                                     $merk = $c->merk;
                                     $spesifikasi = $c->spesifikasi;
 
-                                    echo " <option value='$id_perangkat'>$serial_number - $jenis_perangkat - $merk - $spesifikasi </option>";
+                                    echo " <option value='$id_perangkat"."_".$serial_number."'>$serial_number - $jenis_perangkat - $merk - $spesifikasi </option>";
                                 }
                                 ?>
                             </select>
@@ -228,7 +230,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-primary" id="pilih_perangkat">Save changes</button>
             </div>
         </div>
     </div>
@@ -277,6 +279,7 @@
                 method: 'POST',
                 data: "nippos=" + nippos + "&id_pengajuan=" + id_pengajuan,
                 success: function(response) {
+                    // alert(response);
                     var dt = jQuery.parseJSON(response);
                     var nippos = dt[0].nippos;
                     var nama = dt[0].nama;
@@ -288,6 +291,8 @@
                     var namajabatan = dt[0].namajabatan;
                     var jenis_perangkat = dt[0].jenisperangkat;
                     var deskripsi = dt[0].deskripsi;
+                    var idpengajuan = dt[0].id_pengajuan;
+                    // alert(idpengajuan);
 
                     $('#nipposnama').val(nippos + " - " + nama);
                     $('#kantor').val(nopend + " - " + namaktr);
@@ -295,11 +300,34 @@
                     $('#jabatan').val(kodejabatan + " - " + namajabatan);
                     $('#jns_perangkat').val(jenis_perangkat);
                     $('#deskripsi').val(deskripsi);
+                    $('#id_pengajuan').val(idpengajuan);
+
 
                     // alert(nopend);
 
                 }
             })
         })
+
+        $('#pilih_perangkat').click(function() {
+            // alert("tes");
+            
+            var id_pengajuan = $('#id_pengajuan').val();
+            var mast_perangkat = $('#perangkat').val();
+            var myarr = mast_perangkat.split("_");
+            var id_perangkat = myarr[0];
+            var serial_number = myarr[1];
+
+            $.ajax({
+                url: '<?php echo base_url('staff-gs/Pengajuan/pilih_perangkat'); ?>',
+                method: 'POST',
+                data: "id_pengajuan=" + id_pengajuan + "&perangkat=" + id_perangkat + "&serial_number=" + serial_number,
+                success: function(response) {
+       
+                    alert(response);
+                }
+            })
+        })
+        
     })
 </script>

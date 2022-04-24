@@ -99,5 +99,16 @@ class pengajuan extends CI_Controller
         echo $data;
     }
 
+    public function pilih_perangkat(){
+        $id_pengajuan = $_POST['id_pengajuan'];
+        $idperangkat = $_POST['perangkat'];
+        $serial_number = $_POST['serial_number'];
+
+        $hsl = $this->Model_pengajuan->pilih_perangkat($id_pengajuan,$idperangkat,$serial_number);
+        return $hsl;
+        // echo $id_pengajuan.$idperangkat;
+
+    }
+
 
 }
