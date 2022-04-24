@@ -61,7 +61,7 @@
                                             <td><?php echo $b->jenisperangkat; ?></td>
                                             <td><?php echo $b->deskripsi; ?></td>
                                             <td>
-                                                <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos."_". $b->id_pengajuan;?>">Detail</button>
+                                                <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos . "_" . $b->id_pengajuan; ?>">Detail</button>
 
                                                 <!-- <span class="badge badge-pill badge-primary">Primary</span> -->
                                             </td>
@@ -183,24 +183,33 @@
                             <input type="text" readonly class="form-control-plaintext" id="deskripsi" value=" : Lampiran Serah Terima">
                         </div>
                     </div>
+                    <!-- 
+                      <div class="form-group row">
+                          <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
+                          <select class="form-control select2 col-sm-6" id="exampleFormControlSelect1">
+                              <option>Option 1</option>
+                              <option>Option 2</option>
+                              <option>Option 3</option>
+                          </select>
+                      </div> -->
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
-                        <select class="form-control col-sm-6" id="exampleFormControlSelect1">
-                        <?php
-                            foreach ($dt_perangkat as $c){
-                                $id_perangkat = $c->id_perangkat;
-                                $serial_number = $c->serial_number;
-                                $jenis_perangkat = $c->jenis_perangkat;
-                                $merk = $c->merk;
-                                $spesifikasi = $c->spesifikasi;
+                        <div class="col-sm-6">
+                            <select class="col-sm-6 form-control select2" id="exampleFormControlSelect2">
+                                <?php
+                                foreach ($dt_perangkat as $c) {
+                                    $id_perangkat = $c->id_perangkat;
+                                    $serial_number = $c->serial_number;
+                                    $jenis_perangkat = $c->jenis_perangkat;
+                                    $merk = $c->merk;
+                                    $spesifikasi = $c->spesifikasi;
 
-                                echo " <option value='$id_perangkat'>$serial_number - $jenis_perangkat - $merk - $spesifikasi </option>";
-                            }
-                        ?>
-                        </select>
-                    </div>
-
-
+                                    echo " <option value='$id_perangkat'>$serial_number - $jenis_perangkat - $merk - $spesifikasi </option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>  
                     <!-- <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
 
@@ -231,27 +240,28 @@
         //     // alert("tes");
         //     alert("tes");
         //     $('.modal2').modal('show');
-            // var ts = $('input[name="ids"]:checked').val();            // $('#profil_pegawai').show();
-            // $.ajax({
-            // url: '<?php //echo base_url('Auth/login'); 
-                        ?>',
-            // method: 'post',
-            // data : "username="+username+"&password="+password,
-            // success:function(data){
-            // // alert(data);
-            // if(username == data){
-            // alert("Login Berhasil");
-            // window.location.href = "<?php //echo base_url('Auth/dashboard'); ?>";
-            // }else{
-            // alert("Login Gagal");
-            // }
-            // // alert(data);
-            // // $('#myModal').modal("show");
-            // // $('#tampil_modal').html(data);
-            // // document.getElementById("judul").innerHTML='Edit Data';
-            // }
-            // })
-            // alert("tes");
+        // var ts = $('input[name="ids"]:checked').val();            // $('#profil_pegawai').show();
+        // $.ajax({
+        // url: '<?php //echo base_url('Auth/login'); 
+                    ?>',
+        // method: 'post',
+        // data : "username="+username+"&password="+password,
+        // success:function(data){
+        // // alert(data);
+        // if(username == data){
+        // alert("Login Berhasil");
+        // window.location.href = "<?php //echo base_url('Auth/dashboard'); 
+                                    ?>";
+        // }else{
+        // alert("Login Gagal");
+        // }
+        // // alert(data);
+        // // $('#myModal').modal("show");
+        // // $('#tampil_modal').html(data);
+        // // document.getElementById("judul").innerHTML='Edit Data';
+        // }
+        // })
+        // alert("tes");
         // })
 
 
@@ -263,10 +273,10 @@
             var nippos = myarr[0];
             var id_pengajuan = myarr[1];
             $.ajax({
-                 url: '<?php echo base_url('staff-gs/Pengajuan/detail_pengajuan'); ?>',
-                 method: 'POST',
-                 data: "nippos=" + nippos + "&id_pengajuan=" + id_pengajuan,
-                 success: function(response) {
+                url: '<?php echo base_url('staff-gs/Pengajuan/detail_pengajuan'); ?>',
+                method: 'POST',
+                data: "nippos=" + nippos + "&id_pengajuan=" + id_pengajuan,
+                success: function(response) {
                     var dt = jQuery.parseJSON(response);
                     var nippos = dt[0].nippos;
                     var nama = dt[0].nama;
@@ -278,18 +288,18 @@
                     var namajabatan = dt[0].namajabatan;
                     var jenis_perangkat = dt[0].jenisperangkat;
                     var deskripsi = dt[0].deskripsi;
-                    
-                    $('#nipposnama').val(nippos+" - "+nama);
-                    $('#kantor').val(nopend+" - "+namaktr);
-                    $('#bagian').val(kodebagian+" - "+namabagian);
-                    $('#jabatan').val(kodejabatan+" - "+namajabatan);
+
+                    $('#nipposnama').val(nippos + " - " + nama);
+                    $('#kantor').val(nopend + " - " + namaktr);
+                    $('#bagian').val(kodebagian + " - " + namabagian);
+                    $('#jabatan').val(kodejabatan + " - " + namajabatan);
                     $('#jns_perangkat').val(jenis_perangkat);
                     $('#deskripsi').val(deskripsi);
-                    
+
                     // alert(nopend);
 
-                 }
-             })
+                }
+            })
         })
     })
 </script>
