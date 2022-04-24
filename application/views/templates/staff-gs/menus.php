@@ -45,7 +45,7 @@
             <li class="menu-header">Perangkat</li>
             <li class="<?php if ($this->uri->segment('2') == 'perangkat') {
                             echo 'active';
-                        } ?>"><a href="<?= base_url('staff-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Daftar Perangkat</span></a></li>
+                        } ?>"><a href="<?= base_url('staff-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Kelola Perangkat</span></a></li>
             <li class="menu-header">Transaksi</li>
 
             <li class="<?php if ($this->uri->segment('2') == 'serah_terima') {

@@ -26,23 +26,9 @@ class service extends CI_Controller
         // $data['sales_data'] = count($this->mhome->all_sales());x
         // $data['customer_data'] = count($this->mhome->all_customer());
 
-        $this->load->view('templates/karyawan/header', $data);
-        $this->load->view('templates/karyawan/menus', $data);
-        $this->load->view('karyawan/service', $data);
-        $this->load->view('templates/karyawan/footer');
-    }
-
-    public function form_service()
-    {
-        $data['title'] = 'Form Pengajuan Service';
-        // $data['menu_katalog'] = $this->mhome->category();
-        // $data['product_data'] = count($this->mhome->product());
-        // $data['sales_data'] = count($this->mhome->all_sales());x
-        // $data['customer_data'] = count($this->mhome->all_customer());
-
-        $this->load->view('templates/karyawan/header', $data);
-        $this->load->view('templates/karyawan/menus', $data);
-        $this->load->view('karyawan/service/form_service', $data);
-        $this->load->view('templates/karyawan/footer');
+        $this->load->view('templates/manager-gs/header', $data);
+        $this->load->view('templates/manager-gs/menus', $data);
+        $this->load->view('manager-gs/service/service', $data);
+        $this->load->view('templates/manager-gs/footer');
     }
 }

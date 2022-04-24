@@ -1,4 +1,99 @@
-<script src="<?php echo base_url('assets/assets/modules/bootstrap/js/bootstrap.min.js'); ?>" type="text/javascript"></script>
+<!-- Main Content -->
+<div class="main-content">
+    <section class="section">
+        <div class="section-header">
+            <h1><?= $title ?></h1>
+            <div class="section-header-breadcrumb">
+                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                <div class="breadcrumb-item">Pengajuan Perangkat Baru</a></div>
+            </div>
+        </div>
+
+        <div class="section-body">
+            <!-- <h2 class="section-title">DataTables</h2>
+            <p class="section-lead">
+                We use 'DataTables' made by @SpryMedia. You can check the full documentation <a href="https://datatables.net/">here</a>.
+            </p> -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <!-- <div class="card-header">
+                            <h4>Advanced Table</h4>
+                        </div> -->
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped" id="table-2">
+                                    <thead>
+                                        <tr>
+                                            <!-- <th class="text-center">
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
+                                                    <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                                                </div>
+                                            </th> -->
+                                            <th>No</th>
+                                            <th>Nippos/Nama</th>
+                                            <th>Kantor</th>
+                                            <th>Bagian</th>
+                                            <th>Jabatan</th>
+                                            <th>Jenis Perangkat</th>
+                                            <th>deskripsi</th>
+                                            <th>#</th>
+
+                                        </tr>
+                                    </thead>
+                                    <?php
+                                    foreach ($dt_pengajuan as $b) {
+                                        $no_urut = 0;
+                                    ?>
+
+                                        <tr>
+                                            <!-- <td class="p-0 text-center">
+                                                <div class="custom-checkbox custom-control">
+                                                    <input type="checkbox" data-checkboxes="mygroup" name="ids" class="custom-control-input" id="<?php echo $b->nippos; ?>" value="<?php echo $b->nippos; ?>">
+                                                    <label for="<?php echo $b->nippos; ?>" class="custom-control-label">&nbsp;</label>
+                                                </div>
+                                            </td> -->
+                                            <td>
+                                                Test
+                                            </td>
+                                            <td><?php echo $b->nippos . " - " . $b->nama; ?></td>
+                                            <td><?php echo $b->nopend . " - " . $b->namaktr; ?></td>
+                                            <td><?php echo $b->namabagian; ?></td>
+                                            <td><?php echo $b->namajabatan; ?></td>
+                                            <td><?php echo $b->jenisperangkat; ?></td>
+                                            <td><?php echo $b->deskripsi; ?></td>
+                                            <td>
+                                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">Detail</button>
+
+                                                <!-- <span class="badge badge-pill badge-primary">Primary</span> -->
+                                            </td>
+
+                                        </tr>
+
+                                    <?php
+                                    }
+                                    ?>
+
+                                </table>
+                                <div class="card-footer text-right col-sm-12 col-md-12">
+                                    <button class="btn btn-primary" id="submit">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+</div>
+</div>
+
+</body>
+
+</html>
 
 <div class="modal" tabindex="-1" role="dialog" id="myModal">
     <div class="modal-dialog" role="document">
@@ -41,100 +136,80 @@
     </div>
 </div>
 
-<!-- Main Content -->
-<!-- Main Content -->
-<div class="main-content">
-    <section class="section">
-        <div class="section-header">
-            <h1>DataTables</h1>
-            <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                <div class="breadcrumb-item"><a href="#">Modules</a></div>
-                <div class="breadcrumb-item">DataTables</div>
+
+<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Detail Data Perangkat Saya</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-        </div>
+            <div class="modal-body">
+                <!-- form -->
+                <form>
 
-        <div class="section-body">
-            <h2 class="section-title">DataTables</h2>
-            <p class="section-lead">
-                We use 'DataTables' made by @SpryMedia. You can check the full documentation <a href="https://datatables.net/">here</a>.
-            </p>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4>Advanced Table</h4>
-                        </div>
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-striped" id="table-2">
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
-                                                    <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
-                                                </div>
-                                            </th>
-                                            <th>Nippos/Nama</th>
-                                            <th>Kantor</th>
-                                            <th>Bagian</th>
-                                            <th>Jabatan</th>
-                                            <th>Jenis Perangkat</th>
-                                            <th>deskripsi</th>
-                                            <th>Status</th>
-
-                                        </tr>
-                                    </thead>
-                                    <?php
-                                    foreach ($dt_pengajuan as $b) {
-                                    ?>
-
-                                        <tr>
-                                            <td class="p-0 text-center">
-                                                <div class="custom-checkbox custom-control">
-                                                    <input type="checkbox" data-checkboxes="mygroup" name="ids" class="custom-control-input" id="<?php echo $b->nippos_pengguna; ?>" value="<?php echo $b->nippos_pengguna; ?>">
-                                                    <label for="<?php echo $b->nippos_pengguna; ?>" class="custom-control-label">&nbsp;</label>
-                                                </div>
-                                            </td>
-
-                                            <td><?php echo $b->nippos_pengguna . " - " . $b->nama_pengguna; ?></td>
-                                            <td><?php echo $b->nopend_pengguna . " - " . $b->namaktr_pengguna; ?></td>
-                                            <td><?php echo $b->nm_bagian_pengguna; ?></td>
-                                            <td><?php echo $b->nm_jabatan_pengguna; ?></td>
-                                            <td><?php echo $b->jenis_perangkat; ?></td>
-                                            <td><?php echo $b->deskripsi; ?></td>
-                                            <td>
-                                                <span class="badge badge-pill badge-primary">Primary</span>
-                                            </td>
-
-                                        </tr>
-
-                                    <?php
-                                    }
-                                    ?>
-
-                                </table>
-                                <div class="card-footer text-right col-sm-12 col-md-12">
-                                    <button class="btn btn-primary" id="submit">Submit</button>
-                                </div>
-                            </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Nippos/Nama</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
                         </div>
                     </div>
-                </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Kantor</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Bagian</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Jabatan</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Deskripsi</label>
+                        <div class="col-sm-6">
+                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value=" : Lampiran Serah Terima">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
+                        <select class="form-control col-sm-6" id="exampleFormControlSelect1">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                    </div>
+
+
+                </form>
+
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Setujui</button>
             </div>
         </div>
-    </section>
+    </div>
 </div>
-<script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
-</div>
-</div>
-<script src="<?php echo base_url('assets/js/jquery.min.js'); ?>" type="text/javascript"></script>
-
-</body>
-
-</html>
 
 <script>
     $(document).ready(function() {

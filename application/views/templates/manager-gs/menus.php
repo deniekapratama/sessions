@@ -4,7 +4,7 @@
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand">
-            <a href="<?= base_url('staff-gs/dashboard'); ?>"><b>
+            <a href="<?= base_url('manager-gs/dashboard'); ?>"><b>
                     <img width="120px" src="<?= base_url('assets/auth/img/logoses.svg') ?>" alt="">
         </div>
         <div class="sidebar-brand sidebar-brand-sm">
@@ -15,36 +15,34 @@
             <li class="<?php if ($this->uri->segment('2') == 'dashboard') {
                             echo 'active';
                         } ?>">
-                <a href="<?= base_url('staff-gs/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
+                <a href="<?= base_url('manager-gs/dashboard'); ?>"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
-
             <li class="menu-header">Data</li>
-            <li class="dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="fas fa-arrow-up"></i> <span>Data Pengajuan</span></a>
+            <li class="dropdown ">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-arrow-up"></i> <span>Daftar Pengajuan</span></a>
                 <ul class="dropdown-menu">
                     <li class="<?php if ($this->uri->segment('2') == 'pengajuan') {
                                     echo 'active';
-                                } ?>"><a class="nav-link" href="<?= base_url('staff-gs/pengajuan'); ?>">Perangkat Baru</a></li>
+                                } ?>"><a class="nav-link" href="<?= base_url('manager-gs/pengajuan'); ?>">Perangkat Baru</a></li>
 
                     <li class="<?php if ($this->uri->segment('2') == 'service') {
                                     echo 'active';
-                                } ?>"><a class="nav-link" href="<?= base_url('staff-gs/service'); ?>">Data Service</a></li>
+                                } ?>"><a class="nav-link" href="<?= base_url('manager-gs/service'); ?>">Data Service</a></li>
 
                     <li <?php if ($this->uri->segment('2') == 'upgrade') {
                             echo 'active';
-                        } ?>><a href="<?= base_url('staff-gs/upgrade'); ?>">Data Upgrade</a></li>
+                        } ?>><a href="<?= base_url('manager-gs/upgrade'); ?>">Data Upgrade</a></li>
                 </ul>
             </li>
-            <li><a class="nav-link" href="credits.html"><i class="fas fa-arrow-down"></i> <span>Data Pengembalian</span></a></li>
 
-            <li><a href="<?= base_url('staff-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Calon Karyawan Pensiun</span></a></li>
+            <li class="menu-header">Perangkat</li>
+            <li><a href="<?= base_url('manager-gs/perangkat'); ?>"><i class="fas fa-laptop"></i> <span>Kelola Perangkat</span></a></li>
             <li class="menu-header">Report</li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
                 <ul class="dropdown-menu">
                     <li><a href="auth-forgot-password.html">Pengajuan</a></li>
                     <li><a href="auth-forgot-password.html">Pengembalian </a></li>
-                    <li><a href="auth-forgot-password.html">Data Perangkat </a></li>
                 </ul>
             </li>
             <!-- <li><a class="nav-link" href="credits.html"><i class="fas fa-pencil-ruler"></i> <span>Credits</span></a></li> -->
