@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Pengajuan extends CI_Controller
+class M_approval extends CI_Controller
 {
 
     function __construct()
@@ -47,12 +47,11 @@ class Pengajuan extends CI_Controller
         $this->load->view('templates/manager-gs/footer');
     }
 
-    public function approve()
+    public function cari_pgw()
     {
-        $parameter = $_POST['parameter'];
-        $hsl = $this->Model_pengajuan->approve($parameter);
-        // print_r($mparam);
-        echo $hsl;
+        $nipposatasan = $_POST['nippos_atasan'];
+        $cek = $this->Model_pengajuan->cari_pgw($nipposatasan);
+        echo $cek;
     }
 
 }

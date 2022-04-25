@@ -212,7 +212,19 @@
                  method: 'POST',
                  data: "nippos_pengguna=" + nippos_pengguna + "&nama_pengguna=" + nama_pengguna + "&nopend_pengguna=" + nopend_pengguna + "&namaktr_pengguna=" + namaktr_pengguna + "&jabatan_pengguna=" + jabatan_pengguna + "&nm_jabatan_pengguna=" + nm_jabatan_pengguna + "&bagian_pengguna=" + bagian_pengguna + "&nm_bagian_pengguna=" + nm_bagian_pengguna + "&jenis_perangkat=" + jenis_perangkat + "&deskripsi=" + deskripsi + "&no_surat_nde=" + no_surat_nde + "&tgl_surat_nde=" + tgl_surat_nde,
                  success: function(response) {
-                     alert(response);
+                    if(response == "1"){
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Berhasil Disimpan',
+                        }).then((result) => {
+                            location.reload(true);
+                        })
+                    }else{
+                        Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal Disimpan',
+                        })
+                    }
                  }
              })
          })

@@ -84,8 +84,8 @@ class Pengajuan extends CI_Controller
         $no_surat_nde = trim($_POST['no_surat_nde']);
         $tgl_surat_nde = trim($_POST['tgl_surat_nde']);
 
-        $cek = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $nopend_pengguna, $namaktr_pengguna, $jabatan_pengguna, $nm_jabatan_pengguna, $bagian_pengguna, $nm_bagian_pengguna, $jenis_perangkat, $deskripsi, $no_surat_nde, $tgl_surat_nde);
-        echo $cek;
+        $hsl = $this->Model_pengajuan->insert_pengajuan($nippos_pengguna, $nama_pengguna, $nopend_pengguna, $namaktr_pengguna, $jabatan_pengguna, $nm_jabatan_pengguna, $bagian_pengguna, $nm_bagian_pengguna, $jenis_perangkat, $deskripsi, $no_surat_nde, $tgl_surat_nde);
+        echo $hsl;
     }
 
     public function selectAll_pengajuan()

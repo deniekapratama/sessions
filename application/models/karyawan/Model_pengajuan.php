@@ -52,7 +52,11 @@ Class Model_pengajuan extends CI_Model
       $sql1="INSERT INTO tb_pengajuan (nippos,nama,kodebagian,namabagian,kodejabatan,namajabatan,nopend,namaktr,jenisperangkat,deskripsi,serial_number,id_perangkat,respon_admin,tglpengajuan,tglpengembalian,status,no_surat_nde,tgl_surat_nde,lampiran,WKT_INSERT,UID_INSERT,WKT_UPDATE,UID_UPDATE) VALUES ('".$nippos_pengguna."','".$nama_pengguna."','".$bagian_pengguna."','".$nm_bagian_pengguna."','".$jabatan_pengguna."','".$nm_jabatan_pengguna."','".$nopend_pengguna."','".$namaktr_pengguna."','".$jenis_perangkat."','".$deskripsi."','','','','".$tgl_surat_nde."','','0','".$no_surat_nde."','".$tgl_surat_nde."','',NOW(),NOW(),NOW(),NOW())";
       $this->db->query($sql1);
       // return $this->db->insert_id();
-      echo "tes";
+      if ($this->db->affected_rows() > 0){
+        return TRUE;
+      }else{
+        return FALSE;
+      }
 
     // $this->db->insert('m_pengajuan',$data);
     // echo $nippos_pengguna."_".$nama_pengguna."_".$jabatan_pengguna."_".$bagian_pengguna."_".$nippos_atasan."_".$nama_atasan."_".$jabatan_atasan."_".$bagian_atasan."_".$jenis_perangkat."_".$deskripsi;
