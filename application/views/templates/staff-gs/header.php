@@ -45,6 +45,7 @@
 
     <link rel="shortcut icon" href="<?= base_url('assets/assets/img/'); ?>lo.png" type="image/x-icon">
 
+
     <head>
 
         <script src="http://code.jquery.com/jquery-2.2.1.min.js"></script>

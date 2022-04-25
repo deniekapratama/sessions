@@ -61,7 +61,7 @@
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-danger">
                         <!-- <i class="far fa-newspaper"></i> -->
-                        <i class="far fa-solid fa-screen-users"></i>
+                        <i class="fa-solid fa-computer"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">

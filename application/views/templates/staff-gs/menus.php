@@ -53,6 +53,18 @@
                 <a href="<?= base_url('staff-gs/serah_terima'); ?>"><i class="fas fa-server"></i><span>Daftar Serah Terima</span></a>
             </li>
 
+            <li class="menu-header">Monitoring</li>
+            <li class="dropdown <?php echo activate_menu('posisi_karyawan'); ?> , <?php echo activate_menu('pensiun'); ?>">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-desktop"></i> <span>Monitoring</span></a>
+                <ul class="dropdown-menu">
+                    <li class="<?php if ($this->uri->segment('2') == 'posisi_karyawan') {
+                                    echo 'active';
+                                } ?>"><a class="nav-link" href="<?= base_url('staff-gs/posisi_karyawan'); ?>">Posisi Karyawan</a></li>
+                    <li <?php if ($this->uri->segment('2') == 'pensiun') {
+                            echo 'active';
+                        } ?>><a href="<?= base_url('staff-gs/pensiun'); ?>">Pensiun</a></li>
+                </ul>
+            </li>
             <!-- <li class="menu-header">Report</li>
             <li class="dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="fas fa-chart-bar"></i> <span>Laporan</span></a>
