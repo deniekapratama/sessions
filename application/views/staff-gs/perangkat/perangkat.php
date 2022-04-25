@@ -96,10 +96,15 @@
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
                         <div class="col-sm-6">
                             <select class="col-sm-12 form-control" id="exampleFormControlSelect2">
-                                <option>A</option>
-                                <option>B</option>
-                                <option>C</option>
-                                <option>D</option>
+                                <option>Pilih..</option>
+                                <option>Laptop</option>
+                                <option>Desktop</option>
+                                <option>Printer</option>
+                                <option>Scanner</option>
+                                <option>Hardisk</option>
+                                <option>SSD</option>
+                                <option>Hardisk Ekternal</option>
+                                <option>Perangkat Jaringan</option>
                             </select>
                         </div>
                     </div>
