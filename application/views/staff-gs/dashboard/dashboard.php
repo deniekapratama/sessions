@@ -12,7 +12,7 @@
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
-                            <h4>Pengguna Perangkat</h4>
+                            <h4>Pengguna Perangkats</h4>
                         </div>
                         <div class="card-body">
                             42
