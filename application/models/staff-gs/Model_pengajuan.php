@@ -1,7 +1,8 @@
 <?php
 Class Model_pengajuan extends CI_Model
 {
-   
+
+  
 
     public function selectAll_pengajuan()
     {
@@ -13,7 +14,7 @@ Class Model_pengajuan extends CI_Model
 
     public function selectAll_pengajuandetail($nippos,$id_pengajuan)
     {
-         $query = $this->db->query("SELECT a.id_pengajuan,a.nippos,a.nama,a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.deskripsi FROM tb_pengajuan a left join tb_perangkat b on a.serial_number = b.serial_number  where a.nippos = '$nippos' and a.id_pengajuan = '$id_pengajuan';");
+         $query = $this->db->query("SELECT a.id_pengajuan,a.nippos,a.nama,a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.deskripsi,b.merk,b.spesifikasi,b.serial_number,a.id_perangkat,a.status FROM tb_pengajuan a left join tb_perangkat b on a.id_perangkat = b.id_perangkat  where a.nippos = '$nippos' and a.id_pengajuan = '$id_pengajuan';");
          return $query->result();
 
     }
@@ -25,8 +26,20 @@ Class Model_pengajuan extends CI_Model
 
     public function pilih_perangkat($id_pengajuan,$idperangkat,$serial_number){
       $query = $this->db->query("UPDATE tb_pengajuan SET id_perangkat = '$idperangkat', serial_number = '$serial_number',status = '1' where id_pengajuan = '$id_pengajuan'");
-      $query->result();
-      echo "sukses";
+      if ($this->db->affected_rows() > 0){
+        return TRUE;
+      }else{
+        return FALSE;
+      }
+    }
+
+    public function update_upload($ImageName,$idpengajuan){
+      $query = $this->db->query("UPDATE tb_pengajuan SET lampiran = '$ImageName' where id_pengajuan = '$idpengajuan'");
+      if ($this->db->affected_rows() > 0){
+        return TRUE;
+      }else{
+        return FALSE;
+      }
     }
 }
 ?>

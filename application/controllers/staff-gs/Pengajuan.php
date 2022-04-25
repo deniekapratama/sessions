@@ -8,7 +8,10 @@ class pengajuan extends CI_Controller
     {
         parent::__construct();
         $this->load->model('staff-gs/Model_pengajuan');
-        // load helper
+        
+        //load Helper for Form
+        $this->load->helper('url', 'form'); 
+        $this->load->library('form_validation');
 
         // load model
         // $this->load->model('mhome');
@@ -105,10 +108,20 @@ class pengajuan extends CI_Controller
         $serial_number = $_POST['serial_number'];
 
         $hsl = $this->Model_pengajuan->pilih_perangkat($id_pengajuan,$idperangkat,$serial_number);
-        return $hsl;
+        echo $hsl;
         // echo $id_pengajuan.$idperangkat;
 
     }
+
+    function upload(){
+        $ImageName = $_FILES['fileupload']['name'];
+        $idpengajuan = $_POST['idpengajuan'];
+
+        $hsl = $this->Model_pengajuan->update_upload($ImageName,$idpengajuan);
+        // echo $ImageName.$idpengajuan;
+        echo $hsl;
+ 
+     }
 
 
 }

@@ -39,7 +39,6 @@
                                             <th>Jenis Perangkat</th>
                                             <th>deskripsi</th>
                                             <th>Status Approve Manager</th>
-                                            <th>Lampiran serah terima</th>
                                             <th>#</th>
 
                                         </tr>
@@ -64,14 +63,13 @@
                                                 </div>
                                             </td> -->
 
-                                            <td><?php echo $b->nippos . " - " . $b->status; ?></td>
+                                            <td><?php echo $b->nippos . " - " . $b->nama; ?></td>
                                             <td><?php echo $b->nopend . " - " . $b->namaktr; ?></td>
                                             <td><?php echo $b->namabagian; ?></td>
                                             <td><?php echo $b->namajabatan; ?></td>
                                             <td><?php echo $b->jenisperangkat; ?></td>
                                             <td><?php echo $b->deskripsi; ?></td>
                                             <td><?php echo $desstatus;?></td>
-                                            <td><input type="file"></td>
                                             <td>
                                                 <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos . "_" . $b->id_pengajuan; ?>">Detail</button>
 
@@ -156,46 +154,48 @@
             </div>
             <div class="modal-body">
                 <!-- form -->
-                <form>
+                <form enctype="multipart/form-data" id="myform">
 
                 
                     <input type="hidden" name="id_pengajuan" id="id_pengajuan">
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Nippos/Nama</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="nipposnama" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="nipposnama" >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Kantor</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="kantor" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="kantor" >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Bagian</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="bagian" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="bagian" >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jabatan</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="jabatan" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="jabatan" >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Jenis Perangkat</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="jns_perangkat" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="jns_perangkat" >
                         </div>
                     </div>
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Deskripsi</label>
                         <div class="col-sm-6">
-                            <input type="text" readonly class="form-control-plaintext" id="deskripsi" value=" : Lampiran Serah Terima">
+                            <input type="text" readonly class="form-control-plaintext" id="deskripsi">
                         </div>
                     </div>
+
+                    <input type="hidden" id="titip_id_pengajuan">
                     <!-- 
                       <div class="form-group row">
                           <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
@@ -208,6 +208,7 @@
                     <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Perangkat</label>
                         <div class="col-sm-6">
+                            <div id="tampil_perangkat">
                             <select class="col-sm-12 form-control" id="perangkat">
                                 <option value="00">-- Pilih Perangkat --</option>
                                 <?php
@@ -222,8 +223,19 @@
                                 }
                                 ?>
                             </select>
+                            </div>
                         </div>
                     </div>
+
+                    <div id="tampil_upload" style="display:none">
+                    <div class="form-group row">
+                        <label for="staticEmail" class="col-sm-2 col-form-label">Lampiran Serah Terima</label>
+                        <div class="col-sm-6">
+                           <input type="file" id="fileupload" name="fileupload">
+                        </div>
+                    </div>
+                    </div>
+                    
                     <!-- <div class="form-group row">
                         <label for="staticEmail" class="col-sm-2 col-form-label">Pilih Perangkat</label>
 
@@ -241,8 +253,10 @@
 
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" id="pilih_perangkat">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Keluar</button>
+                <div id="btns">
+                <button type="button" class="btn btn-primary" id="pilih_perangkat">Simpan</button>
+                </div>
             </div>
         </div>
     </div>
@@ -304,6 +318,24 @@
                     var jenis_perangkat = dt[0].jenisperangkat;
                     var deskripsi = dt[0].deskripsi;
                     var idpengajuan = dt[0].id_pengajuan;
+                    var merk = dt[0].merk;
+                    var spesifikasi = dt[0].spesifikasi;
+                    var serial_number = dt[0].serial_number;
+                    var id_perangkat = dt[0].id_perangkat;
+                    var status = dt[0].status;
+
+                    $('#titip_id_pengajuan').val(idpengajuan);
+
+                    if(id_perangkat != 0){
+                        $('#tampil_perangkat').html(serial_number+" - "+merk+" - "+spesifikasi);
+                    }
+
+
+                    if(status == 2){
+                        $('#tampil_upload').show();
+                        $('#btns').html('<button type="button" class="btn btn-primary" onclick="btn_upload()">Upload</button>');
+                    }
+
                     // alert(idpengajuan);
 
                     $('#nipposnama').val(nippos + " - " + nama);
@@ -321,6 +353,7 @@
             })
         })
 
+
         $('#pilih_perangkat').click(function() {
             // alert("tes");
             
@@ -335,11 +368,59 @@
                 method: 'POST',
                 data: "id_pengajuan=" + id_pengajuan + "&perangkat=" + id_perangkat + "&serial_number=" + serial_number,
                 success: function(response) {
-       
-                    alert(response);
+                    if(response == "1"){
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Perangkat Berhasil Dipilih',
+                        }).then((result) => {
+                            location.reload(true);
+                        })
+                    }else{
+                        Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal Dipilih',
+                        })
+                    }
                 }
             })
         })
         
     })
+
+    function btn_upload(){
+            // var fd = new FormData();
+            // var files = $('#file')[0].files;
+            // var nama_file = $('#nama_file').val();
+                const fileupload = $('#fileupload').prop('files')[0];
+                let formData = new FormData();
+                var idpengajuan = $('#titip_id_pengajuan').val();
+                formData.append('fileupload', fileupload);
+                formData.append('idpengajuan', idpengajuan);
+
+  
+                $.ajax({
+                    type: 'POST',
+                    url: "<?php echo base_url('staff-gs/Pengajuan/upload'); ?>",
+                    data: formData,
+                    cache: false,
+                    processData: false,
+                    contentType: false,
+                    success: function (response) {
+                        if(response == "1"){
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Upload File Berhasil',
+                        }).then((result) => {
+                            location.reload(true);
+                        })
+                        }else{
+                            Swal.fire({
+                            icon: 'error',
+                            title: 'Upload File Gagal',
+                            })
+                        }
+                    }
+                
+                });
+            };
 </script>

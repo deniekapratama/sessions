@@ -64,7 +64,7 @@
                                 <?php
                                         if ($b->status == "0") {
                                             echo '<td><div class="badge badge-info">Pengajuan</div></td>';
-                                        } else if ($b->status == "1") {
+                                        } else if ($b->status == "1" or $b->lampiran == "") {
                                             echo '<td><div class="badge badge-warning">In Progress</div></td>';
                                         } else if ($b->status == "2") {
                                             echo '<td><div class="badge badge-success">Completed</div></td>';
