@@ -47,6 +47,10 @@ a:not(.btn-social-icon):not(.btn-social):not(.page-link) .fab {
 	background-color: #fc544b !important
 }
 
+.bg-blue {
+	background-color: #063faf !important
+}
+
 .bg-light {
 	background-color: #e3eaef !important
 }
@@ -1229,6 +1233,7 @@ select.form-control:not([size]):not([multiple]) {
 
 .card.bg-primary,
 .card.bg-danger,
+.card.bg-blue,
 .card.bg-success,
 .card.bg-info,
 .card.bg-dark,
@@ -1240,6 +1245,7 @@ select.form-control:not([size]):not([multiple]) {
 .card.bg-danger .card-header,
 .card.bg-success .card-header,
 .card.bg-info .card-header,
+.card.bg-blue .card-header,
 .card.bg-dark .card-header,
 .card.bg-warning .card-header {
 	color: #fff;
