@@ -69,7 +69,7 @@
                                             <td><?php echo $b->spesifikasi; ?></td>
 
                                             <td>
-                                                <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos . "_" . $b->id_pengajuan; ?>">Detail</button>
+                                                <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos . "_" . $b->id_pengajuan; ?>">Cetak Surat</button>
 
                                                 <!-- <span class="badge badge-pill badge-primary">Primary</span> -->
                                             </td>
@@ -268,7 +268,20 @@
                 method: 'POST',
                 data: "parameter=" + val,
                 success: function(response) {
-                    alert(response);
+                    if(response == "1"){
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Telah Disetujui',
+                        }).then((result) => {
+                            location.reload();
+                        })
+                    }else{
+                        Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal Disimpan',
+                        })
+                    }
+                    // alert(response);
                 }
             })
         })

@@ -25,8 +25,12 @@ Class Model_pengajuan extends CI_Model
     public function approve($parameter){
         $mparam = explode(",", $parameter);
         if (count($mparam) == 1) {
-          $query = $this->db->query("UPDATE tb_pengajuan SET status = '2' where id_pengajuan = '$parameter'");
-          return $query->result();
+            $query = $this->db->query("UPDATE tb_pengajuan SET status = '2' where id_pengajuan = '$parameter'");
+            if ($this->db->affected_rows() > 0){
+              return TRUE;
+            }else{
+              return FALSE;
+            }
         }else{
             $no = 1;
             while($no < count($mparam)){
@@ -34,7 +38,11 @@ Class Model_pengajuan extends CI_Model
               $query = $this->db->query("UPDATE tb_pengajuan SET status = '2' where id_pengajuan = '$parameter'");
               $no++;
             }
-            return $query->result();
+            if ($this->db->affected_rows() > 0){
+              return TRUE;
+            }else{
+              return FALSE;
+            }
         }
     }
 }

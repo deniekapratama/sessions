@@ -38,14 +38,24 @@
                                             <th>Jabatan</th>
                                             <th>Jenis Perangkat</th>
                                             <th>deskripsi</th>
+                                            <th>Status Approve Manager</th>
+                                            <th>Lampiran serah terima</th>
                                             <th>#</th>
 
                                         </tr>
                                     </thead>
                                     <?php
                                     foreach ($dt_pengajuan as $b) {
+                                        $status = $b->status;
+                                        if($status == "0"){
+                                            $desstatus = "";
+                                        }else if($status == "1"){
+                                            $desstatus = "Menunggu";
+                                        }else if($status == "2"){
+                                            $desstatus = "Disetujui";
+                                        }
                                     ?>
-
+                                        
                                         <tr>
                                             <!-- <td class="p-0 text-center">
                                                 <div class="custom-checkbox custom-control">
@@ -54,12 +64,14 @@
                                                 </div>
                                             </td> -->
 
-                                            <td><?php echo $b->nippos . " - " . $b->nama; ?></td>
+                                            <td><?php echo $b->nippos . " - " . $b->status; ?></td>
                                             <td><?php echo $b->nopend . " - " . $b->namaktr; ?></td>
                                             <td><?php echo $b->namabagian; ?></td>
                                             <td><?php echo $b->namajabatan; ?></td>
                                             <td><?php echo $b->jenisperangkat; ?></td>
                                             <td><?php echo $b->deskripsi; ?></td>
+                                            <td><?php echo $desstatus;?></td>
+                                            <td><input type="file"></td>
                                             <td>
                                                 <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos . "_" . $b->id_pengajuan; ?>">Detail</button>
 
