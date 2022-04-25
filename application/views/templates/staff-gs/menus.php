@@ -27,11 +27,11 @@
 
                     <li class="<?php if ($this->uri->segment('2') == 'service') {
                                     echo 'active';
-                                } ?>"><a class="nav-link" href="<?= base_url('staff-gs/service'); ?>">Data Service</a></li>
+                                } ?>"><a class="nav-link" href="<?= base_url('staff-gs/service'); ?>">Service</a></li>
 
                     <li <?php if ($this->uri->segment('2') == 'upgrade') {
                             echo 'active';
-                        } ?>><a href="<?= base_url('staff-gs/upgrade'); ?>">Data Upgrade</a></li>
+                        } ?>><a href="<?= base_url('staff-gs/upgrade'); ?>">Upgrade</a></li>
                 </ul>
             </li>
 

@@ -2,66 +2,13 @@
 <br>
 <div class="main-content">
     <section class="section">
-        <div class="row">
-            <div class="col-lg-4 col-md-4 col-sm-12">
-                <div class="card card-statistic-2">
-                    <div class="card-stats">
-                        <div class="card-stats-title">Jumlah Pengajuan -
-                            <div class="dropdown d-inline">
-                                <a class="font-weight-600 dropdown-toggle" data-toggle="dropdown" href="#" id="orders-month">April</a>
-                                <ul class="dropdown-menu dropdown-menu-sm">
-                                    <li class="dropdown-title">Select Month</li>
-                                    <li><a href="#" class="dropdown-item">January</a></li>
-                                    <li><a href="#" class="dropdown-item">February</a></li>
-                                    <li><a href="#" class="dropdown-item">March</a></li>
-                                    <li><a href="#" class="dropdown-item">April</a></li>
-                                    <li><a href="#" class="dropdown-item">May</a></li>
-                                    <li><a href="#" class="dropdown-item">June</a></li>
-                                    <li><a href="#" class="dropdown-item">July</a></li>
-                                    <li><a href="#" class="dropdown-item active">August</a></li>
-                                    <li><a href="#" class="dropdown-item">September</a></li>
-                                    <li><a href="#" class="dropdown-item">October</a></li>
-                                    <li><a href="#" class="dropdown-item">November</a></li>
-                                    <li><a href="#" class="dropdown-item">December</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-stats-items">
-                            <div class="card-stats-item">
-                                <div class="card-stats-item-count">24</div>
-                                <div class="card-stats-item-label">Perangkat Baru</div>
-                            </div>
-                            <div class="card-stats-item">
-                                <div class="card-stats-item-count">12</div>
-                                <div class="card-stats-item-label">Service</div>
-                            </div>
-                            <div class="card-stats-item">
-                                <div class="card-stats-item-count">23</div>
-                                <div class="card-stats-item-label">Upgrade</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card-icon shadow-primary bg-primary">
-                        <i class="fas fa-archive"></i>
-                    </div>
-                    <div class="card-wrap">
-                        <div class="card-header">
-                            <h4>Total Pengajuan Perangkat</h4>
-                        </div>
-                        <div class="card-body">
-                            59
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-danger">
                         <!-- <i class="far fa-newspaper"></i> -->
-                        <i class="fa-solid fa-computer"></i>
+                        <i class="fas fa-laptop"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
@@ -73,10 +20,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-primary">
-                        <i class="far fa-user"></i>
+                        <i class="fas fa-users"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
@@ -88,11 +36,10 @@
                     </div>
                 </div>
             </div>
-
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
-                    <div class="card-icon bg-success">
-                        <i class="fas fa-circle"></i>
+                    <div class="card-icon bg-secondary">
+                        <i class="fas fa-laptop"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
@@ -104,9 +51,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
-                    <div class="card-icon bg-success">
+                    <div class="card-icon bg-secondary">
                         <i class="fas fa-circle"></i>
                     </div>
                     <div class="card-wrap">
@@ -142,7 +90,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-danger">
-                        <i class="far fa-newspaper"></i>
+                        <i class="fas fa-server"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
@@ -157,7 +105,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-warning">
-                        <i class="far fa-file"></i>
+                        <i class="fas fa-file"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
@@ -172,7 +120,7 @@
             <div class="col-lg-3 col-md-6 col-sm-6 col-12">
                 <div class="card card-statistic-1">
                     <div class="card-icon bg-success">
-                        <i class="fas fa-circle"></i>
+                        <i class="fas fa-exchange-alt"></i>
                     </div>
                     <div class="card-wrap">
                         <div class="card-header">
@@ -180,6 +128,51 @@
                         </div>
                         <div class="card-body">
                             47
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-primary">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Pengajuan Perangkat Baru</h4>
+                        </div>
+                        <div class="card-body">
+                            340
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-danger">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Pengajuan Service</h4>
+                        </div>
+                        <div class="card-body">
+                            42
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+                <div class="card card-statistic-1">
+                    <div class="card-icon bg-warning">
+                        <i class="fas fa-undo"></i>
+                    </div>
+                    <div class="card-wrap">
+                        <div class="card-header">
+                            <h4>Pengajuan Upgrade</h4>
+                        </div>
+                        <div class="card-body">
+                            1,201
                         </div>
                     </div>
                 </div>
