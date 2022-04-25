@@ -56,12 +56,8 @@
                                                 $sn = $b->serial_number;
                                                 $id_perangkat = $b->id_perangkat;
 
-                                                if ($b->status == "0") {
-                                                    echo '<td><div class="badge badge-info">Pengajuan</div></td>';
-                                                } else if ($b->status == "1") {
-                                                    echo '<td><div class="badge badge-warning">Completed</div></td>';
-                                                } else if ($b->status == "2") {
-                                                    echo '<td><div class="badge badge-success">Completed</div></td>';
+                                                if ($b->status == "2") {
+                                                    echo '<td><div class="badge badge-success">Aktif</div></td>';
                                                 } else if ($b->status == "5") {
                                                     echo '<td><div class="badge badge-danger">Sudah Dikembalikan</div></td>';
                                                 }
