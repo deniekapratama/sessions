@@ -87,6 +87,8 @@
                         // if(dt.succ)
                         if(posisi == "99"){
                             window.location.href = "<?php echo base_url('staff-gs/Dashboard'); ?>";
+                        }else if(posisi == "98"){
+                            window.location.href = "<?php echo base_url('manager-gs/Dashboard'); ?>";
                         }else{
                             window.location.href = "<?php echo base_url('karyawan/Dashboard'); ?>";
                         }
