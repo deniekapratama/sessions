@@ -95,9 +95,9 @@ class pengajuan extends CI_Controller
     }
 
     public function detail_pengajuan(){
-        $nippos = $_POST['nippos'];
+        // $nippos = $_POST['nippos'];
         $idpengajuan = $_POST['id_pengajuan'];
-        $hsl = $this->Model_pengajuan->selectAll_pengajuandetail($nippos,$idpengajuan);
+        $hsl = $this->Model_pengajuan->selectAll_pengajuandetail($idpengajuan);
         $data = json_encode($hsl);
         echo $data;
     }

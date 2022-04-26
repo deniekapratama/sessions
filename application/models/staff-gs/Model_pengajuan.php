@@ -12,9 +12,9 @@ Class Model_pengajuan extends CI_Model
         return $query->result();
     }
 
-    public function selectAll_pengajuandetail($nippos,$id_pengajuan)
+    public function selectAll_pengajuandetail($id_pengajuan)
     {
-         $query = $this->db->query("SELECT a.id_pengajuan,a.nippos,a.nama,a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.deskripsi,b.merk,b.spesifikasi,b.serial_number,a.id_perangkat,a.status FROM tb_pengajuan a left join tb_perangkat b on a.id_perangkat = b.id_perangkat  where a.nippos = '$nippos' and a.id_pengajuan = '$id_pengajuan';");
+         $query = $this->db->query("SELECT a.id_pengajuan,a.nippos,a.nama,a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.deskripsi,b.merk,b.spesifikasi,b.serial_number,a.id_perangkat,a.status FROM tb_pengajuan a left join tb_perangkat b on a.id_perangkat = b.id_perangkat  where a.id_pengajuan = '$id_pengajuan';");
          return $query->result();
 
     }

@@ -71,7 +71,7 @@
                                             <td><?php echo $b->deskripsi; ?></td>
                                             <td><?php echo $desstatus;?></td>
                                             <td>
-                                                <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos . "_" . $b->id_pengajuan; ?>">Detail</button>
+                                                <button class="btn btn-primary" onclick='detail(<?php echo $b->id_pengajuan; ?>)' >Detail</button>
 
                                                 <!-- <span class="badge badge-pill badge-primary">Primary</span> -->
                                             </td>
@@ -293,17 +293,52 @@
         // })
 
 
-        $('#detail').click(function() {
+        $('#pilih_perangkat').click(function() {
             // alert("tes");
+            
+            var id_pengajuan = $('#id_pengajuan').val();
+            var mast_perangkat = $('#perangkat').val();
+            var myarr = mast_perangkat.split("_");
+            var id_perangkat = myarr[0];
+            var serial_number = myarr[1];
+
+            $.ajax({
+                url: '<?php echo base_url('staff-gs/Pengajuan/pilih_perangkat'); ?>',
+                method: 'POST',
+                data: "id_pengajuan=" + id_pengajuan + "&perangkat=" + id_perangkat + "&serial_number=" + serial_number,
+                success: function(response) {
+                    if(response == "1"){
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'Perangkat Berhasil Dipilih',
+                        }).then((result) => {
+                            location.reload(true);
+                        })
+                    }else{
+                        Swal.fire({
+                        icon: 'error',
+                        title: 'Gagal Dipilih',
+                        })
+                    }
+                }
+            })
+        })
+        
+    })
+
+    
+
+    function detail(id_pengajuan) {
+            // alert(par);
             $('#modals').modal('show');
-            var par = $('#detail').val();
-            var myarr = par.split("_");
-            var nippos = myarr[0];
-            var id_pengajuan = myarr[1];
+            // var par = $('#detail').val();
+            // var myarr = par.split("_");
+            // var nippos = myarr[0];
+            // var id_pengajuan = myarr[1];
             $.ajax({
                 url: '<?php echo base_url('staff-gs/Pengajuan/detail_pengajuan'); ?>',
                 method: 'POST',
-                data: "nippos=" + nippos + "&id_pengajuan=" + id_pengajuan,
+                data: "id_pengajuan=" + id_pengajuan,
                 success: function(response) {
                     // alert(response);
                     var dt = jQuery.parseJSON(response);
@@ -351,41 +386,7 @@
 
                 }
             })
-        })
-
-
-        $('#pilih_perangkat').click(function() {
-            // alert("tes");
-            
-            var id_pengajuan = $('#id_pengajuan').val();
-            var mast_perangkat = $('#perangkat').val();
-            var myarr = mast_perangkat.split("_");
-            var id_perangkat = myarr[0];
-            var serial_number = myarr[1];
-
-            $.ajax({
-                url: '<?php echo base_url('staff-gs/Pengajuan/pilih_perangkat'); ?>',
-                method: 'POST',
-                data: "id_pengajuan=" + id_pengajuan + "&perangkat=" + id_perangkat + "&serial_number=" + serial_number,
-                success: function(response) {
-                    if(response == "1"){
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'Perangkat Berhasil Dipilih',
-                        }).then((result) => {
-                            location.reload(true);
-                        })
-                    }else{
-                        Swal.fire({
-                        icon: 'error',
-                        title: 'Gagal Dipilih',
-                        })
-                    }
-                }
-            })
-        })
-        
-    })
+        }
 
     function btn_upload(){
             // var fd = new FormData();
