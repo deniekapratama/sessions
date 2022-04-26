@@ -21,6 +21,7 @@
                         <!-- <div class="card-header">
                             <h4>Advanced Table</h4>
                         </div> -->
+                        <!-- <button onclick="<?php echo base_url('manager-gs/Pengajuan/download'); ?>">download</button> -->
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-striped" id="table-2">
@@ -51,12 +52,19 @@
                                     ?>
 
                                         <tr>
+                                        <?php if($b->status == '1'){ ?>
                                             <td class="p-0 text-center">
                                                 <div class="custom-checkbox custom-control">
                                                     <input type="checkbox" data-checkboxes="mygroup" name="ids" class="custom-control-input pgw" id="<?php echo $b->id_pengajuan; ?>" value="<?php echo $b->id_pengajuan; ?>">
                                                     <label for="<?php echo $b->id_pengajuan; ?>" class="custom-control-label">&nbsp;</label>
                                                 </div>
                                             </td>
+                                        <?php }else{ ?>
+                                            <td class="p-0 text-center">
+                                            </td>
+                                        <?php
+                                            }
+                                        ?>
 
                                             <td><?php echo $b->nippos . " - " . $b->nama; ?></td>
                                             <td><?php echo $b->nopend . " - " . $b->namaktr; ?></td>
@@ -68,11 +76,20 @@
                                             <td><?php echo $b->merk; ?></td>
                                             <td><?php echo $b->spesifikasi; ?></td>
 
+                                            <?php if($b->lampiran != ''){ ?>
                                             <td>
-                                                <button class="btn btn-primary" id="detail" value="<?php echo  $b->nippos . "_" . $b->id_pengajuan; ?>">Cetak Surat</button>
+                                            <a href="<?php echo base_url('manager-gs/Pengajuan/download'); ?>">
+
+                                                <button class="btn btn-primary" id="detail" onclick="window.open('file.doc')">Cetak Surat</button>
+                                            </a>
 
                                                 <!-- <span class="badge badge-pill badge-primary">Primary</span> -->
                                             </td>
+                                            <?php }else{ ?>
+                                                <td> - </td>
+                                            <?php
+                                            }
+                                            ?>
 
                                         </tr>
 
@@ -81,7 +98,7 @@
                                     ?>
                                 </table>
                                 <div class="card-footer text-right col-sm-12 col-md-12">
-                                    <button class="btn btn-primary" id="submit">Submit</button>
+                                    <button class="btn btn-primary" id="submit">Approve</button>
                                 </div>
                             </div>
                         </div>

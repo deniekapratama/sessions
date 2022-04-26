@@ -9,6 +9,7 @@ class Pengajuan extends CI_Controller
         parent::__construct();
         $this->load->helper('url');
         $this->load->model('manager-gs/Model_pengajuan');
+        $this->load->helper(array('url','download'));
         // load helper
 
         // load model
@@ -53,6 +54,10 @@ class Pengajuan extends CI_Controller
         $hsl = $this->Model_pengajuan->approve($parameter);
         // print_r($mparam);
         echo $hsl;
+    }
+
+    public function download(){
+        force_download('gambar/FormSerahTerima.pdf',NULL);
     }
 
 }

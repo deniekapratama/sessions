@@ -6,7 +6,7 @@ Class Model_pengajuan extends CI_Model
     {
         //  $this->db->order_by("Judul","desc"); 
         
-        $query = $this->db->query("SELECT a.id_pengajuan,a.nippos,a.nama,a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.deskripsi,a.serial_number,b.merk,b.spesifikasi FROM tb_pengajuan a left join tb_perangkat b on a.serial_number = b.serial_number where a.status = '1'");
+        $query = $this->db->query("SELECT a.id_pengajuan,a.nippos,a.nama,a.nopend,a.namaktr,a.kodebagian,a.namabagian,a.kodejabatan,a.namajabatan,a.jenisperangkat,a.deskripsi,a.serial_number,b.merk,b.spesifikasi,a.lampiran,a.status FROM tb_pengajuan a left join tb_perangkat b on a.serial_number = b.serial_number where a.status in ('1','2') and a.lampiran = ''");
         return $query->result();
     }
 
