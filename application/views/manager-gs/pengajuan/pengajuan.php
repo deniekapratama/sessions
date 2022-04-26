@@ -76,7 +76,7 @@
                                             <td><?php echo $b->merk; ?></td>
                                             <td><?php echo $b->spesifikasi; ?></td>
 
-                                            <?php if($b->lampiran != ''){ ?>
+                                            <?php if($b->status == '2'){ ?>
                                             <td>
                                             <a href="<?php echo base_url('manager-gs/Pengajuan/download'); ?>">
 
